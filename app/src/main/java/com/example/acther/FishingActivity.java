@@ -27,12 +27,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 
-public class FishingActivity extends AppCompatActivity {
+public class FishingActivity  extends AppCompatActivity {
 
     TextView test,test1,test2;
     String key = "oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
@@ -105,18 +106,41 @@ public class FishingActivity extends AppCompatActivity {
                 Date today = new Date();
                 System.out.println(today);
 
+
+
                 //Date  api 요청 파라미터로 사용 위해 문자열 처리 필요 ex) base_date=20221007
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-                //원하는 데이터 포맷 지정
-                String strNowDate = simpleDateFormat.format(today);
-                //지정한 포맷으로 변환
-                System.out.println("포맷 지정 후 : " + strNowDate);
+                String strNowDate = "10";
+
+
+                // 현재 시간 구하기 ( 00 시 ~ 05 시 서비스 사용 시 당일 05시 발표되는 예보 받기 불가. 전날 예보 사용해야 함)
+                SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH");
+                String strNowHour = simpleTimeFormat.format(today);
+                int intHour = Integer.parseInt(strNowHour);
+                System.out.println("현재 시간 출력 : " + intHour);
+
+                if (intHour < 5) {
+                    Date dDate = new Date();
+                    dDate = new Date(dDate.getTime()+(1000*60*60*24*-1));
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+                    strNowDate = simpleDateFormat.format(dDate);
+
+                }
+                else{
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+                    //원하는 데이터 포맷 지정
+                    strNowDate = simpleDateFormat.format(today);
+                    //지정한 포맷으로 변환
+                    System.out.println("포맷 지정 후 : " + strNowDate);
+
+
+                }
 
                 // 기상청 단기 예보 API 사용
+                String finalStrNowDate = strNowDate;
                 new Thread(() -> {
 
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
-                            + key + "&dataType=json&numOfRows=10&pageNo=1&base_date="+strNowDate+"&base_time=0500&"+
+                            + key + "&dataType=json&numOfRows=12&pageNo=1&base_date="+ finalStrNowDate +"&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
                     InputStream is = null;
                     try {
@@ -186,7 +210,7 @@ public class FishingActivity extends AppCompatActivity {
 
 
 
-                            //test2.setText();
+                        //test2.setText();
 
                         // 화면에 띄우기 테스트
                         runOnUiThread(new Runnable() {
@@ -206,22 +230,22 @@ public class FishingActivity extends AppCompatActivity {
 
 
 
-                }
+            }
 
 
 
 
         }
 
-                // 위치정보를 원하는 시간, 거리마다 갱신해준다.
-                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                        1000,
-                        1,
-                        gpsLocationListener);
-                lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,
-                        1000,
-                        1,
-                        gpsLocationListener);
+        // 위치정보를 원하는 시간, 거리마다 갱신해준다.
+        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+                1000,
+                1,
+                gpsLocationListener);
+        lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,
+                1000,
+                1,
+                gpsLocationListener);
     }
 
 
