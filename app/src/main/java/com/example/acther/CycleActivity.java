@@ -48,6 +48,8 @@ public class CycleActivity extends AppCompatActivity {
         test = (TextView) findViewById(R.id.test) ;
         test1 = (TextView) findViewById(R.id.test1);
         test2 = (TextView) findViewById(R.id.test2);
+
+
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -65,44 +67,58 @@ public class CycleActivity extends AppCompatActivity {
                 double latitude = location.getLatitude();
                 double altitude = location.getAltitude();
 
+
+
                 test.setText("위치정보 : " + provider + "\n" +
                         "위도 : " + longitude + "\n" +
                         "경도 : " + latitude + "\n" +
                         "고도  : " + altitude);
 
+
+                // gps 좌표에서 기상청 좌표계로 변환
                 LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
+
+
+                //테스트셋
                 //LatXLngY tmp = convertGRID_GPS(TO_GRID, 37.579871128849334, 126.98935225645432);
                 //LatXLngY tmp2 = convertGRID_GPS(TO_GRID, 35.101148844565955, 129.02478725562108);
                 //LatXLngY tmp3 = convertGRID_GPS(TO_GRID, 33.500946412305076, 126.54663058817043);
-
-
-                Log.e(">>", "x = " + real.x + ", y = " + real.y);
-
                 //Log.e(">>", "x = " + tmp.x + ", y = " + tmp.y);
                 //Log.e(">>", "x = " + tmp2.x + ", y = " + tmp2.y);
                 //Log.e(">>", "x = " + tmp3.x + ", y = " + tmp3.y);
 
 
+
+                // 받아온 위 경도 로그로 확인
+                Log.e(">>", "x = " + real.x + ", y = " + real.y);
+
+
+
+                //좌표 형변환 더블 -> 정수 -> 문자열
                 int temp_x = (int)real.x;
                 int temp_y = (int)real.y;
                 String strX = Integer.toString(temp_x);
                 String strY = Integer.toString(temp_y);
 
-                test1.setText("x 좌표변환한거 : "+ temp_x + "\n" + "y 격자 : " + temp_y);
 
 
+                test1.setText("기상청 x 좌표 : "+ temp_x + "\n" + "기상청 y 좌표 : " + temp_y);
+
+
+
+                // 사용자의 날짜 받아오기
 
                 Date today = new Date();
                 System.out.println(today);
 
+                //Date  api 요청 파라미터로 사용 위해 문자열 처리 필요 ex) base_date=20221007
 
 
-                // Input Stream 으로 문자열로 받아온듯 JSON 데이터 처리 가능?
-
+                // 기상청 단기 예보 API 사용
                 new Thread(() -> {
 
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
-                            + key + "&dataType=json&numOfRows=100&pageNo=1&base_date=20221004&base_time=0500&"+
+                            + key + "&dataType=json&numOfRows=100&pageNo=1&base_date=20221007&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
                     InputStream is = null;
                     try {
@@ -157,6 +173,7 @@ public class CycleActivity extends AppCompatActivity {
 
 
 
+    // gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
 
     private LatXLngY convertGRID_GPS(int mode, double lat_X, double lng_Y )
     {
@@ -246,6 +263,8 @@ public class CycleActivity extends AppCompatActivity {
         public double y;
 
     }
+
+
 
     final LocationListener gpsLocationListener = new LocationListener() {
         public void onLocationChanged(Location location) {

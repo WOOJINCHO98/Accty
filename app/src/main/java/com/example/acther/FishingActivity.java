@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -75,39 +76,47 @@ public class FishingActivity extends AppCompatActivity {
                         "경도 : " + latitude + "\n" +
                         "고도  : " + altitude);
 
+                // gps 좌표에서 기상청 좌표계로 변환
                 LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
+
+                // 받아온 위 경도 로그로 확인
+                Log.e(">>", "x = " + real.x + ", y = " + real.y);
+
+
+                //test 셋
                 //LatXLngY tmp = convertGRID_GPS(TO_GRID, 37.579871128849334, 126.98935225645432);
                 //LatXLngY tmp2 = convertGRID_GPS(TO_GRID, 35.101148844565955, 129.02478725562108);
                 //LatXLngY tmp3 = convertGRID_GPS(TO_GRID, 33.500946412305076, 126.54663058817043);
-
-
-                Log.e(">>", "x = " + real.x + ", y = " + real.y);
 
                 //Log.e(">>", "x = " + tmp.x + ", y = " + tmp.y);
                 //Log.e(">>", "x = " + tmp2.x + ", y = " + tmp2.y);
                 //Log.e(">>", "x = " + tmp3.x + ", y = " + tmp3.y);
 
-
+                //좌표 형변환 더블 -> 정수 -> 문자열
                 int temp_x = (int)real.x;
                 int temp_y = (int)real.y;
                 String strX = Integer.toString(temp_x);
                 String strY = Integer.toString(temp_y);
 
-                test1.setText("x 좌표변환한거 : "+ temp_x + "\n" + "y 격자 : " + temp_y);
+                test1.setText("기상청 x 좌표 : "+ temp_x + "\n" + "기상청 y 좌표 : " + temp_y);
 
 
-
+                // 사용자의 날짜 받아오기
                 Date today = new Date();
                 System.out.println(today);
 
+                //Date  api 요청 파라미터로 사용 위해 문자열 처리 필요 ex) base_date=20221007
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+                //원하는 데이터 포맷 지정
+                String strNowDate = simpleDateFormat.format(today);
+                //지정한 포맷으로 변환
+                System.out.println("포맷 지정 후 : " + strNowDate);
 
-
-                // Input Stream 으로 문자열로 받아온듯 JSON 데이터 처리 가능?
-
+                // 기상청 단기 예보 API 사용
                 new Thread(() -> {
 
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
-                            + key + "&dataType=json&numOfRows=10&pageNo=1&base_date=20221004&base_time=0500&"+
+                            + key + "&dataType=json&numOfRows=10&pageNo=1&base_date="+strNowDate+"&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
                     InputStream is = null;
                     try {
@@ -121,6 +130,7 @@ public class FishingActivity extends AppCompatActivity {
                         String jsonData = buffer.toString();
                         String receiveMsg = buffer.toString();
 
+                        //값 들을 리스트로 받기
                         List<String> categoryList = new ArrayList<String>();
                         List fcstDateList = new ArrayList();
                         List fcstTimeList = new ArrayList();
@@ -134,6 +144,9 @@ public class FishingActivity extends AppCompatActivity {
                         obj = obj.getJSONObject("items");
                         JSONArray ValueArray = obj.getJSONArray("item");
 
+
+                        //리스트에 전부 추가한다.
+                        //만약 카테고리가 TMP OR 바람세기 이면~ 나머지 값들 추가 ;; 이런 식으로 구현할듯
                         for(int i=0; i<ValueArray.length(); i++)
                         {
                             JSONObject valueObject = ValueArray.getJSONObject(i);
@@ -175,6 +188,7 @@ public class FishingActivity extends AppCompatActivity {
 
                             //test2.setText();
 
+                        // 화면에 띄우기 테스트
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -215,6 +229,7 @@ public class FishingActivity extends AppCompatActivity {
 
 
 
+    // gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
 
     private LatXLngY convertGRID_GPS(int mode, double lat_X, double lng_Y )
     {
@@ -225,7 +240,7 @@ public class FishingActivity extends AppCompatActivity {
         double OLON = 126.0; // 기준점 경도(degree)
         double OLAT = 38.0; // 기준점 위도(degree)
         double XO = 43; // 기준점 X좌표(GRID)
-        double YO = 136; // 기1준점 Y좌표(GRID)
+        double YO = 136; // 기준점 Y좌표(GRID)
 
         //
         // LCC DFS 좌표변환 ( code : "TO_GRID"(위경도->좌표, lat_X:위도,  lng_Y:경도), "TO_GPS"(좌표->위경도,  lat_X:x, lng_Y:y) )
