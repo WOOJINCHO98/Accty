@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView btn1,btn2;
+    ImageView btn1,btn2,btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn1 = (ImageView) findViewById(R.id.btn1);
         btn2 = (ImageView) findViewById(R.id.btn2);
+        btn3 = (ImageView) findViewById(R.id.btn3);
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,FishingActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,GlidingActivity.class);
                 startActivity(intent);
 
             }

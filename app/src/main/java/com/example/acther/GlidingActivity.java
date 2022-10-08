@@ -2,15 +2,12 @@ package com.example.acther;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.TypedValue;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,14 +24,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 
-public class CycleActivity  extends AppCompatActivity {
+public class GlidingActivity extends AppCompatActivity {
 
     TextView test,test1,test2,test3,test4;
     String key = "oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
@@ -63,7 +59,7 @@ public class CycleActivity  extends AppCompatActivity {
 
         if ( Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions( CycleActivity.this, new String[] {
+            ActivityCompat.requestPermissions( GlidingActivity.this, new String[] {
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
         }
         else{
@@ -218,14 +214,26 @@ public class CycleActivity  extends AppCompatActivity {
                         Comparable maxWindSpeed = Collections.max(windSpeedList);
                         Double doubleMaxWindSpeed = (Double)(maxWindSpeed);
 
-                        // 풍속이 4.0ms 이하일 때
-                        if (doubleMaxWindSpeed <= 4.0){
+                        // 풍속이 1.0ms ~ 6.0 일 때
+                        if (doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0){
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                                            "최대 풍속이 4.0 이하 입니다.\n" +
-                                            "자전거 타기 좋은 날 입니다."+
+                                            "최대 풍속이 1.0 이상 6.0 이하 입니다.\n" +
+                                            "패러글라이딩 하기 좋은 날 입니다."+
+                                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
+                                }
+                            });
+
+                        }
+                        else if (doubleMaxWindSpeed < 1.0){
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                                            "최대 풍속이 1.0 이하 입니다.\n" +
+                                            "패러글라이딩 하기 힘든 날 입니다."+
                                             "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
                                 }
                             });
@@ -237,8 +245,8 @@ public class CycleActivity  extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                                            "최대 풍속이 4.0 보다 높습니다.\n" +
-                                            "자전거 타기 힘든 날 입니다."+
+                                            "최대 풍속이 6.0 보다 높습니다.\n" +
+                                            "패러글라이딩 하기 힘든 날 입니다."+
                                             "오늘의 최대 풍속은  "+doubleMaxWindSpeed + " 입니다.");
                                 }
                             });
