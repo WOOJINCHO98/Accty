@@ -1,6 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
 <resources>
     <string name="app_name">Acther</string>
     <string name="accty">Accty</string>
+    <string name="msg_token_fmt" formatted="true">%sjj</string>
+    <string name="default_notification_channel_id">CHN_ID</string>
+
+    <string name="channel_name">test</string>
+    <string name="channel_description">test1</string>
 
 
 </resources>

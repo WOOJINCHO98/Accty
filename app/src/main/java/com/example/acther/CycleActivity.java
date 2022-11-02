@@ -129,7 +129,7 @@ public class CycleActivity  extends AppCompatActivity {
                         JSONObject jObject = new JSONObject(jsonData);
                         JSONArray jArray = jObject.getJSONArray("documents");
                         JSONObject obj = jArray.getJSONObject(0);
-                        obj = obj.getJSONObject("road_address");
+                        obj = obj.getJSONObject("address");
                         String address = obj.getString("address_name");
 
 

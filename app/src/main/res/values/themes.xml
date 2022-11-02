@@ -46,4 +46,26 @@
         </item>
 
     </style>
+
+    <style name="shadow">
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            10
+        </item>
+
+        <item name="android:shadowDy">
+            10
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+
+    </style>
+
 </resources>
