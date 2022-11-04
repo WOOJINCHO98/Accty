@@ -13,4 +13,59 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!--
+    Font family: Gonzi Expanded PERSONAL USE
+    Line height: 67sp
+    -->
+    <!-- styles.xml -->
+    <style name="accty">
+
+        <item name="android:textSize">
+            48sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            0
+        </item>
+
+        <item name="android:shadowDy">
+            10
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+    </style>
+
+    <style name="shadow">
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            10
+        </item>
+
+        <item name="android:shadowDy">
+            10
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+
+    </style>
+
 </resources>

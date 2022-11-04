@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565678334019",
+    "project_id": "accty-530ea",
+    "storage_bucket": "accty-530ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565678334019:android:a353b26fddedc6ae0734f6",
+        "android_client_info": {
+          "package_name": "com.example.acther"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565678334019-vb539uaug4f3nmijjrs4mvoh5ensaqph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZhn418kCLXXJ2I_5RREtK3b7LQWuExOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565678334019-vb539uaug4f3nmijjrs4mvoh5ensaqph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -29,13 +29,14 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 
 public class FishingActivity  extends AppCompatActivity {
 
-    TextView test,test1,test2;
+    TextView test,test1,test2,test3,test4;
     String key = "oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
     String result = "";
 
@@ -54,6 +55,8 @@ public class FishingActivity  extends AppCompatActivity {
         test = (TextView) findViewById(R.id.test) ;
         test1 = (TextView) findViewById(R.id.test1);
         test2 = (TextView) findViewById(R.id.test2);
+        test3 = (TextView) findViewById(R.id.test3);
+        test4 = (TextView) findViewById(R.id.test4);
 
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -140,7 +143,7 @@ public class FishingActivity  extends AppCompatActivity {
                 new Thread(() -> {
 
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
-                            + key + "&dataType=json&numOfRows=12&pageNo=1&base_date="+ finalStrNowDate +"&base_time=0500&"+
+                            + key + "&dataType=json&numOfRows=400&pageNo=1&base_date="+ finalStrNowDate +"&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
                     InputStream is = null;
                     try {
@@ -160,6 +163,12 @@ public class FishingActivity  extends AppCompatActivity {
                         List fcstTimeList = new ArrayList();
                         List fcstValueList = new ArrayList();
 
+                        List inTimeList = new ArrayList();
+
+                        List windSpeedList = new ArrayList();
+                        List windDirectionList = new ArrayList();
+
+                        List wavList = new ArrayList();
 
                         // jsonData를 먼저 JSONObject 형태로 바꾼다.
                         JSONObject obj = new JSONObject(jsonData);
@@ -187,8 +196,120 @@ public class FishingActivity  extends AppCompatActivity {
                             fcstDateList.add(valueObject.getString("fcstDate"));
                             fcstTimeList.add(valueObject.getString("fcstTime"));
                             fcstValueList.add(valueObject.getString("fcstValue"));
+
+                            int intNowDate = Integer.parseInt(finalStrNowDate);
+
+                            //9시 부터 17 시 까지 시간에 (당일만 !!)
+                            int intTime = Integer.parseInt(valueObject.getString("fcstTime"));
+                            int intDate = Integer.parseInt(valueObject.getString("fcstDate"));
+                            if (intTime>900 && intTime<=1700 && intDate == intNowDate){
+                                inTimeList.add(valueObject.getString("fcstTime"));
+
+                                // 카테고리가 풍속일 때 리스트에 추가
+                                if (valueObject.getString("category").equals("WSD")){
+                                    windSpeedList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                                }
+                                // 카테고리가 풍향일 떄 리스트에 추가
+                                if (valueObject.getString("category").equals("VEC")){
+                                    windDirectionList.add(Integer.parseInt(valueObject.getString("fcstValue")));
+                                }
+                                // 카테고리가 파고일 떄 리스트에 추가
+                                if (valueObject.getString("category").equals("WAV")){
+                                    wavList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                                }
+
+                            }
+
                         }
 
+                        System.out.println(wavList);
+
+                        Comparable maxWindSpeed = Collections.max(windSpeedList);
+                        Double doubleMaxWindSpeed = (Double)(maxWindSpeed);
+
+                        Comparable maxWav = Collections.max(wavList);
+                        Double doubleMaxWav = (Double)(maxWav);
+
+                        // 풍속이 4.0ms 이하일 때
+                        if (doubleMaxWav <= 4.0){
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                                            "최대 파고가 4.0 미터 이하 입니다.\n" +
+                                            "낚시 하기 좋은 날 입니다."+
+                                            "오늘의 최대 파고는  "+doubleMaxWav+ " 입니다.");
+                                }
+                            });
+
+                        }
+                        //아니면.
+                        else{
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                                            "최대 파고가 4.0 미터 보다 높습니다.\n" +
+                                            "낚시 하기 힘든 날 입니다."+
+                                            "오늘의 최대 파고는  "+doubleMaxWav + " 입니다.");
+                                }
+                            });
+                        }
+
+                        System.out.println(windDirectionList);
+
+                        //풍향 방향 설정 하기
+//                        for (int i=0; i<windDirectionList.size(); i++){
+//                            System.out.println(windDirectionList.get(i));
+//                        }
+
+                        List windDirectionCntList = new ArrayList();
+                        String windDirection = "";
+                        for (Object direction : windDirectionList) {
+                            System.out.println(direction);
+                            int intDirection = (int)(direction);
+
+                            if (intDirection>0 && intDirection<45){
+                                windDirectionCntList.add("N-NE");
+
+                            }
+                            else if (intDirection>45 && intDirection<90){
+                                windDirectionCntList.add("NE-E");
+
+                            }
+                            else if (intDirection>90 && intDirection<135){
+                                windDirectionCntList.add("E-SE");
+
+                            }
+                            else if (intDirection>135 && intDirection<180){
+                                windDirectionCntList.add("SE-S");
+
+                            }
+                            else if (intDirection>180 && intDirection<225){
+                                windDirectionCntList.add("S-SW");
+
+                            }
+                            else if (intDirection>225 && intDirection<270){
+                                windDirectionCntList.add("SW-W");
+
+                            }
+                            else if (intDirection>225 && intDirection<315){
+                                windDirectionCntList.add("W-NW");
+
+                            }
+                            else if (intDirection>315 && intDirection<360){
+                                windDirectionCntList.add("NW-N");
+
+                            }
+                        }
+
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                test4.setText("바람의 방향은  \n" + windDirectionCntList);
+                            }
+                        });
 
 
                         System.out.println(receiveMsg);
@@ -199,6 +320,8 @@ public class FishingActivity  extends AppCompatActivity {
                         System.out.println(fcstDateList);
                         System.out.println(fcstTimeList);
                         System.out.println(fcstValueList);
+                        System.out.println(inTimeList);
+                        System.out.println(windSpeedList);
 
                         int i;
                         for (i=0; i<categoryList.size(); i++) {
@@ -206,19 +329,14 @@ public class FishingActivity  extends AppCompatActivity {
                             TextView textView01 = new TextView(getApplicationContext());
                             textView01.setText(categoryList.get(i));  //배열리스트 이용
 
+
                         }
 
 
 
                         //test2.setText();
 
-                        // 화면에 띄우기 테스트
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                test2.setText(categoryList+"\n"+fcstDateList+"\n"+fcstTimeList+"\n"+fcstValueList);
-                            }
-                        });
+
 
                     }
                     catch (IOException | JSONException e) {

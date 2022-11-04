@@ -33,6 +33,12 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
+
 
 public class CycleActivity  extends AppCompatActivity {
 
@@ -105,10 +111,50 @@ public class CycleActivity  extends AppCompatActivity {
                 test1.setText("기상청 x 좌표 : "+ temp_x + "\n" + "기상청 y 좌표 : " + temp_y);
 
 
+                String kakaoX = Double.toString(longitude);
+                String kakaoY = Double.toString(latitude);
+
+
+                //kakao Test
+                new Thread(() -> {
+                    try {
+                        String kakaoRes = gpsInfo(kakaoX,kakaoY); // network 동작, 인터넷에서 받아오는 코드
+                        System.out.println(kakaoRes);
+
+
+                        String jsonData = kakaoRes;
+                        String receiveMsg = kakaoRes;
+
+
+                        JSONObject jObject = new JSONObject(jsonData);
+                        JSONArray jArray = jObject.getJSONArray("documents");
+                        JSONObject obj = jArray.getJSONObject(0);
+                        obj = obj.getJSONObject("address");
+                        String address = obj.getString("address_name");
+
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                test2.setText(address);
+
+                            }
+                        });
+
+
+
+
+
+                    } catch (IOException | JSONException e) {
+                        e.printStackTrace();
+                    }
+                }).start();
+
                 // 사용자의 날짜 받아오기
                 Date today = new Date();
                 System.out.println(today);
-
+                System.out.println(strX);
+                System.out.println(strY);
 
 
                 //Date  api 요청 파라미터로 사용 위해 문자열 처리 필요 ex) base_date=20221007
@@ -145,6 +191,7 @@ public class CycleActivity  extends AppCompatActivity {
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
                             + key + "&dataType=json&numOfRows=400&pageNo=1&base_date="+ finalStrNowDate +"&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
+                    System.out.println(url);
                     InputStream is = null;
                     try {
                         is = new URL(url).openStream();
@@ -156,6 +203,9 @@ public class CycleActivity  extends AppCompatActivity {
                         }
                         String jsonData = buffer.toString();
                         String receiveMsg = buffer.toString();
+
+                        System.out.println("jsonData ::::: "+jsonData);
+                        System.out.println("recMSG ::::::"+receiveMsg);
 
                         //값 들을 리스트로 받기
                         List<String> categoryList = new ArrayList<String>();
@@ -355,8 +405,21 @@ public class CycleActivity  extends AppCompatActivity {
     }
 
 
+    public static String gpsInfo(String x, String y) throws IOException {
+        URL url = new URL("http://dapi.kakao.com/v2/local/geo/coord2address.json?x="+x+"&y="+y+"&input_coord=WGS84");
+        HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+        httpConn.setRequestMethod("GET");
 
+        httpConn.setRequestProperty("Authorization", "KakaoAK c1c0921d459951a565bc6c7669060e68");
 
+        InputStream responseStream = httpConn.getResponseCode() / 100 == 2
+                ? httpConn.getInputStream()
+                : httpConn.getErrorStream();
+        Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+        String response = s.hasNext() ? s.next() : "";
+        System.out.println(response);
+        return response;
+    }
 
 
     // gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
@@ -507,7 +570,6 @@ public class CycleActivity  extends AppCompatActivity {
 
         }
     };
-
 
 
 }
