@@ -11,4 +11,17 @@
     <string name="channel_description">test1</string>
 
 
+
+
+    <string-array name = "activity_array">
+        <item>러닝</item>
+        <item>자전거</item>
+        <item>등산</item>
+        <item>패러글라이딩</item>
+        <item>서핑</item>
+        <item>낚시</item>
+        <item>골프</item>
+        <item>스키</item>
+
+    </string-array>
 </resources>

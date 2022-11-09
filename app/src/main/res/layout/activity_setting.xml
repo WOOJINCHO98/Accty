@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IM SETTING"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람 시간 설정 하기"/>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람 운동종목 설정하기"/>
+
+
+    <CheckBox
+        android:id="@+id/running"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="러닝"
+        android:layout_gravity="center"
+        />
+
+    <CheckBox
+        android:id="@+id/bicycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자전거"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/hiking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="등산"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/gliding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="패러글라이딩"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/surfing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서핑"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/fishing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="낚시"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/golf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="골프"
+        android:layout_gravity="center"
+        />
+    <CheckBox
+        android:id="@+id/ski"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스키"
+        android:layout_gravity="center"
+        />
+
+
+
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:entries="@array/activity_array"
+        android:gravity="center"
+
+        />
+
+    <Button
+        android:id="@+id/notification_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람 보내기"
+        android:layout_gravity="center"
+        />
+
+
+
+
+
+
+</LinearLayout>

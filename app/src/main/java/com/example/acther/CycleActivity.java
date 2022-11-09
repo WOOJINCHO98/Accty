@@ -133,6 +133,7 @@ public class CycleActivity  extends AppCompatActivity {
                         String address = obj.getString("address_name");
 
 
+
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

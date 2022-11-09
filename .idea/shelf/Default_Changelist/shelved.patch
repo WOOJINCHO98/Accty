@@ -1,0 +1,39 @@
+Index: .gradle/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gradle/.gitignore b/.gradle/.gitignore
+deleted file mode 100644
+--- a/.gradle/.gitignore	(revision 63880c53fc21a6f05f1bb6895f519cde61f7405e)
++++ /dev/null	(revision 63880c53fc21a6f05f1bb6895f519cde61f7405e)
+@@ -1,15 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+-local.properties
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Default ignored files\n/shelf/\n/workspace.xml\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+--- a/.idea/.gitignore	(revision 63880c53fc21a6f05f1bb6895f519cde61f7405e)
++++ b/.idea/.gitignore	(date 1667970597864)
+@@ -1,3 +1,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
