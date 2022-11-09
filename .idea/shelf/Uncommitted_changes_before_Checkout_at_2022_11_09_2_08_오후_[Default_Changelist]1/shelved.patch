@@ -1,0 +1,1539 @@
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	
++++ /dev/null	
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .gradle/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gradle/.gitignore b/.gradle/.gitignore
+deleted file mode 100644
+--- a/.gradle/.gitignore	
++++ /dev/null	
+@@ -1,15 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+-local.properties
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-measurement-connector:19.0.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/56efaa9db70eb6154a374b5cd05fb716/transformed/firebase-measurement-connector-19.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/c835a4d66a40529124ef60979788f13b/transformed/firebase-measurement-connector-19.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-measurement-connector/19.0.0/c0d58b8efa926b2c607984c54fb3d274490badd1/firebase-measurement-connector-19.0.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_19_0_0_aar.xml	
+@@ -1,10 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-measurement-connector:19.0.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/56efaa9db70eb6154a374b5cd05fb716/transformed/firebase-measurement-connector-19.0.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c835a4d66a40529124ef60979788f13b/transformed/firebase-measurement-connector-19.0.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/624ef3c3f3124271e2f4701f4c5ff318/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-iid-interop:17.1.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/abe677207e8eee708c54aed212fd16b8/transformed/firebase-iid-interop-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/2646450cea0cd889806f8f2ce55255b0/transformed/firebase-iid-interop-17.1.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-iid-interop/17.1.0/7fad4ae6f5c2016d5c7babbbf020b6ac08a9cb08/firebase-iid-interop-17.1.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_1_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_1_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_1_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_1_0_aar.xml	
+@@ -1,8 +1,6 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-iid-interop:17.1.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/abe677207e8eee708c54aed212fd16b8/transformed/firebase-iid-interop-17.1.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2646450cea0cd889806f8f2ce55255b0/transformed/firebase-iid-interop-17.1.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8fc28e3399c0953a8e000a22924c82d8/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml" />
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-installations:17.1.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/cc8695925e6354b205afef1b811c985d/transformed/firebase-installations-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/89f2bb6ca6b547f34c6300e1e0a24c7e/transformed/firebase-installations-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations/17.1.0/8b3226eeb5c7fe2721c91df37c11678e3906dc75/firebase-installations-17.1.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations/17.1.0/58f25b93e4cd6a0b3d21f106a466931d1c91011a/firebase-installations-17.1.0-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-installations:17.1.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc8695925e6354b205afef1b811c985d/transformed/firebase-installations-17.1.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/89f2bb6ca6b547f34c6300e1e0a24c7e/transformed/firebase-installations-17.1.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc8b136190658935d678b1769c1ddb80/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations/17.1.0/8b3226eeb5c7fe2721c91df37c11678e3906dc75/firebase-installations-17.1.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-installations-interop:17.1.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3fb9815b2df961f5b197850f37bdefd0/transformed/firebase-installations-interop-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/b4af8975db8c2b1379e6e931f8026d05/transformed/firebase-installations-interop-17.1.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/17.1.0/4fd04ebe2d8d8f9bf658db62a507d7a0161c362a/firebase-installations-interop-17.1.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/17.1.0/5998843857375da90db2675c2dce6814d97d16ff/firebase-installations-interop-17.1.0-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-installations-interop:17.1.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3fb9815b2df961f5b197850f37bdefd0/transformed/firebase-installations-interop-17.1.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b4af8975db8c2b1379e6e931f8026d05/transformed/firebase-installations-interop-17.1.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/74cc8f6b6d16dba57555b27beddd94a6/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/17.1.0/4fd04ebe2d8d8f9bf658db62a507d7a0161c362a/firebase-installations-interop-17.1.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-components:17.0.1@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/053d31f9c4ee1409262a5aeae610177b/transformed/firebase-components-17.0.1/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/0b2b0c68d236886b1d2f43106db9a915/transformed/firebase-components-17.0.1/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/17.0.1/25dd870fd6dea1a3a5df01ce1a02127638a44751/firebase-components-17.0.1-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/17.0.1/f0059600ec5c35df09ef78393e9b87e05a34ab45/firebase-components-17.0.1-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_1_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_1_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_1_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_components_17_0_1_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-components:17.0.1@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/053d31f9c4ee1409262a5aeae610177b/transformed/firebase-components-17.0.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b2b0c68d236886b1d2f43106db9a915/transformed/firebase-components-17.0.1/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3ec939eb3d1dd249b597350b133026f2/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/17.0.1/25dd870fd6dea1a3a5df01ce1a02127638a44751/firebase-components-17.0.1-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-datatransport:18.1.7@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/c7858fc227f322a0a1369fcbd306fe11/transformed/firebase-datatransport-18.1.7/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/85955c6dfe78506196c79de7cb5b8872/transformed/firebase-datatransport-18.1.7/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.1.7/5d428da07efd8edc44a796ec9e1e731a584d4d13/firebase-datatransport-18.1.7-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.1.7/d4a74a87d4a01efa97a9271270d11d808836f6ad/firebase-datatransport-18.1.7-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml	
+@@ -1,10 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-datatransport:18.1.7@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c7858fc227f322a0a1369fcbd306fe11/transformed/firebase-datatransport-18.1.7/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/85955c6dfe78506196c79de7cb5b8872/transformed/firebase-datatransport-18.1.7/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a5268d9a2ecc63d387e6286da1e3963a/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_18_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-encoders-json:18.0.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/f570ac6cf6833385f23ff294137119c1/transformed/firebase-encoders-json-18.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3116310ff307ba46bbee2bd2b9ea4564/transformed/firebase-encoders-json-18.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-json/18.0.0/8b885e5d8450f7afe805d5efbff0bb6085301c62/firebase-encoders-json-18.0.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-json/18.0.0/d1cddbffa2ae77d26fd0c0b2c37b94331be039ef/firebase-encoders-json-18.0.0-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_18_0_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_18_0_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_18_0_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_encoders_json_18_0_0_aar.xml	
+@@ -1,10 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-encoders-json:18.0.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f570ac6cf6833385f23ff294137119c1/transformed/firebase-encoders-json-18.0.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3116310ff307ba46bbee2bd2b9ea4564/transformed/firebase-encoders-json-18.0.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/301d8778708a2fc3613f56b07b5a3cf6/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_analytics_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-analytics:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/dcccc9cd3ff321f7fb58eae65b14d130/transformed/firebase-analytics-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-analytics/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/firebase-analytics-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_21_2_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-analytics:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dcccc9cd3ff321f7fb58eae65b14d130/transformed/firebase-analytics-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1f38aa4dd630b4dfa7330a37c8e44d44/transformed/jetified-firebase-analytics-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-analytics/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/firebase-analytics-21.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.firebase:firebase-common:20.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/20.2.0/b0544f0a7019c278e4dc45f38f8a8530e468cfa3/firebase-common-20.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/20.2.0/4b879ad6c0d9b5b210d395b7c1e1056c37263982/firebase-common-20.2.0-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml b/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml	
+@@ -1,9 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.firebase:firebase-common:20.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06315013864a7944bf0c1c6bcd297c4b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/20.2.0/b0544f0a7019c278e4dc45f38f8a8530e468cfa3/firebase-common-20.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_2_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-stats:17.0.2@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/8b8b7fbd42c5a273fd707699da77b321/transformed/play-services-stats-17.0.2/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/36c736561514d754072b3f3a8d56bcbf/transformed/play-services-stats-17.0.2/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-stats/17.0.2/c0d58b8efa926b2c607984c54fb3d274490badd1/play-services-stats-17.0.2-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_2_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_2_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_2_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_2_aar.xml	
+@@ -1,10 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-stats:17.0.2@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8b8b7fbd42c5a273fd707699da77b321/transformed/play-services-stats-17.0.2/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36c736561514d754072b3f3a8d56bcbf/transformed/play-services-stats-17.0.2/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc41923bd68c982689bd797f95f5a0b7/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: app/src/main/java/com/example/acther/A_AlarmReceiver.java
+===================================================================
+diff --git a/app/src/main/java/com/example/acther/A_AlarmReceiver.java b/app/src/main/java/com/example/acther/A_AlarmReceiver.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/acther/A_AlarmReceiver.java	
+@@ -0,0 +1,152 @@
++package com.example.acther;
++
++import android.app.AlertDialog;
++import android.app.Notification;
++import android.app.NotificationChannel;
++import android.app.NotificationManager;
++import android.content.BroadcastReceiver;
++import android.content.Context;
++import android.content.DialogInterface;
++import android.content.Intent;
++import android.graphics.BitmapFactory;
++import android.os.Build;
++import android.os.PowerManager;
++import android.util.Log;
++import android.widget.Toast;
++
++import androidx.core.app.NotificationCompat;
++import androidx.core.content.ContextCompat;
++
++public class A_AlarmReceiver extends BroadcastReceiver {
++
++    //TODO [클래스 전역 변수 선언 부분]
++    Context mContext;
++
++    //TODO [onReceive 메소드를 재정의 (채널 알림 메시지 확인 부분)]
++    @Override
++    public void onReceive(Context context, Intent intent) {
++        try {
++            mContext = context;
++            Log.d("---","---");
++            Log.w("//===========//","================================================");
++            Log.d("","\n"+"[A_AlarmReceiver > onReceive() 메소드 : 수신받은 알림 내용 확인]");
++            Log.w("//===========//","================================================");
++            Log.d("---","---");
++
++            //TODO 노티피케이션 알림 호출 실시
++            Toast.makeText(mContext,S_Preference.getString(mContext, "Alarm_Date")+" [알림]",Toast.LENGTH_SHORT).show();
++            serviceContent = S_Preference.getString(mContext, "Alarm_Date");
++            setNotificationShow();
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [노티피케이션 알림 표시 부분]
++    NotificationManager notificationManager; //매니저
++    NotificationChannel notificationChannel; //채널
++    NotificationCompat.Builder builder; //빌더
++    String serviceTittle = "[알람 매니저]";
++    String serviceContent = "";
++    public void setNotificationShow(){
++        try {
++            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){ //TODO 오레오 버전 이상
++                //오레오 버전 이상부터는 노티피케이션을 사용하기 위해서 채널이 필요하다
++                int importance = NotificationManager.IMPORTANCE_HIGH; //TODO 알림 우선순위를 최상으로 설정 (타이틀 및 소리)
++                String Noti_Channel_ID = "DefaultNoti";
++                String Noti_Channel_Group_ID = "DefaultNoti_Group";
++                notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
++                notificationChannel = new NotificationChannel(Noti_Channel_ID,Noti_Channel_Group_ID,importance);
++                //TODO 뱃지 카운트 실시 (디폴트 true)
++                //notificationChannel.setShowBadge(true);
++                if(notificationManager.getNotificationChannel(Noti_Channel_ID) != null){ //TODO 채널이 존재할 경우
++                    Log.d("---","---");
++                    Log.w("//===========//","================================================");
++                    Log.d("","\n"+"[A_ImmotalServiceReceiver > setNotificationShow() 메소드 : 채널이 이미 존재합니다]");
++                    Log.w("//===========//","================================================");
++                    Log.d("---","---");
++                }
++                else{
++                    Log.d("---","---");
++                    Log.e("//===========//","================================================");
++                    Log.d("","\n"+"[A_ImmotalServiceReceiver > setNotificationShow() 메소드 : 채널이 없어서 만듭니다]");
++                    Log.e("//===========//","================================================");
++                    Log.d("---","---");
++                    notificationManager.createNotificationChannel(notificationChannel);
++                }
++                notificationManager.createNotificationChannel(notificationChannel);
++                builder = new NotificationCompat.Builder(mContext,Noti_Channel_ID)
++                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher_background))
++                        .setSmallIcon(R.drawable.ic_launcher_background)
++                        .setColor(ContextCompat.getColor(mContext, R.color.colorAccent))
++                        .setWhen(System.currentTimeMillis())
++                        .setShowWhen(true)
++                        .setAutoCancel(true)
++                        /**
++                         .setOngoing(true) // 사용자가 직접 못지우게 계속 실행하기. (클릭해야 메시지 읽음 상태)
++                         */
++                        .setPriority(NotificationCompat.PRIORITY_MAX)
++                        .setContentTitle(serviceTittle) //TODO 제목
++                        .setChannelId(Noti_Channel_ID)
++                        .setContentText(serviceContent); //TODO 내용
++
++                builder.getNotification().flags |= Notification.FLAG_AUTO_CANCEL; //TODO 노티 알림 삭제 시 자동으로 푸시 뱃지 표시 지움
++
++                notificationManager.notify(1,builder.build()); //TODO 아이디값이 달라야 노티피케이션이 여러개 표시된다
++
++                getDisplayWakeUp(); //TODO 화면 강제 기상
++            }
++            else {
++                builder = new NotificationCompat.Builder(mContext)
++                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher_background))
++                        .setSmallIcon(R.drawable.ic_launcher_background)
++                        .setColor(ContextCompat.getColor(mContext, R.color.colorAccent))
++                        .setWhen(System.currentTimeMillis())
++                        .setShowWhen(true)
++                        .setAutoCancel(true)
++                        /**
++                         .setOngoing(true) // 사용자가 직접 못지우게 계속 실행하기. (클릭해야 메시지 읽음 상태)
++                         */
++                        .setPriority(NotificationCompat.PRIORITY_MAX) //TODO Priority와 Vibrator가 있어야 알림바 표시됨
++                        .setDefaults(Notification.DEFAULT_VIBRATE)
++                        .setContentTitle(serviceTittle) //TODO 제목
++                        .setContentText(serviceContent); //TODO 내용
++
++                builder.getNotification().flags |= Notification.FLAG_AUTO_CANCEL; //TODO 노티 알림 삭제 시 자동으로 푸시 뱃지 표시 지움
++
++                notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
++
++                notificationManager.notify(1,builder.build()); //TODO 아이디값이 달라야 노티피케이션이 여러개 표시된다
++
++                getDisplayWakeUp(); //TODO 화면 강제 기상
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [화면 기상 시키는 메소드]
++    public void getDisplayWakeUp(){
++        try {
++            /**
++             * [화면 기상 방법]
++             * 1. 화면 제어 권한 획득 실시 - AndroidManifest.xml : <uses-permission android:name="android.permission.WAKE_LOCK"/>
++             * 2. PowerManager.WakeLock 사용해 화면 강제 기상 (깨우기) 실시
++             */
++            PowerManager pm = (PowerManager)mContext.getSystemService(Context.POWER_SERVICE);
++            PowerManager.WakeLock wakelock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "My:Tag");
++            wakelock.acquire(); //TODO 화면 즉시 기상 실시
++            wakelock.release(); //TODO WakeLock 자원 해제
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++}//TODO 클래스 종료
++
++
++
++
+Index: app/src/main/java/com/example/acther/A_Alarm.java
+===================================================================
+diff --git a/app/src/main/java/com/example/acther/A_Alarm.java b/app/src/main/java/com/example/acther/A_Alarm.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/acther/A_Alarm.java	
+@@ -0,0 +1,525 @@
++package com.example.acther;
++
++import static android.app.PendingIntent.FLAG_MUTABLE;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.app.AlarmManager;
++import android.app.AlertDialog;
++import android.app.PendingIntent;
++import android.content.ClipData;
++import android.content.ClipboardManager;
++import android.content.Context;
++import android.content.DialogInterface;
++import android.content.Intent;
++import android.content.SharedPreferences;
++import android.os.Build;
++import android.os.Bundle;
++import android.util.Log;
++import android.view.KeyEvent;
++import android.view.MotionEvent;
++import android.view.View;
++import android.view.inputmethod.InputMethodManager;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import com.google.errorprone.annotations.Var;
++
++import java.text.ParseException;
++import java.text.SimpleDateFormat;
++import java.util.Calendar;
++import java.util.Date;
++import java.util.Locale;
++
++
++public class A_Alarm extends AppCompatActivity {
++
++    //private static final int FLAG_IMMUTABLE =0 ;
++    //TODO [클래스 전역 변수 선언]
++    String timeTotal = "";
++    String yyyy = "";
++    String MM = "";
++    String dd = "";
++    String hh = "";
++    String mmm = "";
++    String ss = "";
++
++    //TODO [클래스 컴포넌트 선언]
++    EditText year_edit;
++    EditText month_edit;
++    EditText day_edit;
++    EditText hour_edit;
++    EditText minute_edit;
++    EditText second_edit;
++    Button ok_button;
++    Button no_button;
++
++
++
++
++    //TODO [액티비티 시작 메소드]
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_a_alarm);
++        Log.d("---","---");
++        Log.d("//===========//","================================================");
++        Log.d("","\n"+"[A_Alarm > onCreate() 메소드 : 액티비티 시작 실시]");
++        Log.d("//===========//","================================================");
++        Log.d("---","---");
++
++        //TODO [초기 프리퍼런스에 현재 날짜 저장 실시]
++        try {
++            S_Preference.setString(getApplication(), "Alarm_Date", getNowTime2());
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++
++        //TODO [프리퍼런스에 저장된 데이터가 있는지 체크]
++        try {
++            //TODO [2021-05-04 11:35:12] 형태
++            String pref = String.valueOf(S_Preference.getString(getApplication(), "Alarm_Date"));
++            pref = pref.trim(); //TODO 끝쪽 공백 제거
++            if(pref != null && pref.length() > 0 && !pref.equals("") && !pref.contains("null")){
++                Log.d("---","---");
++                Log.w("//===========//","================================================");
++                Log.d("","\n"+"[A_Alarm > 프리퍼런스 저장된 날짜 확인]");
++                Log.d("","\n"+"[날짜 : "+String.valueOf(pref)+"]");
++                Log.w("//===========//","================================================");
++                Log.d("---","---");
++                //TODO 중앙 공백 기준으로 날짜 및 시간 분리
++                String date = pref.split(" ")[0];
++                String hour = pref.split(" ")[1];
++                getDateParce(date); //TODO 메소드 호출
++                getTimeParce(hour); //TODO 메소드 호출
++            }
++            else{
++                Log.d("---","---");
++                Log.e("//===========//","================================================");
++                Log.d("","\n"+"[A_Alarm > 프리퍼런스 저장된 날짜 확인]");
++                Log.d("","\n"+"[날짜 : "+String.valueOf(pref)+"]");
++                Log.e("//===========//","================================================");
++                Log.d("---","---");
++                //TODO 기본값 설정
++                yyyy = "2021";
++                MM = "05";
++                dd = "03";
++                hh = "17";
++                mmm = "30";
++                ss = "00";
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++
++        //TODO [컴포넌트 매칭 실시]
++        year_edit = (EditText)findViewById(R.id.year_edit);
++        year_edit.setText(yyyy);
++
++        month_edit = (EditText)findViewById(R.id.month_edit);
++        month_edit.setText(MM);
++
++        day_edit = (EditText)findViewById(R.id.day_edit);
++        day_edit.setText(dd);
++
++        hour_edit = (EditText)findViewById(R.id.hour_edit);
++        hour_edit.setText(hh);
++
++        minute_edit = (EditText)findViewById(R.id.minute_edit);
++        minute_edit.setText(mmm);
++
++        second_edit = (EditText)findViewById(R.id.second_edit);
++        second_edit.setText(ss);
++
++        ok_button = (Button)findViewById(R.id.ok_button);
++        no_button = (Button)findViewById(R.id.no_button);
++
++        //TODO [버튼 클릭 이벤트 정의]
++        ok_button.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                yyyy = year_edit.getText().toString().trim();
++                MM = month_edit.getText().toString().trim();
++                dd = day_edit.getText().toString().trim();
++                hh = hour_edit.getText().toString().trim();
++                mmm = minute_edit.getText().toString().trim();
++                ss = second_edit.getText().toString().trim();
++
++                setAlarmSetting(yyyy, MM, dd, hh, mmm, ss); //TODO 알람 설정 메소드 호출
++            }
++        });
++
++        //TODO [버튼 클릭 이벤트 정의]
++        no_button.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                setAlarmCancle(); //TODO 알람 취소 메소드 호출
++            }
++        });
++
++    }//TODO 메인 종료
++
++    //TODO [알림 등록 실시 메소드]
++    public void setAlarmSetting(String year, String month, String day, String hour, String minute, String second){
++        String str_date = "";
++        //TODO [2021-05-04 11:35:12] 형태
++        str_date = String.valueOf(year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second);
++        Log.d("---","---");
++        Log.d("//===========//","================================================");
++        Log.d("","\n"+"[A_Alarm > setAlarmSetting() 메소드 : 알람 등록 수행 실시]");
++        Log.d("","\n"+"[날짜 : "+str_date+"]");
++        Log.d("//===========//","================================================");
++        Log.d("---","---");
++        try {
++            String now = getNowTime2();
++            int result = str_date.compareTo(now);
++            if(result < 0){ //TODO 저장하려는 시간이 현재시간보다 작은 경우
++                getAlertDialog("알람 설정",
++                        "\n"+"[설정하려는 알람 시간을 다시 확인해주세요]"+"\n"+"\n"+
++                                "[현재 날짜]"+"\n"+String.valueOf(now)+"\n"+"\n"+
++                                "[예약할 날짜]"+"\n"+String.valueOf(str_date),
++                        "확인",
++                        "취소",
++                        "");
++            }
++            else{
++                //TODO [알림 매니저 객체 생성]
++                AlarmManager alarmManager  = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
++                Calendar calendar = Calendar.getInstance();
++
++                //TODO [인텐트 등록]
++                Intent intent = new Intent(A_Alarm.this, A_AlarmReceiver.class);
++                PendingIntent pendingIntent = PendingIntent.getBroadcast(A_Alarm.this, 1, intent, FLAG_MUTABLE);
++
++                //TODO [캘린더에 알림 날짜 저장 실시]
++                SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-MM-dd kk:mm:ss", Locale.KOREA);
++                try {
++                    Date date = simpleDateFormat.parse(str_date);
++                    calendar.setTime(date);
++                } catch (ParseException e) {
++                    e.printStackTrace();
++                }
++
++                Log.d("---","---");
++                Log.w("//===========//","================================================");
++                Log.d("","\n"+"[A_Alarm > setAlarmSetting() 메소드 : 알람 등록 수행 실시]");
++                Log.d("","\n"+"[Calendar : "+calendar.toString()+"]");
++                Log.w("//===========//","================================================");
++                Log.d("---","---");
++
++                //TODO [알림 등록 실시]
++                if (Build.VERSION.SDK_INT >= 23) { //TODO 23보다 큰 경우
++                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent); //TODO 버전 23 이상
++                }
++                else { //TODO 23보다 크지 않은 경우
++                    if(Build.VERSION.SDK_INT >= 19){ //TODO 19보다 큰 경우
++                        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent); //TODO 버전 19 이상
++                    }
++                    else { //TODO 19보다 크지 않은 경우
++                        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent); //TODO 버전 19 미만
++                    }
++                }
++
++                S_Preference.setString(getApplication(), "Alarm_Date", str_date);
++
++                getAlertDialog("알람 설정",
++                        "\n"+"[알림이 정상적으로 예약되었습니다]"+"\n"+"\n"+S_Preference.getString(getApplication(), "Alarm_Date"),
++                        "확인",
++                        "취소",
++                        "");
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [알림 등록 취소 메소드]
++    public void setAlarmCancle(){
++        Log.d("---","---");
++        Log.e("//===========//","================================================");
++        Log.d("","\n"+"[A_Alarm > setAlarmCancle() 메소드 : 알람 등록 해제 실시]");
++        Log.e("//===========//","================================================");
++        Log.d("---","---");
++        String save = S_Preference.getString(getApplication(), "Alarm_Date");
++        try {
++            if(save != null && save.length() > 0 && !save.equals("") && !save.contains("null")){
++                String now = getNowTime2();
++                int result = save.compareTo(now);
++                if(result < 0){ //TODO 저장된 시간이 현재 시간보다 작은 경우 (비정상)
++                    getAlertDialog("알람 해제",
++                            "\n"+"[알람 해제할 시간을 다시 확인해주세요]"+"\n"+"\n"+
++                                    "[현재 날짜]"+"\n"+String.valueOf(now)+"\n"+"\n"+
++                                    "[저장된 날짜]"+"\n"+S_Preference.getString(getApplication(), "Alarm_Date"),
++                            "확인",
++                            "취소",
++                            "");
++                }
++                else { //TODO 저장된 시간이 현재 시간보다 큰 경우 (정상)
++                    //TODO [알림 매니저 객체 생성]
++                    AlarmManager alarmManager  = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
++
++                    //TODO [인텐트 해제]
++                    Intent intent = new Intent(A_Alarm.this, A_AlarmReceiver.class);
++                    PendingIntent pendingIntent = PendingIntent.getBroadcast(A_Alarm.this, 1, intent, FLAG_MUTABLE);
++                    alarmManager.cancel(pendingIntent);
++                }
++            }
++            else {
++                getAlertDialog("알람 해제",
++                        "\n"+"[등록된 알람 설정이 없습니다]",
++                        "확인",
++                        "취소",
++                        "");
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [날짜 형태 데이터 파싱 실시]
++    public void getDateParce(String data){
++        try {
++            int check = 0;
++            for(int i=0; i<data.length(); i++) {
++                if(data.charAt(i) == '-') { //TODO 날짜 타입
++                    check ++;
++                }
++            }
++            if(data.length() > 0) {
++                if(check > 0) { //데이터가 한개 초과 저장된 경우
++                    for(int j=0; j<=check; j++) { //콤마가 포함된 [기준]으로 문자열을 분리시킨다
++                        System.out.println("저장된 데이터 : "+data.split("[-]")[j]);
++                        if(j == 0){
++                            yyyy = data.split("[-]")[j].trim();
++                        }
++                        if(j == 1){
++                            MM = data.split("[-]")[j].trim();
++                        }
++                        if(j == 2){
++                            dd = data.split("[-]")[j].trim();
++                        }
++                    }
++                    Log.d("---","---");
++                    Log.w("//===========//","================================================");
++                    Log.d("","\n"+"[A_Alarm > getDateParce() 메소드 : 날짜 형식 데이터 파싱]");
++                    Log.d("","\n"+"[[연] 결과 : "+String.valueOf(yyyy)+"]");
++                    Log.d("","\n"+"[[월] 결과 : "+String.valueOf(MM)+"]");
++                    Log.d("","\n"+"[[일] 결과 : "+String.valueOf(dd)+"]");
++                    Log.w("//===========//","================================================");
++                    Log.d("---","---");
++                }
++                else { //데이터가 한개만 저장된 경우
++                    Log.d("---","---");
++                    Log.w("//===========//","================================================");
++                    Log.d("","\n"+"[A_Alarm > getDateParce() 메소드 : 날짜 형식 데이터 파싱]");
++                    Log.d("","\n"+"[결과 : "+String.valueOf(data)+"]");
++                    Log.w("//===========//","================================================");
++                    Log.d("---","---");
++                }
++            }
++            else {
++                Log.d("---","---");
++                Log.e("//===========//","================================================");
++                Log.d("","\n"+"[A_Alarm > getDateParce() 메소드 : 날짜 형식 데이터 파싱]");
++                Log.d("","\n"+"[결과 : "+String.valueOf("저장된 데이터를 확인해주세요")+"]");
++                Log.e("//===========//","================================================");
++                Log.d("---","---");
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [시간 형태 데이터 파싱 실시]
++    public void getTimeParce(String data){
++        try {
++            int check = 0;
++            for(int i=0; i<data.length(); i++) {
++                if(data.charAt(i) == ':') { //TODO 날짜 타입
++                    check ++;
++                }
++            }
++            if(data.length() > 0) {
++                if(check > 0) { //데이터가 한개 초과 저장된 경우
++                    for(int j=0; j<=check; j++) { //콤마가 포함된 [기준]으로 문자열을 분리시킨다
++                        System.out.println("저장된 데이터 : "+data.split("[:]")[j]);
++                        if(j == 0){
++                            hh = data.split("[:]")[j].trim();
++                        }
++                        if(j == 1){
++                            mmm = data.split("[:]")[j].trim();
++                        }
++                        if(j == 2){
++                            ss = data.split("[:]")[j].trim();
++                        }
++                    }
++                    Log.d("---","---");
++                    Log.w("//===========//","================================================");
++                    Log.d("","\n"+"[A_Alarm > getTimeParce() 메소드 : 시간 형식 데이터 파싱]");
++                    Log.d("","\n"+"[[시] 결과 : "+String.valueOf(hh)+"]");
++                    Log.d("","\n"+"[[분] 결과 : "+String.valueOf(mmm)+"]");
++                    Log.d("","\n"+"[[초] 결과 : "+String.valueOf(ss)+"]");
++                    Log.w("//===========//","================================================");
++                    Log.d("---","---");
++                }
++                else { //데이터가 한개만 저장된 경우
++                    Log.d("---","---");
++                    Log.w("//===========//","================================================");
++                    Log.d("","\n"+"[A_Alarm > getTimeParce() 메소드 : 시간 형식 데이터 파싱]");
++                    Log.d("","\n"+"[결과 : "+String.valueOf(data)+"]");
++                    Log.w("//===========//","================================================");
++                    Log.d("---","---");
++                }
++            }
++            else {
++                Log.d("---","---");
++                Log.e("//===========//","================================================");
++                Log.d("","\n"+"[A_Alarm > getTimeParce() 메소드 : 시간 형식 데이터 파싱]");
++                Log.d("","\n"+"[결과 : "+String.valueOf("저장된 데이터를 확인해주세요")+"]");
++                Log.e("//===========//","================================================");
++                Log.d("---","---");
++            }
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [바깥 레이아웃 클릭 시 키보드 내림]
++    @Override
++    public boolean dispatchTouchEvent(MotionEvent event){
++        int action = event.getAction();
++        switch(action){
++            case(MotionEvent.ACTION_DOWN):
++                try {
++                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
++                    imm.hideSoftInputFromWindow(year_edit.getWindowToken(), 0);
++                    imm.hideSoftInputFromWindow(month_edit.getWindowToken(), 0);
++                    imm.hideSoftInputFromWindow(day_edit.getWindowToken(), 0);
++                    imm.hideSoftInputFromWindow(hour_edit.getWindowToken(), 0);
++                    imm.hideSoftInputFromWindow(minute_edit.getWindowToken(), 0);
++                    imm.hideSoftInputFromWindow(second_edit.getWindowToken(), 0);
++                }
++                catch (Exception e){
++                    e.printStackTrace();
++                }
++                break;
++            case(MotionEvent.ACTION_MOVE):
++                break;
++            default:
++                break;
++        }
++        return super.dispatchTouchEvent(event);
++    }
++
++    //TODO [백버튼 터치시 뒤로 가기]
++    @Override
++    public boolean onKeyDown(int keyCode, KeyEvent event) {
++        // 디바이스의 키 이벤트가 발생했는데, 뒤로가기 이벤트일때
++        if (keyCode == KeyEvent.KEYCODE_BACK) {
++            Log.d("---","---");
++            Log.d("//===========//","================================================");
++            Log.d("","\n"+"[A_Alarm > onKeyDown() 메소드 : 백버튼 터치시 뒤로 가기 이벤트 실시]");
++            Log.d("//===========//","================================================");
++            Log.d("---","---");
++            //TODO [액티비티 종료 실시]
++            finish();
++            overridePendingTransition(0,0);
++        }
++        return true;
++    }
++
++    //TODO [액티비티 종료 메소드]
++    @Override
++    public void onDestroy(){
++        super.onDestroy();
++        Log.d("---","---");
++        Log.d("//===========//","================================================");
++        Log.d("","\n"+"[A_Alarm > onDestroy() 메소드 : 액티비티 종료 실시]");
++        Log.d("//===========//","================================================");
++        Log.d("---","---");
++        //TODO [변수 초기화 실시]
++        try {
++
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [액티비티 실행 준비 메소드]
++    @Override
++    public void onResume(){
++        super.onResume();
++        Log.d("---","---");
++        Log.d("//===========//","================================================");
++        Log.d("","\n"+"[A_Alarm > onResume() 메소드 : 액티비티 실행 준비 실시]");
++        Log.d("//===========//","================================================");
++        Log.d("---","---");
++        try {
++            //TODO [외부 브라우저 복귀 시 화면 전환 애니메이션 없애기 위함]
++            overridePendingTransition(0,0);
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++    }
++
++    //TODO [일회용 AlertDialog 팝업창 호출 메소드 정의 실시]
++    public void getAlertDialog(String header, String content, String ok, String no, String normal){
++        //TODO 타이틀 및 내용 표시
++        String Tittle = header;
++        String Message = content;
++
++        //TODO 버튼 이름 정의
++        String buttonNo = no;
++        String buttonYes = ok;
++        String buttonNature = normal;
++
++        //TODO AlertDialog 팝업창 생성
++        new AlertDialog.Builder(A_Alarm.this)
++                .setTitle(Tittle) //팝업창 타이틀 지정
++                .setIcon(R.drawable.ic_launcher_background) //팝업창 아이콘 지정
++                .setMessage(Message) //팝업창 내용 지정
++                .setCancelable(false) //외부 레이아웃 클릭시도 팝업창이 사라지지않게 설정
++                .setPositiveButton(buttonYes, new DialogInterface.OnClickListener() {
++                    @Override
++                    public void onClick(DialogInterface dialog, int which) {
++                        // TODO Auto-generated method stub
++
++                    }
++                })
++                .setNegativeButton(buttonNo, new DialogInterface.OnClickListener() {
++                    @Override
++                    public void onClick(DialogInterface dialog, int which) {
++                        // TODO Auto-generated method stub
++
++                    }
++                })
++                .setNeutralButton(buttonNature, new DialogInterface.OnClickListener() {
++                    @Override
++                    public void onClick(DialogInterface dialog, int which) {
++                        // TODO Auto-generated method stub
++
++                    }
++                })
++                .show();
++    }
++
++    //TODO [현재 시간 알아오는 메소드]
++    public static String getNowTime2() {
++        long time = System.currentTimeMillis();
++        //SimpleDateFormat dayTime = new SimpleDateFormat("hh:mm:ss");
++        SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
++        String str = dayTime.format(new Date(time));
++        return str;
++    }
++
++}//TODO 클래스 종료
++
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_tasks_18_0_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-tasks:18.0.1@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/50c8613d8a62bd4dd5c67a5ff4087478/transformed/play-services-tasks-18.0.1/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/d04c6ef63a04910e2b4c40135b24a6dd/transformed/play-services-tasks-18.0.1/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.0.1/2e3c5d886f131c9c8ae2d93dcf32aa58dad438e3/play-services-tasks-18.0.1-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_18_0_1_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_18_0_1_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_18_0_1_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_18_0_1_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-tasks:18.0.1@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/50c8613d8a62bd4dd5c67a5ff4087478/transformed/play-services-tasks-18.0.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d04c6ef63a04910e2b4c40135b24a6dd/transformed/play-services-tasks-18.0.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/01e2a08c0397c2be757b2ed9df54b9ea/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.0.1/2e3c5d886f131c9c8ae2d93dcf32aa58dad438e3/play-services-tasks-18.0.1-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement-base:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3e3055edbaf00dcea4d64f2ba09ca87b/transformed/play-services-measurement-base-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-base/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/play-services-measurement-base-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_21_2_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement-base:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3e3055edbaf00dcea4d64f2ba09ca87b/transformed/play-services-measurement-base-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bf87ecbd466bde8cbcc3ce405a0b4586/transformed/jetified-play-services-measurement-base-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-base/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/play-services-measurement-base-21.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement-impl:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/cf5477ca01eefba152e0c8ab902eb57b/transformed/play-services-measurement-impl-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-impl/21.2.0/527e64a785a5f6d4372b43f42d98546c7fda079/play-services-measurement-impl-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_21_2_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement-impl:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cf5477ca01eefba152e0c8ab902eb57b/transformed/play-services-measurement-impl-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9084c55a90005d809a02a1a7fb60eb8a/transformed/jetified-play-services-measurement-impl-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-impl/21.2.0/527e64a785a5f6d4372b43f42d98546c7fda079/play-services-measurement-impl-21.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement-sdk:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/546407e7e12dc6008127737840aa62b4/transformed/play-services-measurement-sdk-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-sdk/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/play-services-measurement-sdk-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_21_2_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement-sdk:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/546407e7e12dc6008127737840aa62b4/transformed/play-services-measurement-sdk-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3bb7910ad5f4a4dcdc1811fb662698a7/transformed/jetified-play-services-measurement-sdk-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-sdk/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/play-services-measurement-sdk-21.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement-sdk-api:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/0211ecaed67591f5e0c6018794355d52/transformed/play-services-measurement-sdk-api-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-sdk-api/21.2.0/e30555d01f4b419de1eed6ceed27b98aedecf946/play-services-measurement-sdk-api-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_21_2_0_aar.xml	
+@@ -1,9 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement-sdk-api:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0211ecaed67591f5e0c6018794355d52/transformed/play-services-measurement-sdk-api-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79b6e6e9b969c244c52bb852e9462aba/transformed/jetified-play-services-measurement-sdk-api-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: app/src/main/res/layout/activity_a_alarm.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_a_alarm.xml b/app/src/main/res/layout/activity_a_alarm.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_a_alarm.xml	
+@@ -0,0 +1,288 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical"
++    android:focusable="true"
++    android:focusableInTouchMode="true"
++    android:id="@+id/parent">
++    <!--    [editText 사용시 자동으로 포커스활성 방지]-->
++    <!--    android:focusable="true"-->
++    <!--    android:focusableInTouchMode="true"-->
++    <!--    android:id="@+id/parent"-->
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="vertical">
++
++        <!-- ====== [타이틀 레이아웃] ====== -->
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="60dp"
++            android:orientation="horizontal"
++            android:background="#343d46"
++            android:layout_marginBottom="5dp">
++            <TextView
++                android:id="@+id/title_text"
++                android:layout_width="0dp"
++                android:layout_height="match_parent"
++                android:layout_weight="1"
++                android:text="[ 알람 매니저 ]"
++                android:textColor="#ffffff"
++                android:textSize="23dp"
++                android:textStyle="bold"
++                android:gravity="center"/>
++        </LinearLayout>
++
++        <!-- ====== [카드 레이아웃] ====== -->
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="vertical"
++            android:background="#343d46"
++            android:layout_margin="10dp">
++
++            <LinearLayout
++                android:layout_width="100dp"
++                android:layout_height="100dp"
++                android:gravity="center"
++                android:layout_gravity="center"
++                android:layout_marginTop="15dp">
++                <ImageView
++                    android:layout_width="100dp"
++                    android:layout_height="100dp"
++                    android:src="@drawable/ic_launcher_background"/>
++            </LinearLayout>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 연도 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/year_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:nextFocusDown="@+id/num_textview2"
++                android:singleLine="true"/>
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 월 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/month_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:nextFocusDown="@+id/name_textview3"
++                android:singleLine="true"/>
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 일 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/day_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:nextFocusDown="@+id/name_textview4"
++                android:singleLine="true"/>
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 시간 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/hour_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:nextFocusDown="@+id/name_textview5"
++                android:singleLine="true"/>
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 분 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/minute_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:nextFocusDown="@+id/name_textview6"
++                android:singleLine="true"/>
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.5"
++                android:text="[ 초 ]"
++                android:textColor="#ffffff"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="bottom"
++                android:orientation="horizontal"
++                android:layout_marginTop="5dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="5dp"/>
++            <EditText
++                android:id="@+id/second_edit"
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:text=""
++                android:textColor="#000000"
++                android:textStyle="bold"
++                android:textSize="15dp"
++                android:gravity="center"
++                android:hint=""
++                android:background="#ffffff"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:singleLine="true"/>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="0dp"
++                android:layout_weight="0.7"
++                android:orientation="horizontal"
++                android:layout_marginTop="15dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                android:layout_marginBottom="15dp">
++
++                <Button
++                    android:id="@+id/ok_button"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    android:layout_weight="0.7"
++                    android:text="알림 등록"
++                    android:textStyle="bold"
++                    android:textSize="15dp"
++                    android:gravity="center"
++                    android:textColor="#000000"
++                    android:background="@drawable/ic_launcher_background"
++                    android:layout_marginTop="0dp"
++                    android:layout_marginLeft="0dp"
++                    android:layout_marginRight="5dp"
++                    android:layout_marginBottom="0dp"/>
++
++                <Button
++                    android:id="@+id/no_button"
++                    android:layout_width="0dp"
++                    android:layout_height="match_parent"
++                    android:layout_weight="0.7"
++                    android:text="등록 취소"
++                    android:textStyle="bold"
++                    android:textSize="15dp"
++                    android:gravity="center"
++                    android:textColor="#000000"
++                    android:background="@drawable/ic_launcher_background"
++                    android:layout_marginTop="0dp"
++                    android:layout_marginLeft="5dp"
++                    android:layout_marginRight="0dp"
++                    android:layout_marginBottom="0dp"/>
++
++            </LinearLayout>
++
++        </LinearLayout>
++
++    </LinearLayout>
++
++</LinearLayout>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_basement_18_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-basement:18.1.0@aar\">\n    <CLASSES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/18.1.0/dc468f5f14200309066c7c5f99374e625c9fa89a/play-services-basement-18.1.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_18_1_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_18_1_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_18_1_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_18_1_0_aar.xml	
+@@ -2,8 +2,8 @@
+   <library name="Gradle: com.google.android.gms:play-services-basement:18.1.0@aar">
+     <CLASSES>
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbc851aa2443d6f67a5aef21dbfae09d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/18.1.0/dc468f5f14200309066c7c5f99374e625c9fa89a/play-services-basement-18.1.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_17_0_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-cloud-messaging:17.0.1@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/ff19b335504d6e8a63d968df56033673/transformed/play-services-cloud-messaging-17.0.1/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/49106a1c99748df6ee3b58e11aae3bb2/transformed/play-services-cloud-messaging-17.0.1/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-cloud-messaging/17.0.1/5b54e40c89bf1882a551b10312acdf03dcf34e82/play-services-cloud-messaging-17.0.1-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_17_0_1_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_17_0_1_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_17_0_1_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_cloud_messaging_17_0_1_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-cloud-messaging:17.0.1@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ff19b335504d6e8a63d968df56033673/transformed/play-services-cloud-messaging-17.0.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/49106a1c99748df6ee3b58e11aae3bb2/transformed/play-services-cloud-messaging-17.0.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19ac50043fdd1ac91a60385c20400857/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-cloud-messaging/17.0.1/5b54e40c89bf1882a551b10312acdf03dcf34e82/play-services-cloud-messaging-17.0.1-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/61f959c784dd1f783128e767472e1316/transformed/play-services-measurement-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement/21.2.0/78b6008c3cd2c3800a55916c6545d53b50910d26/play-services-measurement-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_21_2_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/61f959c784dd1f783128e767472e1316/transformed/play-services-measurement-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/35e5d0cae480b6291a47699eecbaf76a/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement/21.2.0/78b6008c3cd2c3800a55916c6545d53b50910d26/play-services-measurement-21.2.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_21_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-measurement-api:21.2.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/cb20288d22e9055c7cdadee8c050ff21/transformed/play-services-measurement-api-21.2.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-api/21.2.0/26c381557860f3669b13df8a8499fb8790a13b0d/play-services-measurement-api-21.2.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_21_2_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_21_2_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_21_2_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_21_2_0_aar.xml	
+@@ -1,9 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-measurement-api:21.2.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cb20288d22e9055c7cdadee8c050ff21/transformed/play-services-measurement-api-21.2.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a17a267e3156a1f01047069a4a7400a5/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: .idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.datatransport:transport-backend-cct:3.1.8@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/14732bdb086b9eda388884991e2b2e3d/transformed/transport-backend-cct-3.1.8/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3450f214e31050aac2a1dad4d55ab941/transformed/transport-backend-cct-3.1.8/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/3.1.8/aa74d2974b31f0b667757c7f739b32b39a2a8818/transport-backend-cct-3.1.8-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/3.1.8/bdc0b9f2a882ea7170d5aa3963d1ed2944a51c4d/transport-backend-cct-3.1.8-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml b/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.datatransport:transport-backend-cct:3.1.8@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/14732bdb086b9eda388884991e2b2e3d/transformed/transport-backend-cct-3.1.8/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3450f214e31050aac2a1dad4d55ab941/transformed/transport-backend-cct-3.1.8/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/656cd5299faafaeef56fb6e36bfcaa6c/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/3.1.8/aa74d2974b31f0b667757c7f739b32b39a2a8818/transport-backend-cct-3.1.8-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.datatransport:transport-runtime:3.1.8@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/61617f46b12984707450931787991732/transformed/transport-runtime-3.1.8/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/41c760222b78434c73c8d289285c7ed5/transformed/transport-runtime-3.1.8/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-runtime/3.1.8/448df02831bf02af4fece264a7b96a3889f4f594/transport-runtime-3.1.8-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-runtime/3.1.8/9b00f2ea90e62a04032d60248cb67f05abe81fcf/transport-runtime-3.1.8-sources.jar!/\" />\n    </SOURCES>\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml b/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.datatransport:transport-runtime:3.1.8@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/61617f46b12984707450931787991732/transformed/transport-runtime-3.1.8/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/41c760222b78434c73c8d289285c7ed5/transformed/transport-runtime-3.1.8/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d55dd096cc12898d0ee5d1398ba8656/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-runtime/3.1.8/448df02831bf02af4fece264a7b96a3889f4f594/transport-runtime-3.1.8-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_18_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-ads-identifier:18.0.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/f620c45985cf1d72d2ebf45c79d01956/transformed/play-services-ads-identifier-18.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/jars/classes.jar!/\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-ads-identifier/18.0.0/71d2e97dbe034b36f64b28491590ec2b2ec324e3/play-services-ads-identifier-18.0.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_18_0_0_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_18_0_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_18_0_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_18_0_0_aar.xml	
+@@ -1,10 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-ads-identifier:18.0.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f620c45985cf1d72d2ebf45c79d01956/transformed/play-services-ads-identifier-18.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/jars/classes.jar!/" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/81a9821debca35f07b90cf151e077219/transformed/jetified-play-services-ads-identifier-18.0.0/jars/classes.jar!/" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-ads-identifier/18.0.0/71d2e97dbe034b36f64b28491590ec2b2ec324e3/play-services-ads-identifier-18.0.0-javadoc.jar!/" />
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_base_18_0_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.gms:play-services-base:18.0.1@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-base/18.0.1/5c3b2e3ce7819eeff73b937ae37741ad2bd88172/play-services-base-18.0.1-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_gms_play_services_base_18_0_1_aar.xml b/.idea/libraries/Gradle__com_google_android_gms_play_services_base_18_0_1_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_gms_play_services_base_18_0_1_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_gms_play_services_base_18_0_1_aar.xml	
+@@ -1,8 +1,8 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.gms:play-services-base:18.0.1@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/res" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a4c698fb726e4c73fb1055dffed3af75/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+Index: .idea/libraries/Gradle__com_google_android_datatransport_transport_api_3_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Gradle: com.google.android.datatransport:transport-api:3.0.0@aar\">\n    <CLASSES>\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/acb627c61b1eb1b6b9885582a400a160/transformed/transport-api-3.0.0/res\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/494b6e193ea654a4eb0c892d5729ebb0/transformed/transport-api-3.0.0/res\" />\n      <root url=\"jar://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/jars/classes.jar!/\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml\" />\n      <root url=\"file://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/res\" />\n    </CLASSES>\n    <JAVADOC>\n      <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-api/3.0.0/7f506fe3498cda976d1b350c218464a0f1974982/transport-api-3.0.0-javadoc.jar!/\" />\n    </JAVADOC>\n    <SOURCES />\n  </library>\n</component>
+===================================================================
+diff --git a/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_3_0_0_aar.xml b/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_3_0_0_aar.xml
+--- a/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_3_0_0_aar.xml	
++++ b/.idea/libraries/Gradle__com_google_android_datatransport_transport_api_3_0_0_aar.xml	
+@@ -1,11 +1,9 @@
+ <component name="libraryTable">
+   <library name="Gradle: com.google.android.datatransport:transport-api:3.0.0@aar">
+     <CLASSES>
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/acb627c61b1eb1b6b9885582a400a160/transformed/transport-api-3.0.0/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/494b6e193ea654a4eb0c892d5729ebb0/transformed/transport-api-3.0.0/res" />
+       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml" />
+       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f6fe6cb11fb45b0e3a9f106b2f8bbc6/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-api/3.0.0/7f506fe3498cda976d1b350c218464a0f1974982/transport-api-3.0.0-javadoc.jar!/" />
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"deploymentTargetDropDown\">\n    <runningDeviceTargetSelectedWithDropDown>\n      <Target>\n        <type value=\"RUNNING_DEVICE_TARGET\" />\n        <deviceKey>\n          <Key>\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\n            <value value=\"$USER_HOME$/.android/avd/S_Pixel_2_API_31_.avd\" />\n          </Key>\n        </deviceKey>\n      </Target>\n    </runningDeviceTargetSelectedWithDropDown>\n    <timeTargetWasSelectedWithDropDown value=\"2022-11-02T07:32:40.236359Z\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	
++++ b/.idea/deploymentTargetDropDown.xml	
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+-    <runningDeviceTargetSelectedWithDropDown>
++    <targetSelectedWithDropDown>
+       <Target>
+-        <type value="RUNNING_DEVICE_TARGET" />
++        <type value="QUICK_BOOT_TARGET" />
+         <deviceKey>
+           <Key>
+             <type value="VIRTUAL_DEVICE_PATH" />
+@@ -11,7 +11,7 @@
+           </Key>
+         </deviceKey>
+       </Target>
+-    </runningDeviceTargetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2022-11-02T07:32:40.236359Z" />
++    </targetSelectedWithDropDown>
++    <timeTargetWasSelectedWithDropDown value="2022-11-09T04:47:29.037435Z" />
+   </component>
+ </project>
+\ No newline at end of file
