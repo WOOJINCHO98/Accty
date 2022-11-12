@@ -16,13 +16,12 @@
         android:layout_height="wrap_content"
         android:text="알람 시간 설정 하기"/>
 
-    <TimePicker
-        android:id="@+id/timePicker"
+    <Button
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:timePickerMode="spinner"
-        android:gravity="center"
-        android:layout_gravity="center"
+        android:text="알람 시간 설정 하기"
+        android:id="@+id/setTime"
         />
 
     <TextView
@@ -41,7 +40,7 @@
         />
 
     <CheckBox
-        android:id="@+id/bicycle"
+        android:id="@+id/cycling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="자전거"
