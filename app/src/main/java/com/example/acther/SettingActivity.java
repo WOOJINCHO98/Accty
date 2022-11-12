@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -21,10 +22,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class SettingActivity extends AppCompatActivity {
 
-    Button notification_btn;
+    Button setTime,notification_btn;
 
+    static CheckBox running;
+    static CheckBox cycling;
+    static CheckBox hiking;
+    static CheckBox gliding;
+    static CheckBox surfing;
+    static CheckBox fishing;
+    static CheckBox golf;
+    static CheckBox ski;
 
     private final ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
@@ -42,10 +54,21 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+
+        // -----------
         notification_btn = (Button) findViewById(R.id.notification_btn);
-
-
-
+        setTime = (Button) findViewById(R.id.setTime);
+        //-------------
+        running = (CheckBox) findViewById(R.id.running);
+        cycling = (CheckBox) findViewById(R.id.cycling);
+        hiking = (CheckBox) findViewById(R.id.hiking);
+        gliding = (CheckBox) findViewById(R.id.gliding);
+        surfing = (CheckBox) findViewById(R.id.surfing);
+        fishing = (CheckBox) findViewById(R.id.fishing);
+        golf = (CheckBox) findViewById(R.id.golf);
+        ski = (CheckBox) findViewById(R.id.ski);
+        //--------------------------------
+/*
         //알림(Notification)을 관리하는 관리자 객체를 운영체제(Context)로부터 소환하기
         NotificationManager notificationManager=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
@@ -98,18 +121,25 @@ public class SettingActivity extends AppCompatActivity {
         askNotificationPermission();
 
 
+*/
 
-
-
+        setTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), A_Alarm.class);
+                startActivity(intent);
+            }
+        });
         notification_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                notificationManager.notify(2, notification);
 
 
             }
         });
+
+        getIsChecked();
     }
 
 
@@ -124,6 +154,93 @@ public class SettingActivity extends AppCompatActivity {
                 requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
             }
         }
+    }
+
+    public static Integer getIsChecked() {
+        Integer runningFlag = 0;
+        Integer cyclingFlag = 0;
+        Integer hikingFlag = 0;
+        Integer glidingFlag = 0;
+        Integer surfingFlag = 0;
+        Integer fishingFlag = 0;
+        Integer golfFlag = 0;
+        Integer skiFlag = 0;
+
+        if (running.isChecked()) {
+            runningFlag = 1;
+            System.out.println("runningFlag : " + runningFlag);
+        }
+        else {
+            runningFlag = 0;
+            System.out.println("runningFlag : " + runningFlag);
+        }
+
+        if (cycling.isChecked()) {
+            cyclingFlag = 1;
+            System.out.println("cyclingFlag = 1");
+        }
+        else {
+            cyclingFlag = 0;
+            System.out.println("cyclingFlag = 0");
+        }
+
+        if (hiking.isChecked()) {
+            hikingFlag = 1;
+            System.out.println("hikingFlag = 1");
+        }
+        else {
+            hikingFlag = 0;
+            System.out.println("hikingFlag = 0");
+        }
+
+        if (gliding.isChecked()) {
+            glidingFlag = 1;
+            System.out.println("glidingFlag = 1");
+        }
+        else {
+            glidingFlag = 0;
+            System.out.println("glidingFlag = 0");
+        }
+
+        if (surfing.isChecked()) {
+            surfingFlag = 1;
+            System.out.println("surfingFlag = 1");
+        }
+        else {
+            surfingFlag = 0;
+            System.out.println("surfingFlag = 0");
+        }
+
+        if (fishing.isChecked()) {
+            fishingFlag = 1;
+            System.out.println("fishingFlag = 1");
+        }
+        else {
+            fishingFlag = 0;
+            System.out.println("fishingFlag = 0");
+        }
+
+        if (golf.isChecked()) {
+            golfFlag = 1;
+            System.out.println("golfFlag = 1");
+        }
+        else {
+            golfFlag = 0;
+            System.out.println("golfFlag = 0");
+        }
+
+        if (ski.isChecked()) {
+            skiFlag = 1;
+            System.out.println("skiFlag = 1");
+        }
+        else {
+            skiFlag = 0;
+            System.out.println("skiFlag = 0");
+
+        }
+
+
+        return runningFlag;
     }
 
 

@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (ImageView) findViewById(R.id.btn2);
         btn3 = (ImageView) findViewById(R.id.btn3);
         settingBtn = (Button) findViewById(R.id.settingBtn);
-        settingBtn2 = (Button) findViewById(R.id.settingBtn2);
 
 
 
@@ -97,15 +96,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        settingBtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,A_Alarm.class);
-                startActivity(intent);
-
-
-            }
-        });
 
 
 
