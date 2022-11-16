@@ -64,6 +64,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"

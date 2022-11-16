@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        ((SplashActivity)SplashActivity.mContext).makeFlag();
+
+
+        //권한 물어보기
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{"android.permission.INTERNET"},
                 0);
@@ -50,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{"android.permission.ACCESS_FINE_LOCATION"},
                 0);
 
+
+        // 컴포넌트를 초기화 합니다.
         btn1 = (ImageView) findViewById(R.id.btn1);
         btn2 = (ImageView) findViewById(R.id.btn2);
         btn3 = (ImageView) findViewById(R.id.btn3);

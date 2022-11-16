@@ -1,16 +1,15 @@
 package com.example.acther;
 
+
+
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.TypedValue;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,51 +24,45 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Scanner;
 
 
-public class CycleActivity  extends AppCompatActivity {
 
-    TextView test,test1,test2,test3,test4;
+public class FlagMaker extends AppCompatActivity {
+
     String key = "oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
     String result = "";
 
 
 
+    public static Context mContext;
+
 
     public static int TO_GRID = 0;
     public static int TO_GPS = 1;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void makeFlag() {
+
+        mContext = this;
+
         setContentView(R.layout.activity_cycle);
 
+        Log.d("----------", "onCreate: ################## IN FLAGMAKER ####### AT ON CREATE ###############" );
 
-        test = (TextView) findViewById(R.id.test) ;
-        test1 = (TextView) findViewById(R.id.test1);
-        test2 = (TextView) findViewById(R.id.test2);
-        test3 = (TextView) findViewById(R.id.test3);
-        test4 = (TextView) findViewById(R.id.test4);
 
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if ( Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
-            ActivityCompat.requestPermissions( CycleActivity.this, new String[] {
+            ActivityCompat.requestPermissions( FlagMaker.this, new String[] {
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
         }
         else{
@@ -81,13 +74,13 @@ public class CycleActivity  extends AppCompatActivity {
                 double latitude = location.getLatitude();
                 double altitude = location.getAltitude();
 
-                test.setText("위치정보 : " + provider + "\n" +
+                System.out.println("위치정보 : " + provider + "\n" +
                         "위도 : " + longitude + "\n" +
                         "경도 : " + latitude + "\n" +
                         "고도  : " + altitude);
 
                 // gps 좌표에서 기상청 좌표계로 변환
-                LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
+                FlagMaker.LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
 
                 // 받아온 위 경도 로그로 확인
                 Log.e(">>", "x = " + real.x + ", y = " + real.y);
@@ -108,7 +101,7 @@ public class CycleActivity  extends AppCompatActivity {
                 String strX = Integer.toString(temp_x);
                 String strY = Integer.toString(temp_y);
 
-                test1.setText("기상청 x 좌표 : "+ temp_x + "\n" + "기상청 y 좌표 : " + temp_y);
+                System.out.println("기상청 x 좌표 : "+ temp_x + "\n" + "기상청 y 좌표 : " + temp_y);
 
 
                 String kakaoX = Double.toString(longitude);
@@ -134,14 +127,7 @@ public class CycleActivity  extends AppCompatActivity {
 
 
 
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                test2.setText(address);
-
-                            }
-                        });
-
+                        System.out.println("주소 : " + address);
 
 
 
@@ -232,7 +218,7 @@ public class CycleActivity  extends AppCompatActivity {
                         {
                             JSONObject valueObject = ValueArray.getJSONObject(i);
 
-                            Value value = new Value();
+                            FlagMaker.Value value = new FlagMaker.Value();
 
 
                             //value.setCategory(valueObject.getString("category"));
@@ -274,7 +260,7 @@ public class CycleActivity  extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
                                             "최대 풍속이 4.0 이하 입니다.\n" +
                                             "자전거 타기 좋은 날 입니다."+
                                             "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
@@ -287,7 +273,7 @@ public class CycleActivity  extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    test3.setText("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
                                             "최대 풍속이 4.0 보다 높습니다.\n" +
                                             "자전거 타기 힘든 날 입니다."+
                                             "오늘의 최대 풍속은  "+doubleMaxWindSpeed + " 입니다.");
@@ -342,13 +328,8 @@ public class CycleActivity  extends AppCompatActivity {
                             }
                         }
 
+                        System.out.println("바람의 방향은  \n" + windDirectionCntList);
 
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                test4.setText("바람의 방향은  \n" + windDirectionCntList);
-                            }
-                        });
 
 
                         System.out.println(receiveMsg);
@@ -428,7 +409,7 @@ public class CycleActivity  extends AppCompatActivity {
 
     // gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
 
-    private LatXLngY convertGRID_GPS(int mode, double lat_X, double lng_Y )
+    public FlagMaker.LatXLngY convertGRID_GPS(int mode, double lat_X, double lng_Y )
     {
         double RE = 6371.00877; // 지구 반경(km)
         double GRID = 5.0; // 격자 간격(km)
@@ -459,7 +440,7 @@ public class CycleActivity  extends AppCompatActivity {
         sf = Math.pow(sf, sn) * Math.cos(slat1) / sn;
         double ro = Math.tan(Math.PI * 0.25 + olat * 0.5);
         ro = re * sf / Math.pow(ro, sn);
-        LatXLngY rs = new LatXLngY();
+        FlagMaker.LatXLngY rs = new FlagMaker.LatXLngY();
 
         if (mode == TO_GRID) {
             rs.lat = lat_X;
@@ -565,7 +546,7 @@ public class CycleActivity  extends AppCompatActivity {
             double longitude = location.getLongitude(); // 위도
             double latitude = location.getLatitude(); // 경도
             double altitude = location.getAltitude(); // 고도
-            test.setText("위치정보 : " + provider + "\n" + "위도 : " + longitude + "\n" + "경도 : " + latitude + "\n" + "고도 : " + altitude);
+            System.out.println("위치정보 : " + provider + "\n" + "위도 : " + longitude + "\n" + "경도 : " + latitude + "\n" + "고도 : " + altitude);
         } public void onStatusChanged(String provider, int status, Bundle extras) {
 
         } public void onProviderEnabled(String provider) {
@@ -574,7 +555,4 @@ public class CycleActivity  extends AppCompatActivity {
 
         }
     };
-
-
 }
-
