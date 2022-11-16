@@ -13,8 +13,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c01d1f-247a-4cbf-a6fd-4b7f58527ba9" name="Default Changelist" comment="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a5c01d1f-247a-4cbf-a6fd-4b7f58527ba9" name="Default Changelist" comment="README UPDATE">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <list id="770b700f-5a36-451a-b8ec-cdc5352b8c1e" name="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" comment="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +173,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668608093046</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding">
+      <created>1668608237922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668608237922</updated>
+    </task>
+    <task id="LOCAL-00006" summary="README UPDATE">
+      <created>1668608461568</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668608461568</updated>
+    </task>
+    <task id="LOCAL-00007" summary="README UPDATE">
+      <created>1668608576909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668608576909</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +227,7 @@
     <MESSAGE value="For Window Project" />
     <MESSAGE value="Method In SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding" />
     <MESSAGE value="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding" />
+    <MESSAGE value="README UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="README UPDATE" />
   </component>
 </project>
