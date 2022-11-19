@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
 
-    ImageView btn1,btn2,btn3;
-    Button settingBtn,settingBtn2;
+    ImageView settingBtn;
+    Button btn1,btn2,btn3,settingBtn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{"android.permission.ACCESS_FINE_LOCATION"},
                 0);
 
-        btn1 = (ImageView) findViewById(R.id.btn1);
-        btn2 = (ImageView) findViewById(R.id.btn2);
-        btn3 = (ImageView) findViewById(R.id.btn3);
-        settingBtn = (Button) findViewById(R.id.settingBtn);
+        btn1 = (Button) findViewById(R.id.btn1);
+        btn2 = (Button) findViewById(R.id.btn2);
+        btn3 = (Button) findViewById(R.id.btn3);
+        settingBtn = (ImageView) findViewById(R.id.settingBtn);
 
 
 

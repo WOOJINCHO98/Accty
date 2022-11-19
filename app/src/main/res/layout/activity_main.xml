@@ -3,213 +3,235 @@
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#F2F2F2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+ >
 
 
-    <TableLayout
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        
-        android:stretchColumns="*">
 
 
-        <TableRow>
+        android:orientation="vertical">
 
-            <TextView
-                android:layout_width="53dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="30dp"
-                android:text="Activity"
-                android:textColor="@color/black"
-                android:textSize="40dp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+
+            ></TextView
+           >
+    <LinearLayout
+        android:background="#F2F2F2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="Activity"
+            android:textSize="65dp"
+            android:textColor="#00D1FF"
+            android:color="@color/black"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/settingBtn"
+            android:src="@drawable/ic_baseline_settings_24">
+
+        </ImageView>
+
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:color="@color/black"
+            ></TextView>
+
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text=":"
-                android:id="@+id/settingBtn"
-
-
-                />
-
-        </TableRow>
-
-        <TableRow>
-
-            <ImageView
-
-                android:id="@+id/rectangle_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:elevation="20dp"
-                android:scaleType="center"
-
-                android:src="@drawable/rectangle" />
-
-            <ImageView
-                android:id="@+id/rectangle_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:elevation="15dp"
-                android:scaleType="center"
-                android:src="@drawable/rectangle"
-
-                />
-        </TableRow>
-
-        <TableRow>
-
-
-            <ImageView
+                android:layout_gravity="center"
+                android:background="@drawable/mainbox"
                 android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="러닝"
+                android:elevation="10dp"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/running90"
+                android:padding="40dp"/>
 
-                />
-
-            <ImageView
+            <Button
+                android:layout_gravity="center"
+                android:background="@drawable/mainbox"
                 android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="골프"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/golf_icon"
+                android:padding="40dp"/>
 
-        </TableRow>
 
-        <TableRow>
+        </LinearLayout>
 
-            <ImageView
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/mainbox"
                 android:id="@+id/btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="40dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="싸이클"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/cycling_icon"
+                android:padding="40dp"/>
+
+            <Button
+                android:background="@drawable/mainbox"
+                android:id="@+id/btn4"
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="패러글라이딩"
+                android:textColor="#009BF2"
+                android:textSize="24dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/paragliding_icon"
+                android:padding="40dp"/>
 
-                />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="@drawable/mainbox"
+
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="낚시"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/fishing_icon"
+                android:padding="40dp"/>
 
-        </TableRow>
+            <Button
+                android:background="@drawable/mainbox"
 
-        <TableRow>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
 
-                />
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="서핑"
+                android:layout_marginBottom="10dp"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/surf90"
+                android:padding="40dp"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="@drawable/mainbox"
+
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="40dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
 
-        </TableRow>
+                android:layout_marginBottom="10dp"
+                android:text="스키"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/skking_icon"
+                android:padding="40dp"/>
 
-        <TableRow>
+            <Button
+                android:background="@drawable/mainbox"
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:text="등산"
+                android:layout_marginBottom="10dp"
+                android:textColor="#009BF2"
+                android:textSize="35dp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/running90"
+                android:padding="40dp"/>
 
 
-                />
+        </LinearLayout>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
+    </LinearLayout>
 
-        </TableRow>
-
-        <TableRow>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
-
-
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
-
-
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background"
-
-
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_launcher_background" />
-
-        </TableRow>
-
-    </TableLayout>
 </ScrollView>
