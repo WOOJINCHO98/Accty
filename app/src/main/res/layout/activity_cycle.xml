@@ -5,39 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CycleActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <TextView
-        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CycleZone"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="Running"
+        android:textSize="40sp"
+        android:textColor="#00D1FF"
+        android:color="@color/black"
+        ></TextView>
 
-    <TextView
-        android:id="@+id/test1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-    <TextView
-        android:id="@+id/test2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test2222"
-        android:layout_margin="35dp"
-        />
-    <TextView
-        android:id="@+id/test3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test3"
-        android:layout_margin="35dp"
-        />
-    <TextView
-        android:id="@+id/test4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test4"
-        android:layout_margin="35dp"
-        />
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="600dp"
+            android:background="@drawable/mainbox"
+            android:elevation="10dp"
+            >
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="러닝하기 좋은 날씨"
+            android:layout_gravity="center"
+            android:color="@color/black"
+            android:textSize="20sp"/>
+
+    </FrameLayout>
+
 </LinearLayout>

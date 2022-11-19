@@ -4,26 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F2F2"
-    xmlns:android="http://schemas.android.com/apk/res/android"
- >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-
         android:orientation="vertical">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50dp"
+            android:textSize="20dp"
+            ></TextView>
 
-            ></TextView
-           >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"></TextView>
+
     <LinearLayout
         android:background="#F2F2F2"
         android:layout_gravity="center"
@@ -33,21 +33,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="30dp"
             android:fontFamily="@font/roboto_black"
             android:text="Activity"
-            android:textSize="65dp"
-            android:textColor="#00D1FF"
+            android:textSize="40sp"
+            android:textColor="#009BF2"
             android:color="@color/black"
             >
 
         </TextView>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="134dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/settingBtn"
             android:src="@drawable/ic_baseline_settings_24">
 
@@ -59,9 +59,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50dp"
+            android:textSize="10dp"
             android:color="@color/black"
             ></TextView>
+
 
         <LinearLayout
             android:background="#F2F2F2"
@@ -71,37 +72,38 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_gravity="center"
+
                 android:background="@drawable/mainbox"
                 android:id="@+id/btn1"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="40dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
                 android:layout_marginBottom="10dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
                 android:text="러닝"
                 android:elevation="10dp"
                 android:textColor="#009BF2"
-                android:textSize="35dp"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/running90"
-                android:padding="40dp"/>
+                android:padding="20dp"/>
 
             <Button
-                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
                 android:background="@drawable/mainbox"
                 android:id="@+id/btn2"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
                 android:text="골프"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="#009BF2"
-                android:textSize="35dp"
+                android:textSize="24sp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/golf_icon"
-                android:padding="40dp"/>
+                android:padding="20dp"/>
 
 
         </LinearLayout>
@@ -111,40 +113,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
             <Button
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/mainbox"
                 android:id="@+id/btn3"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="40dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
-                android:text="싸이클"
-                android:textColor="#009BF2"
-                android:textSize="35dp"
-                android:gravity="bottom|center_horizontal"
-                android:drawableTop="@drawable/cycling_icon"
-                android:padding="40dp"/>
-
-            <Button
-                android:background="@drawable/mainbox"
-                android:id="@+id/btn4"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
-                android:text="패러글라이딩"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:text="싸이클"
                 android:textColor="#009BF2"
-                android:textSize="24dp"
+                android:textSize="24sp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/cycling_icon"
+                android:padding="20dp"/>
+
+            <Button
+                android:background="@drawable/mainbox"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:text="패러글라이딩"
+                android:layout_marginBottom="10dp"
+                android:textColor="#009BF2"
+                android:textSize="19sp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/paragliding_icon"
-                android:padding="40dp"/>
-
+                android:padding="20dp"/>
 
         </LinearLayout>
 
@@ -156,36 +154,33 @@
 
             <Button
                 android:background="@drawable/mainbox"
-
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
-                android:text="낚시"
-                android:textColor="#009BF2"
-                android:textSize="35dp"
-                android:gravity="bottom|center_horizontal"
-                android:drawableTop="@drawable/fishing_icon"
-                android:padding="40dp"/>
-
-            <Button
-                android:background="@drawable/mainbox"
-
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
                 android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:text="낚시"
+                android:textColor="#009BF2"
+                android:textSize="24sp"
+                android:gravity="bottom|center_horizontal"
+                android:drawableTop="@drawable/fishing_icon"
+                android:padding="20dp"/>
 
-                android:layout_width="220dp"
-                android:layout_height="250dp"
+            <Button
+                android:background="@drawable/mainbox"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
                 android:text="서핑"
                 android:layout_marginBottom="10dp"
                 android:textColor="#009BF2"
-                android:textSize="35dp"
+                android:textSize="24sp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/surf90"
-                android:padding="40dp"/>
+                android:padding="20dp"/>
 
 
         </LinearLayout>
@@ -198,20 +193,18 @@
 
             <Button
                 android:background="@drawable/mainbox"
-
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="40dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
-
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
                 android:layout_marginBottom="10dp"
                 android:text="스키"
                 android:textColor="#009BF2"
-                android:textSize="35dp"
+                android:textSize="24sp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/skking_icon"
-                android:padding="40dp"/>
+                android:padding="20dp"/>
 
             <Button
                 android:background="@drawable/mainbox"
@@ -219,18 +212,25 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
                 android:layout_marginLeft="20dp"
-                android:layout_width="220dp"
-                android:layout_height="250dp"
+                android:layout_width="150dp"
+                android:layout_height="190dp"
                 android:text="등산"
                 android:layout_marginBottom="10dp"
                 android:textColor="#009BF2"
-                android:textSize="35dp"
+                android:textSize="24sp"
                 android:gravity="bottom|center_horizontal"
-                android:drawableTop="@drawable/running90"
-                android:padding="40dp"/>
+                android:drawableTop="@drawable/trekking_icon"
+                android:padding="20dp"/>
 
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            ></TextView>
+
 
     </LinearLayout>
 
