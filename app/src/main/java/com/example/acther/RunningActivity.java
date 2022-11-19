@@ -38,6 +38,19 @@ public class RunningActivity extends AppCompatActivity
         }
 
 
+        System.out.println(a.get(0).toString());
+        System.out.println(a.get(1).toString());
+        System.out.println(a.get(2).toString());
+        System.out.println(a.get(3).toString());
+        System.out.println(a.get(4).toString());
+        System.out.println(a.get(5).toString());
+        System.out.println(a.get(6).toString());
+        System.out.println(a.get(7).toString());
+        System.out.println(a.get(8).toString());
+        System.out.println(a.get(9).toString());
+        System.out.println(a.get(10).toString());
+
+
         CharSequence address = a.get(0).toString();
 
         test.setText(address); // 주소정보

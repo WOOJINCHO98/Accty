@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -104,6 +105,20 @@ public class SplashActivity extends AppCompatActivity {
 
 
         mContext = this;
+
+        //권한 물어보기
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.INTERNET"},
+                0);
+
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.ACCESS_FINE_LOCATION"},
+                0);
+
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.ACCESS_COURCE_LOCATION"},
+                0);
+
 
 
 
