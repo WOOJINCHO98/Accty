@@ -1,4 +1,11 @@
-# Accty
 
-# FishingActivity.java 에 주된 내용이 있습니다. 
-메인 화면 우측 상단 버튼에 위치합니다.
+
+![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=ACTTY%20CAPSTONE%20DESIGN&fontSize=90&fontColor=#2b2b2b&animation=fadeIn)
+
+<div align="center">
+
+
+
+
+
+</div>

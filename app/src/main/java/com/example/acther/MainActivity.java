@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        ((SplashActivity)SplashActivity.mContext).makeFlag();
+
+
+        //권한 물어보기
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{"android.permission.INTERNET"},
                 0);
