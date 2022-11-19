@@ -21,8 +21,8 @@
         ></TextView>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         >
 
         <ImageView
@@ -31,17 +31,62 @@
             android:layout_height="600dp"
             android:background="@drawable/mainbox"
             android:elevation="10dp"
-            >
-        </ImageView>
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="러닝하기 좋은 날씨"
-            android:layout_gravity="center"
             android:color="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:id="@+id/test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
+        <TextView
+            android:id="@+id/test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test2"
+            android:layout_gravity="center"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:id="@+id/test3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test3"
+            android:layout_gravity="center"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:id="@+id/test4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test4"
+            android:layout_gravity="center"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:id="@+id/test5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test5"
+            android:layout_gravity="center"
+            android:elevation="11dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
     </FrameLayout>
 
 </LinearLayout>

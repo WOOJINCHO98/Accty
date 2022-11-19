@@ -130,6 +130,7 @@
                 android:padding="20dp"/>
 
             <Button
+                android:id="@+id/btn4"
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
@@ -153,6 +154,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn5"
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
@@ -168,6 +170,7 @@
                 android:padding="20dp"/>
 
             <Button
+                android:id="@+id/btn6"
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
@@ -192,6 +195,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn7"
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
@@ -207,6 +211,7 @@
                 android:padding="20dp"/>
 
             <Button
+                android:id="@+id/btn8"
                 android:background="@drawable/mainbox"
 
                 android:layout_marginTop="20dp"

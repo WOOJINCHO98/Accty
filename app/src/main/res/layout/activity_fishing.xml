@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CycleActivity"
+    tools:context=".CycleActivity_backup"
     android:orientation="vertical">
     <TextView
         android:id="@+id/test"

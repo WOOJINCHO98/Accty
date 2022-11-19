@@ -1,23 +1,10 @@
 package com.example.acther;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageView settingBtn;
-    Button btn1,btn2,btn3,settingBtn2;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,settingBtn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ((SplashActivity)SplashActivity.mContext).makeFlag();
 
 
         //권한 물어보기
@@ -58,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
+        btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
+        btn7 = (Button) findViewById(R.id.btn7);
+        btn8 = (Button) findViewById(R.id.btn8);
         settingBtn = (ImageView) findViewById(R.id.settingBtn);
 
 
@@ -69,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,CycleActivity.class);
+                Intent intent = new Intent(MainActivity.this, RunningActivity.class);
                 startActivity(intent);
 
             }
@@ -77,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,FishingActivity.class);
+                Intent intent = new Intent(MainActivity.this,GolfSelectActivity.class);
                 startActivity(intent);
 
             }
@@ -85,7 +76,51 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,GlidingActivity.class);
+                Intent intent = new Intent(MainActivity.this,CycleActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,GlidingSelectActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FishingSelectActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SurfingActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SkiSelectActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HikingActivity.class);
                 startActivity(intent);
 
             }

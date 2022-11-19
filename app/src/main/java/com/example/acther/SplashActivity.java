@@ -67,6 +67,7 @@ public class SplashActivity extends AppCompatActivity {
     public static int TO_GRID = 0;
     public static int TO_GPS = 1;
 
+    String address = "";
 
     //값 들을 리스트로 받기
     List<String> categoryList = new ArrayList<String>();
@@ -135,12 +136,20 @@ public class SplashActivity extends AppCompatActivity {
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        Log.d("----------", "onCreate: ################## IN 어디? ####### AT ON CREATE ###############" );
+
         if ( Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions( SplashActivity.this, new String[] {
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
+
+            Log.d("----------", "onCreate: ################## IN 어디ㅐㅔㅓㅑㅕㅗ? ####### AT ON CREATE ###############" );
+
         }
         else{
+
+            Log.d("----------", "onCreate: ################## IN ㅎㄹ오호옹ㅅ뇨어디? ####### AT ON CREATE ###############" );
+            System.out.println("여기는 어디?");
             // 가장최근 위치정보 가져오기
             Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if(location != null) {
@@ -153,6 +162,8 @@ public class SplashActivity extends AppCompatActivity {
                         "위도 : " + longitude + "\n" +
                         "경도 : " + latitude + "\n" +
                         "고도  : " + altitude);
+
+                Log.d("----------", "onCreate: ################## IN 어디? ####### AT ON CREATE ###############" );
 
                 // gps 좌표에서 기상청 좌표계로 변환
                 SplashActivity.LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
@@ -197,12 +208,13 @@ public class SplashActivity extends AppCompatActivity {
                         JSONObject jObject = new JSONObject(jsonData);
                         JSONArray jArray = jObject.getJSONArray("documents");
                         JSONObject obj = jArray.getJSONObject(0);
-                        obj = obj.getJSONObject("address");
-                        String address = obj.getString("address_name");
+                        obj = obj.getJSONObject("road_address");
+                        address = obj.getString("address_name");
 
 
 
                         System.out.println("주소 : " + address);
+
 
 
 
@@ -500,7 +512,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
 
-
+                        System.out.println("주소 : " + address);
 
                         System.out.println("Running : " + setRunningFlag());
                         System.out.println("Hiking : " + setHikingFlag());
@@ -509,6 +521,34 @@ public class SplashActivity extends AppCompatActivity {
                         System.out.println("Ski : " + setSkiFlag());
                         System.out.println("Paragliding : " + setParaglidingFlag());
 
+
+                        System.out.println("--------------------------------------");
+
+                        System.out.println("TempAverage : " + setTempAverage());
+                        System.out.println("Rain1hAverage : " + setRain1hAverage());
+                        System.out.println("Snow1hAverage : " + setSnow1hAverage());
+                        System.out.println("WindSpeedAverage : " + setWindSpeedAverage());
+
+                        System.out.println("--------------------------------------");
+
+
+
+                        System.out.println(address);
+
+                        result.add(address);
+                        result.add(setRunningFlag().toString());
+                        result.add(setGolfFlag().toString());
+                        result.add(setCycleFlag().toString());
+                        result.add(setParaglidingFlag().toString());
+                        result.add(setSkiFlag().toString());
+                        result.add(setHikingFlag().toString());
+
+
+                        result.add(setTempAverage().toString());
+                        result.add(setRain1hAverage().toString());
+                        result.add(setSnow1hAverage().toString());
+                        result.add(setWindSpeedAverage().toString());
+                        result.add(maxWindSpeed.toString());
 
 
                         //setSurfingFlag();
@@ -559,6 +599,72 @@ public class SplashActivity extends AppCompatActivity {
          */
 
         return result;
+    }
+
+
+    public Double setWindSpeedAverage() {
+        Double windSpeedAverage = 0.0;
+        int i;
+        for (i=0; i<windSpeedList.size(); i++) {
+            windSpeedAverage += (Double)windSpeedList.get(i);
+        }
+        windSpeedAverage = windSpeedAverage / windSpeedList.size();
+        return windSpeedAverage;
+    }
+
+
+    public Double setRain1hAverage(){
+
+
+        Double sum = 0.0;
+
+        try {
+            for (int i=0; i<rain1hList.size(); i++){
+                sum += Double.parseDouble(rain1hList.get(i));
+            }
+            return sum/rain1hList.size();
+        }
+        catch (Exception e){
+            return 0.0;
+        }
+
+    }
+
+
+    public Double setSnow1hAverage(){
+
+
+        Double sum = 0.0;
+
+        try {
+            for (int i=0; i<snow1hList.size(); i++){
+                sum += Double.parseDouble(snow1hList.get(i));
+            }
+            return sum/snow1hList.size();
+        }
+        catch (Exception e){
+            return 0.0;
+        }
+
+    }
+
+    public Double setTempAverage() {
+        Double tempAverage = 0.0;
+        Double tempSum = 0.0;
+        Integer tempCnt = 0;
+        Integer i;
+
+        for (i=0; i<tempList.size(); i++) {
+            if (tempList.get(i) != null) {
+                tempSum += (Double)tempList.get(i);
+                tempCnt++;
+            }
+        }
+
+        tempAverage = tempSum / tempCnt;
+
+        System.out.println("tempAverage : " + tempAverage);
+        return tempAverage;
     }
 
 
@@ -654,7 +760,10 @@ public class SplashActivity extends AppCompatActivity {
         if (dailyTempGap >= 10){
             DailyTempGapFlag = 1;
         }
-        else if (dailyTempGap >= 5){
+        else if (dailyTempGap >= 15){
+            DailyTempGapFlag = 2;
+        }
+        else if (dailyTempGap >= 20){
             DailyTempGapFlag = 2;
         }
         else{
@@ -690,7 +799,7 @@ public class SplashActivity extends AppCompatActivity {
         int i;
         int baseFlag = 0;
 
-        if (setRainFlag() == 1 && setSnowFlag() == 1 && setSkyFlag() == 1 && setMinTempFlag() == 1 && setMaxTempFlag() == 1) {
+        if (setRainFlag() == 1 && setSnowFlag() == 1 && setMinTempFlag() == 1 && setMaxTempFlag() == 1) {
             baseFlag = 1;
         } else {
             baseFlag = 0;
@@ -722,7 +831,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int hikingFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1){
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
             hikingFlag = 1;
         }
         else{
@@ -734,7 +843,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
     // 싸이클 FLAG 값 정하기
-    public int setCycleFlag() {
+    public Integer setCycleFlag() {
         // 풍속이 4.0ms 이하일 때
         if (doubleMaxWindSpeed <= 4.0 && setBaseFlag() == 1) {
             runOnUiThread(new Runnable() {
@@ -772,7 +881,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int golfFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1){
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
             golfFlag = 1;
         }
         else{
@@ -783,11 +892,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     // 스키 FLAG 값 정하기
+    // 스키는 조건을 조금 더 추가해야함
     public Integer setSkiFlag(){
 
         int skiFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1){
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1 && (Double)maxTempList.get(0) < 8.0) {
             skiFlag = 1;
         }
         else{

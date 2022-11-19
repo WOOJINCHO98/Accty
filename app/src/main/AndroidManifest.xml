@@ -21,6 +21,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
         <meta-data
             android:name="firebase_messaging_auto_init_enabled"
@@ -31,7 +32,6 @@
 
         <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
              See README(https://goo.gl/l4GJaQ) for more. -->
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_launcher_background" />
@@ -49,6 +49,35 @@
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
+            android:name=".RunningActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".SkiSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity
+            android:name=".GolfSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".FishingSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".SurfingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".GlidingSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".GolfActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
             android:name=".CycleActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
@@ -60,6 +89,11 @@
             android:name=".GlidingActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".HikingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
