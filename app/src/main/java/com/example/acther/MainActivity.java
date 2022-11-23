@@ -29,6 +29,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    FlagMaker flagMaker = new FlagMaker();
+
     private static final String TAG = "MainActivity";
 
     SQLiteDatabase sqlDb;
@@ -40,6 +42,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //flagMaker.makeFlag();
+
+/*
+        //권한 물어보기
+        ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{"android.permission.INTERNET"},
+                0);
+
+        ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{"android.permission.ACCESS_FINE_LOCATION"},
+                0);
+
+        ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{"android.permission.ACCESS_COURCE_LOCATION"},
+                0);
+
+        */
 
 
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);

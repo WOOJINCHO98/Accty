@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
     tools:context=".CycleActivity"
     android:orientation="vertical"
-    android:background="@color/white">
+    >
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,17 +16,19 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/roboto_black"
-        android:text="Running"
+        android:text="Cycling"
         android:textSize="40sp"
         android:textColor="#00D1FF"
         android:color="@color/black"
         ></TextView>
 
 
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="러닝하기 좋은 날씨"
+        android:text="자전거타기 좋은 날씨"
         android:color="@color/black"
         android:textSize="20sp"
         />
@@ -33,7 +37,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-
     <TextView
         android:id="@+id/test2"
         android:layout_width="wrap_content"
@@ -58,19 +61,23 @@
         android:layout_height="wrap_content"
         android:text="test5"
         />
+
+
+
     <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="600dp"
-            android:background="@drawable/mainbox"
-            android:elevation="10dp"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mainbox"
+            android:scaleType="centerCrop"
             />
 
     </FrameLayout>
+
+
 
 </LinearLayout>

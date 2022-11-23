@@ -17,9 +17,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,8 +29,13 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -58,6 +61,8 @@ public class SplashActivity extends AppCompatActivity {
 
     List<String> result = new ArrayList<String>();
 
+
+    public static HashMap<String, String> hMap = new HashMap<String, String>();
 
 
 
@@ -106,20 +111,6 @@ public class SplashActivity extends AppCompatActivity {
 
         mContext = this;
 
-        //권한 물어보기
-        ActivityCompat.requestPermissions(SplashActivity.this,
-                new String[]{"android.permission.INTERNET"},
-                0);
-
-        ActivityCompat.requestPermissions(SplashActivity.this,
-                new String[]{"android.permission.ACCESS_FINE_LOCATION"},
-                0);
-
-        ActivityCompat.requestPermissions(SplashActivity.this,
-                new String[]{"android.permission.ACCESS_COURCE_LOCATION"},
-                0);
-
-
 
 
 
@@ -162,7 +153,6 @@ public class SplashActivity extends AppCompatActivity {
 
         }
         else{
-
             Log.d("----------", "onCreate: ################## IN ㅎㄹ오호옹ㅅ뇨어디? ####### AT ON CREATE ###############" );
             System.out.println("여기는 어디?");
             // 가장최근 위치정보 가져오기
@@ -220,18 +210,34 @@ public class SplashActivity extends AppCompatActivity {
                         String receiveMsg = kakaoRes;
 
 
-                        JSONObject jObject = new JSONObject(jsonData);
-                        JSONArray jArray = jObject.getJSONArray("documents");
-                        JSONObject obj = jArray.getJSONObject(0);
-                        obj = obj.getJSONObject("road_address");
-                        address = obj.getString("address_name");
+                        System.out.println("######################################### \n\n\n"+jsonData);
 
+
+
+
+                        try{
+                            JSONObject jObject = new JSONObject(jsonData);
+                            JSONArray jArray = jObject.getJSONArray("documents");
+                            JSONObject obj = jArray.getJSONObject(0);
+                            obj = obj.getJSONObject("road_address");
+                            address = obj.getString("address_name");
+                        }catch(JSONException e){
+                            JSONObject jObject2 = new JSONObject(jsonData);
+                            JSONArray jArray2 = jObject2.getJSONArray("documents");
+                            JSONObject obj2 = jArray2.getJSONObject(0);
+                            obj2 = obj2.getJSONObject("address");
+                            address = obj2.getString("address_name");
+                        }
+                        System.out.println("######################################### \n\n\n"+address);
+
+                        System.out.println("######################################### \n\n\n"+address);
 
 
                         System.out.println("주소 : " + address);
 
+                        result.add(address);
 
-
+                        hMap.put("address", address);
 
 
                     } catch (IOException | JSONException e) {
@@ -550,7 +556,8 @@ public class SplashActivity extends AppCompatActivity {
 
                         System.out.println(address);
 
-                        result.add(address);
+
+
                         result.add(setRunningFlag().toString());
                         result.add(setGolfFlag().toString());
                         result.add(setCycleFlag().toString());
@@ -558,12 +565,26 @@ public class SplashActivity extends AppCompatActivity {
                         result.add(setSkiFlag().toString());
                         result.add(setHikingFlag().toString());
 
+                        hMap.put("Running", setRunningFlag().toString());
+                        hMap.put("Golf", setGolfFlag().toString());
+                        hMap.put("Cycle", setCycleFlag().toString());
+                        hMap.put("Paragliding", setParaglidingFlag().toString());
+                        hMap.put("Ski", setSkiFlag().toString());
+                        hMap.put("Hiking", setHikingFlag().toString());
+
+
 
                         result.add(setTempAverage().toString());
                         result.add(setRain1hAverage().toString());
                         result.add(setSnow1hAverage().toString());
                         result.add(setWindSpeedAverage().toString());
                         result.add(maxWindSpeed.toString());
+
+                        hMap.put("TempAverage", setTempAverage().toString());
+                        hMap.put("Rain1hAverage", setRain1hAverage().toString());
+                        hMap.put("Snow1hAverage", setSnow1hAverage().toString());
+                        hMap.put("WindSpeedAverage", setWindSpeedAverage().toString());
+                        hMap.put("MaxWindSpeed", maxWindSpeed.toString());
 
 
                         //setSurfingFlag();

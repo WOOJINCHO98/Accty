@@ -157,90 +157,81 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     public static Integer getIsChecked() {
-        Integer runningFlag = 0;
-        Integer cyclingFlag = 0;
-        Integer hikingFlag = 0;
-        Integer glidingFlag = 0;
-        Integer surfingFlag = 0;
-        Integer fishingFlag = 0;
-        Integer golfFlag = 0;
-        Integer skiFlag = 0;
+        Integer isCheckedRunning = 0;
+        Integer isCheckedGolf = 0;
+        Integer isCheckedCycle = 0;
+        Integer isCheckedGild = 0;
+        Integer isCheckedFish = 0;
+        Integer isCheckedSurf = 0;
+        Integer isCheckedSki = 0;
+        Integer isCheckedHiking = 0;
 
         if (running.isChecked()) {
-            runningFlag = 1;
-            System.out.println("runningFlag : " + runningFlag);
+            isCheckedRunning = 1;
+            System.out.println("runningFlag : " + isCheckedRunning);
         }
         else {
-            runningFlag = 0;
-            System.out.println("runningFlag : " + runningFlag);
+            isCheckedRunning = 0;
+            System.out.println("runningFlag : " + isCheckedRunning);
         }
-
-        if (cycling.isChecked()) {
-            cyclingFlag = 1;
-            System.out.println("cyclingFlag = 1");
-        }
-        else {
-            cyclingFlag = 0;
-            System.out.println("cyclingFlag = 0");
-        }
-
-        if (hiking.isChecked()) {
-            hikingFlag = 1;
-            System.out.println("hikingFlag = 1");
-        }
-        else {
-            hikingFlag = 0;
-            System.out.println("hikingFlag = 0");
-        }
-
-        if (gliding.isChecked()) {
-            glidingFlag = 1;
-            System.out.println("glidingFlag = 1");
-        }
-        else {
-            glidingFlag = 0;
-            System.out.println("glidingFlag = 0");
-        }
-
-        if (surfing.isChecked()) {
-            surfingFlag = 1;
-            System.out.println("surfingFlag = 1");
-        }
-        else {
-            surfingFlag = 0;
-            System.out.println("surfingFlag = 0");
-        }
-
-        if (fishing.isChecked()) {
-            fishingFlag = 1;
-            System.out.println("fishingFlag = 1");
-        }
-        else {
-            fishingFlag = 0;
-            System.out.println("fishingFlag = 0");
-        }
-
         if (golf.isChecked()) {
-            golfFlag = 1;
-            System.out.println("golfFlag = 1");
+            isCheckedGolf = 1;
+            System.out.println("golfFlag : " + isCheckedGolf);
         }
         else {
-            golfFlag = 0;
-            System.out.println("golfFlag = 0");
+            isCheckedGolf = 0;
+            System.out.println("golfFlag : " + isCheckedGolf);
         }
-
+        if (cycling.isChecked()) {
+            isCheckedCycle = 1;
+            System.out.println("cycleFlag : " + isCheckedCycle);
+        }
+        else {
+            isCheckedCycle = 0;
+            System.out.println("cycleFlag : " + isCheckedCycle);
+        }
+        if (gliding.isChecked()) {
+            isCheckedGild = 1;
+            System.out.println("gildFlag : " + isCheckedGild);
+        }
+        else {
+            isCheckedGild = 0;
+            System.out.println("gildFlag : " + isCheckedGild);
+        }
+        if (fishing.isChecked()) {
+            isCheckedFish = 1;
+            System.out.println("fishFlag : " + isCheckedFish);
+        }
+        else {
+            isCheckedFish = 0;
+            System.out.println("fishFlag : " + isCheckedFish);
+        }
+        if (surfing.isChecked()) {
+            isCheckedSurf = 1;
+            System.out.println("surfFlag : " + isCheckedSurf);
+        }
+        else {
+            isCheckedSurf = 0;
+            System.out.println("surfFlag : " + isCheckedSurf);
+        }
         if (ski.isChecked()) {
-            skiFlag = 1;
-            System.out.println("skiFlag = 1");
+            isCheckedSki = 1;
+            System.out.println("skiFlag : " + isCheckedSki);
         }
         else {
-            skiFlag = 0;
-            System.out.println("skiFlag = 0");
-
+            isCheckedSki = 0;
+            System.out.println("skiFlag : " + isCheckedSki);
+        }
+        if (hiking.isChecked()) {
+            isCheckedHiking = 1;
+            System.out.println("hikingFlag : " + isCheckedHiking);
+        }
+        else {
+            isCheckedHiking = 0;
+            System.out.println("hikingFlag : " + isCheckedHiking);
         }
 
-
-        return runningFlag;
+        return isCheckedCycle;
     }
 
 

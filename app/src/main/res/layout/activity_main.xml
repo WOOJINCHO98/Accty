@@ -6,9 +6,7 @@
     android:background="#F2F2F2"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -24,36 +22,34 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"></TextView>
 
-    <LinearLayout
-        android:background="#F2F2F2"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="@font/roboto_black"
-            android:text="Activity"
-            android:textSize="40sp"
-            android:textColor="#009BF2"
-            android:color="@color/black"
-            >
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Activity"
+                android:textSize="40sp"
+                android:textColor="#009BF2"
+                android:color="@color/black"
+                >
+            </TextView>
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="134dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/settingBtn"
-            android:src="@drawable/ic_baseline_settings_24">
-
-        </ImageView>
-
-    </LinearLayout>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="134dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/settingBtn"
+                android:src="@drawable/ic_baseline_settings_24">
+            </ImageView>
+        </LinearLayout>
 
 
         <TextView
@@ -84,7 +80,7 @@
                 android:elevation="10dp"
                 android:textColor="#009BF2"
                 android:textSize="24sp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="45dp"
                 android:gravity="bottom|center_horizontal"
                 android:drawableTop="@drawable/running90"
                 android:padding="20dp"/>
@@ -109,41 +105,42 @@
         </LinearLayout>
 
         <LinearLayout
-            android:background="#F2F2F2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#F2F2F2"
             android:orientation="horizontal">
+
             <Button
-                android:background="@drawable/mainbox"
                 android:id="@+id/btn3"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="150dp"
                 android:layout_height="190dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/mainbox"
+                android:drawableTop="@drawable/cycling_icon"
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:gravity="bottom|center_horizontal"
+                android:padding="20dp"
                 android:text="싸이클"
                 android:textColor="#009BF2"
-                android:textSize="24sp"
-                android:gravity="bottom|center_horizontal"
-                android:drawableTop="@drawable/cycling_icon"
-                android:padding="20dp"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn4"
-                android:background="@drawable/mainbox"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="20dp"
                 android:layout_width="150dp"
                 android:layout_height="190dp"
-                android:text="패러글라이딩"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:textColor="#009BF2"
-                android:textSize="19sp"
-                android:gravity="bottom|center_horizontal"
+                android:background="@drawable/mainbox"
                 android:drawableTop="@drawable/paragliding_icon"
-                android:padding="20dp"/>
+                android:fontFamily="@font/nanumgothicextrabold"
+                android:gravity="bottom|center_horizontal"
+                android:padding="20dp"
+                android:text="패러글라이딩"
+                android:textColor="#009BF2"
+                android:textSize="19sp" />
 
         </LinearLayout>
 
@@ -158,7 +155,7 @@
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="45dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="150dp"
                 android:layout_height="190dp"
@@ -199,7 +196,7 @@
                 android:background="@drawable/mainbox"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="45dp"
                 android:layout_width="150dp"
                 android:layout_height="190dp"
                 android:layout_marginBottom="10dp"

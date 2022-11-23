@@ -10,7 +10,8 @@
         <entry key="app/src/main/res/drawable/splash_base.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/top_shape.xml" value="0.1365" />
         <entry key="app/src/main/res/layout/activity_a_alarm.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_cycle.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_cycle.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cycle2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fishing.xml" value="0.22962962962962963" />
         <entry key="app/src/main/res/layout/activity_fishing_select.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_gliding.xml" value="0.22962962962962963" />
@@ -19,7 +20,7 @@
         <entry key="app/src/main/res/layout/activity_golf_select.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_hiking.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28880157470703127" />
-        <entry key="app/src/main/res/layout/activity_running.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_running.xml" value="0.34794311523437493" />
         <entry key="app/src/main/res/layout/activity_set_alarm.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_ski.xml" value="0.1" />

@@ -31,14 +31,17 @@ public class RunningActivity extends AppCompatActivity
         List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
 
 
+
+
+
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-
-        System.out.println(a.get(0).toString());
+/*
+        //System.out.println(a.get(0).toString());
         System.out.println(a.get(1).toString());
         System.out.println(a.get(2).toString());
         System.out.println(a.get(3).toString());
@@ -48,12 +51,16 @@ public class RunningActivity extends AppCompatActivity
         System.out.println(a.get(7).toString());
         System.out.println(a.get(8).toString());
         System.out.println(a.get(9).toString());
-        System.out.println(a.get(10).toString());
+        System.out.println(a.get(10).toString());*/
 
 
+
+
+
+
+        System.out.println(a.get(0).toString());
         CharSequence address = a.get(0).toString();
-
-        test.setText(address); // 주소정보
+        test.setText(a.get(0).toString()); // 주소정보
 
 
         if (Integer.parseInt(a.get(1).toString())==1){
