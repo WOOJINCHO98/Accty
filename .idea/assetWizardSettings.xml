@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -28,8 +33,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="6d6d6d" />
-                            <entry key="outputName" value="ic_baseline_settings_24" />
+                            <entry key="outputName" value="ic__105bfdf_4ce8_47bb_9b60_635c936d2cbb" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/5105bfdf-4ce8-47bb-9b60-635c936d2cbb.svg" />
                           </map>
                         </option>
                       </PersistentState>

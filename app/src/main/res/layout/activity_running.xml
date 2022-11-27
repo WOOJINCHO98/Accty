@@ -4,47 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RunningActivity"
-    android:orientation="vertical">
+    android:background="@color/white"
+    tools:context=".RunningActivity">
 
     <TextView
-        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Running"/>
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:color="@color/black"
+        android:fontFamily="@font/roboto_black"
+        android:text="Running"
+        android:textColor="#00D1FF"
+        android:textSize="40sp"></TextView>
 
-    <TextView
-        android:id="@+id/test1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/test2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test2222"
-        android:layout_margin="35dp"
-        />
-    <TextView
-        android:id="@+id/test3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test3"
-        android:layout_margin="35dp"
-        />
-    <TextView
-        android:id="@+id/test4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test4"
-        android:layout_margin="35dp"
-        />
-    <TextView
-        android:id="@+id/test5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test5"
-        android:layout_margin="35dp"
-        />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:background="@drawable/mainbox" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="기온"
+            android:textSize="20sp" />
+
+
+
+    </FrameLayout>
+
 </LinearLayout>

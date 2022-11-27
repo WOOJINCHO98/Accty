@@ -38,7 +38,7 @@ public class RunningActivity extends AppCompatActivity
         }
 
 
-        System.out.println(a.get(0).toString());
+        //System.out.println(a.get(0).toString());
         System.out.println(a.get(1).toString());
         System.out.println(a.get(2).toString());
         System.out.println(a.get(3).toString());
@@ -51,9 +51,9 @@ public class RunningActivity extends AppCompatActivity
         System.out.println(a.get(10).toString());
 
 
-        CharSequence address = a.get(0).toString();
+        //CharSequence address = a.get(0).toString();
 
-        test.setText(address); // 주소정보
+        //test.setText(address); // 주소정보
 
 
         if (Integer.parseInt(a.get(1).toString())==1){
