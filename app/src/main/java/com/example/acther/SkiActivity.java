@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
-public class SkiActicity extends AppCompatActivity {
+public class SkiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

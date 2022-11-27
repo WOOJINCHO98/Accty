@@ -48,16 +48,11 @@
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".RunningActivity"
+            android:name=".CycleActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".SkiSelectActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.NoActionBar" />
-
-        <activity
-            android:name=".GolfSelectActivity"
+            android:name=".FishingActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
@@ -65,7 +60,7 @@
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".SurfingActivity"
+            android:name=".GlidingActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
@@ -76,18 +71,14 @@
             android:name=".GolfActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
+
+
         <activity
-            android:name=".CycleActivity"
+            android:name=".GolfSelectActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
-        <activity
-            android:name=".FishingActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.NoActionBar" />
-        <activity
-            android:name=".GlidingActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.NoActionBar" />
+
+
         <activity
             android:name=".HikingActivity"
             android:exported="false"
@@ -97,6 +88,29 @@
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity
+            android:name=".RunningActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".SkiSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity android:name=".SkiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity
+            android:name=".SurfingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+
+
+
+
 
         <activity
             android:name=".SplashActivity"

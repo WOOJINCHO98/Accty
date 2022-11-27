@@ -3,12 +3,14 @@ package com.example.acther;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -37,8 +39,29 @@ import java.util.Scanner;
 
 public class FlagMaker extends AppCompatActivity {
 
+
     String key = "oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
-    String result = "";
+    //String result = "";
+
+    // 다른 액티비티에 결과값을 전달하기 위한 문자열 리스트
+    // 0 / 1 / 2 / 3 / 4 / ...
+    // 0 : 첫번째 운동 FLAG   ( 0 : 운동 비추 / 1 : 운동 보통 / 2 : 운동 추천 )
+    // 1 : 두번째 운동 FLAG
+    // 2 : 세번째 운동 FLAG
+    // 3 : 네번째 운동 FLAG
+    // 4 : 다섯번째 운동 FLAG
+    // 5 : 여섯번째 운동 FLAG
+    // 6 : 일곱번째 운동 FLAG
+    // 7 : 여덟번째 운동 FLAG
+    // 8 : 기온
+    // 9 : 강수량
+    // 10 : 습도
+    // 11 : 풍속
+    // 12 : 주소 정보
+
+    List<String> result = new ArrayList<String>();
+
+
 
 
 
@@ -48,11 +71,71 @@ public class FlagMaker extends AppCompatActivity {
     public static int TO_GRID = 0;
     public static int TO_GPS = 1;
 
-    protected void makeFlag() {
+    String address = "";
+
+    //값 들을 리스트로 받기
+    List<String> categoryList = new ArrayList<String>();
+    List fcstDateList = new ArrayList();
+    List fcstTimeList = new ArrayList();
+    List fcstValueList = new ArrayList();
+
+    List inTimeList = new ArrayList();
+
+    List windSpeedList = new ArrayList();
+    List windDirectionList = new ArrayList();
+    List rainPerList = new ArrayList();
+    List rainTypeList = new ArrayList();
+    List<String> rain1hList = new ArrayList<String>();
+    List rainList = new ArrayList();
+    List skyList = new ArrayList();
+    List tempList = new ArrayList();
+    List humidityList = new ArrayList();
+    List<String> snow1hList = new ArrayList<String>();
+    List waveList = new ArrayList();
+    List maxTempList = new ArrayList();
+    List minTempList = new ArrayList();
+
+
+    Comparable maxWindSpeed = 0;
+    Double doubleMaxWindSpeed = 0.0;
+
+
+    public static int run = 0;
+    public static int  golf = 0;
+    public static int  cycle = 0;
+    public static int  gliding = 0;
+    public static int  fishing = 0;
+    public static int surfing =0;
+    public static int  sking = 0;
+    public static int hiking = 0;
+
+    public static String  address2 = "";
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+
 
         mContext = this;
 
-        setContentView(R.layout.activity_cycle);
+
+
+
+
+    }
+
+
+
+
+
+
+    // 다른 액티비티에서 사용하기 위한 메서드
+    public List makeFlag() {
+
+
+
 
         Log.d("----------", "onCreate: ################## IN FLAGMAKER ####### AT ON CREATE ###############" );
 
@@ -60,12 +143,19 @@ public class FlagMaker extends AppCompatActivity {
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        Log.d("----------", "onCreate: ################## IN 어디? ####### AT ON CREATE ###############" );
+
         if ( Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission( getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions( FlagMaker.this, new String[] {
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, 0 );
+
+            Log.d("----------", "onCreate: ################## IN 어디ㅐㅔㅓㅑㅕㅗ? ####### AT ON CREATE ###############" );
+
         }
         else{
+            Log.d("----------", "onCreate: ################## IN ㅎㄹ오호옹ㅅ뇨어디? ####### AT ON CREATE ###############" );
+            System.out.println("여기는 어디?");
             // 가장최근 위치정보 가져오기
             Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             if(location != null) {
@@ -78,6 +168,8 @@ public class FlagMaker extends AppCompatActivity {
                         "위도 : " + longitude + "\n" +
                         "경도 : " + latitude + "\n" +
                         "고도  : " + altitude);
+
+                Log.d("----------", "onCreate: ################## IN 어디? ####### AT ON CREATE ###############" );
 
                 // gps 좌표에서 기상청 좌표계로 변환
                 FlagMaker.LatXLngY real = convertGRID_GPS(TO_GRID, latitude, longitude);
@@ -122,12 +214,13 @@ public class FlagMaker extends AppCompatActivity {
                         JSONObject jObject = new JSONObject(jsonData);
                         JSONArray jArray = jObject.getJSONArray("documents");
                         JSONObject obj = jArray.getJSONObject(0);
-                        obj = obj.getJSONObject("address");
-                        String address = obj.getString("address_name");
+                        obj = obj.getJSONObject("road_address");
+                        address = obj.getString("address_name");
 
 
 
                         System.out.println("주소 : " + address);
+
 
 
 
@@ -194,16 +287,8 @@ public class FlagMaker extends AppCompatActivity {
                         System.out.println("jsonData ::::: "+jsonData);
                         System.out.println("recMSG ::::::"+receiveMsg);
 
-                        //값 들을 리스트로 받기
-                        List<String> categoryList = new ArrayList<String>();
-                        List fcstDateList = new ArrayList();
-                        List fcstTimeList = new ArrayList();
-                        List fcstValueList = new ArrayList();
 
-                        List inTimeList = new ArrayList();
 
-                        List windSpeedList = new ArrayList();
-                        List windDirectionList = new ArrayList();
                         // jsonData를 먼저 JSONObject 형태로 바꾼다.
                         JSONObject obj = new JSONObject(jsonData);
                         obj = obj.getJSONObject("response");
@@ -212,7 +297,7 @@ public class FlagMaker extends AppCompatActivity {
                         JSONArray ValueArray = obj.getJSONArray("item");
 
 
-                        //리스트에 전부 추가한다.
+                        //valueObject 에 전부 추가한다.
                         //만약 카테고리가 TMP OR 바람세기 이면~ 나머지 값들 추가 ;; 이런 식으로 구현할듯
                         for(int i=0; i<ValueArray.length(); i++)
                         {
@@ -233,6 +318,19 @@ public class FlagMaker extends AppCompatActivity {
 
                             int intNowDate = Integer.parseInt(finalStrNowDate);
 
+
+                            // 일 최고 기온
+                            if (valueObject.getString("category").equals("TMX")){
+                                maxTempList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                            }
+
+                            // 일 최저 기온
+                            if (valueObject.getString("category").equals("TMN")){
+                                System.out.println("TMN :::: "+valueObject.getString("fcstValue"));
+                                minTempList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                            }
+
+
                             //9시 부터 17 시 까지 시간에 (당일만 !!)
                             int intTime = Integer.parseInt(valueObject.getString("fcstTime"));
                             int intDate = Integer.parseInt(valueObject.getString("fcstDate"));
@@ -248,38 +346,88 @@ public class FlagMaker extends AppCompatActivity {
                                     windDirectionList.add(Integer.parseInt(valueObject.getString("fcstValue")));
                                 }
 
+
+                                // 강수확률
+                                if (valueObject.getString("category").equals("POP")){
+                                    rainList.add(Integer.parseInt(valueObject.getString("fcstValue")));
+                                }
+
+                                //
+
+
+                                // 강수형태
+                                if (valueObject.getString("category").equals("PTY")){
+                                    if (valueObject.getString("fcstValue").equals("1")){
+                                        rainTypeList.add("비");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("2")){
+                                        rainTypeList.add("비/눈");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("3")){
+                                        rainTypeList.add("눈");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("4")){
+                                        rainTypeList.add("소나기");
+                                    }
+                                    else{
+                                        rainTypeList.add("없음");
+                                    }
+                                }
+
+                                // 1시간 강수량
+                                if (valueObject.getString("category").equals("PCP")){
+                                    rain1hList.add(valueObject.getString("fcstValue"));
+                                }
+
+                                // 1시간 적설량
+                                if (valueObject.getString("category").equals("SNO")){
+                                    snow1hList.add(valueObject.getString("fcstValue"));
+                                }
+
+                                // 습도
+                                if (valueObject.getString("category").equals("REH")){
+                                    humidityList.add(Integer.parseInt(valueObject.getString("fcstValue")));
+                                }
+
+                                //1시간 기온
+                                if (valueObject.getString("category").equals("TMP")){
+                                    tempList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                                }
+
+
+
+                                // 파고
+                                if (valueObject.getString("category").equals("WAV")){
+                                    waveList.add(Double.parseDouble(valueObject.getString("fcstValue")));
+                                }
+
+
+
+                                // 하늘 상태
+                                if (valueObject.getString("category").equals("SKY")){
+                                    if (valueObject.getString("fcstValue").equals("1")){
+                                        skyList.add("맑음");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("2")){
+                                        skyList.add("구름조금");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("3")){
+                                        skyList.add("구름많음");
+                                    }
+                                    else if (valueObject.getString("fcstValue").equals("4")){
+                                        skyList.add("흐림");
+                                    }
+                                }
+
+
+
                             }
 
                         }
 
-                        Comparable maxWindSpeed = Collections.max(windSpeedList);
-                        Double doubleMaxWindSpeed = (Double)(maxWindSpeed);
+                        maxWindSpeed = Collections.max(windSpeedList);
+                        doubleMaxWindSpeed = (Double)(maxWindSpeed);
 
-                        // 풍속이 4.0ms 이하일 때
-                        if (doubleMaxWindSpeed <= 4.0){
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                                            "최대 풍속이 4.0 이하 입니다.\n" +
-                                            "자전거 타기 좋은 날 입니다."+
-                                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
-                                }
-                            });
-
-                        }
-                        //아니면.
-                        else{
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                                            "최대 풍속이 4.0 보다 높습니다.\n" +
-                                            "자전거 타기 힘든 날 입니다."+
-                                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed + " 입니다.");
-                                }
-                            });
-                        }
 
                         System.out.println(windDirectionList);
 
@@ -336,12 +484,27 @@ public class FlagMaker extends AppCompatActivity {
                         System.out.println(obj);
 
 
-                        System.out.println(categoryList);
-                        System.out.println(fcstDateList);
-                        System.out.println(fcstTimeList);
-                        System.out.println(fcstValueList);
-                        System.out.println(inTimeList);
-                        System.out.println(windSpeedList);
+                        System.out.println("카테고리 리스트 : "+ categoryList);
+                        System.out.println("날짜 리스트 : " + fcstDateList);
+                        System.out.println("시간 리스트 : " + fcstTimeList);
+                        System.out.println("값 리스트 : " + fcstValueList);
+                        System.out.println("시간 리스트 : " + inTimeList);
+                        System.out.println("풍속 리스트 : " + windSpeedList);
+                        System.out.println("풍향 리스트 : " + windDirectionList);
+                        System.out.println("풍향 문자 리스트 : " + windDirectionCntList);
+                        System.out.println("파고 리스트 : " + waveList);
+                        System.out.println("강수 확률 리스트 : " + rainList);
+                        System.out.println("비 형태 리스트 : " + rainTypeList);
+                        System.out.println("1시간 강수량 리스트 : " + rain1hList);
+                        System.out.println("1시간 적설량 리스트 : " + snow1hList);
+                        System.out.println("하늘 리스트 : " + skyList);
+                        System.out.println("습도 리스트 : " + humidityList);
+                        System.out.println("기온 리스트 : " + tempList);
+                        System.out.println("일 최고 기온 리스트 : " + maxTempList);
+                        System.out.println("일 최저 기온 리스트 : " + minTempList);
+
+
+
 
                         int i;
                         for (i=0; i<categoryList.size(); i++) {
@@ -355,6 +518,60 @@ public class FlagMaker extends AppCompatActivity {
 
 
 
+                        System.out.println("주소 : " + address);
+
+                        System.out.println("Running : " + setRunningFlag());
+                        System.out.println("Hiking : " + setHikingFlag());
+                        System.out.println("Cycle : " + setCycleFlag());
+                        System.out.println("Gofl : " + setGolfFlag());
+                        System.out.println("Ski : " + setSkiFlag());
+                        System.out.println("Paragliding : " + setParaglidingFlag());
+
+
+                        System.out.println("--------------------------------------");
+
+                        System.out.println("TempAverage : " + setTempAverage());
+                        System.out.println("Rain1hAverage : " + setRain1hAverage());
+                        System.out.println("Snow1hAverage : " + setSnow1hAverage());
+                        System.out.println("WindSpeedAverage : " + setWindSpeedAverage());
+
+                        System.out.println("--------------------------------------");
+
+
+
+                        System.out.println(address);
+
+                        result.add(address);
+                        address2 = address;
+                        result.add(setRunningFlag().toString());
+                        result.add(setGolfFlag().toString());
+                        result.add(setCycleFlag().toString());
+                        result.add(setParaglidingFlag().toString());
+                        result.add(setSkiFlag().toString());
+                        result.add(setHikingFlag().toString());
+
+
+                        result.add(setTempAverage().toString());
+                        result.add(setRain1hAverage().toString());
+                        result.add(setSnow1hAverage().toString());
+                        result.add(setWindSpeedAverage().toString());
+                        result.add(maxWindSpeed.toString());
+
+
+                        //setSurfingFlag();
+                        //setFishingFlag();
+
+
+
+
+
+                        System.out.println("setDailyTempGap : " + setDailyTempGapFlag());
+                        System.out.println("setRainFlag : " + setRainFlag());
+                        System.out.println("setSkyFlag : " + setSkyFlag());
+                        System.out.println("setSnowFlag : " + setSnowFlag());
+                        System.out.println("setMinTempFlag() : " + setMinTempFlag());
+                        System.out.println("setMaxTempFlag() : " + setMaxTempFlag());
+                        System.out.println("setBaseFlag : " + setBaseFlag());
 
 
                     }
@@ -387,9 +604,339 @@ public class FlagMaker extends AppCompatActivity {
                 gpsLocationListener);
 
          */
+
+        return result;
     }
 
 
+    public Double setWindSpeedAverage() {
+        Double windSpeedAverage = 0.0;
+        int i;
+        for (i=0; i<windSpeedList.size(); i++) {
+            windSpeedAverage += (Double)windSpeedList.get(i);
+        }
+        windSpeedAverage = windSpeedAverage / windSpeedList.size();
+        return windSpeedAverage;
+    }
+
+
+    public Double setRain1hAverage(){
+
+
+        Double sum = 0.0;
+
+        try {
+            for (int i=0; i<rain1hList.size(); i++){
+                sum += Double.parseDouble(rain1hList.get(i));
+            }
+            return sum/rain1hList.size();
+        }
+        catch (Exception e){
+            return 0.0;
+        }
+
+    }
+
+
+    public Double setSnow1hAverage(){
+
+
+        Double sum = 0.0;
+
+        try {
+            for (int i=0; i<snow1hList.size(); i++){
+                sum += Double.parseDouble(snow1hList.get(i));
+            }
+            return sum/snow1hList.size();
+        }
+        catch (Exception e){
+            return 0.0;
+        }
+
+    }
+
+    public Double setTempAverage() {
+        Double tempAverage = 0.0;
+        Double tempSum = 0.0;
+        Integer tempCnt = 0;
+        Integer i;
+
+        for (i=0; i<tempList.size(); i++) {
+            if (tempList.get(i) != null) {
+                tempSum += (Double)tempList.get(i);
+                tempCnt++;
+            }
+        }
+
+        tempAverage = tempSum / tempCnt;
+
+        System.out.println("tempAverage : " + tempAverage);
+        return tempAverage;
+    }
+
+
+    // 하늘 흐리다면 0, 아니면1
+    public Integer setSkyFlag(){
+
+        int i;
+        int SkyFlag = 0;
+        for (i=0; i<skyList.size(); i++){
+            if (skyList.get(i).equals("맑음") || skyList.get(i).equals("구름조금") || skyList.get(i).equals("구름많음")) {
+                SkyFlag = 1;
+            }
+
+            else if (skyList.get(i).equals("흐림")){
+                SkyFlag = 0;
+            }
+        }
+        return SkyFlag;
+
+    }
+
+    //----------------------------------------------- 기초가 되는 BaseFlag들 -------------------------------------------------
+    // 예측 강수 있다면, rainFlag == 0
+    public Integer setRainFlag(){
+        int i;
+        int rainFlag = 0;
+        for (i=0; i<rain1hList.size(); i++){
+            if (rain1hList.get(i).equals("강수없음")){
+                rainFlag = 1;
+            }
+            else{
+                rainFlag = 0;
+                break;
+            }
+        }
+        return rainFlag;
+    }
+
+    // 예측 강수 있다면, rainFlag == 0
+    public Integer setSnowFlag(){
+        int i;
+        int snowFlag = 0;
+        for (i=0; i<snow1hList.size(); i++){
+            if (snow1hList.get(i).equals("적설없음")){
+                snowFlag = 1;
+            }
+            else{
+                snowFlag = 0;
+                break;
+            }
+        }
+        return snowFlag;
+    }
+
+    // 활동 시간 내에 최저 기온이 0도 이하라면 0 반환
+    public Integer setMinTempFlag(){
+        int i;
+        int minTempFlag = 0;
+        for (i=0; i<tempList.size(); i++){
+            if ((Double)tempList.get(i) <= 0){
+                minTempFlag = 0;
+                break;
+            }
+            else{
+                minTempFlag = 1;
+            }
+        }
+        return minTempFlag;
+    }
+
+    // 활동 시간 내에 최대 기온이 30도 이상이라면 0 반환
+    public Integer setMaxTempFlag(){
+        int i;
+        int maxTempFlag = 0;
+        for (i=0; i<tempList.size(); i++){
+            if ((Double)tempList.get(i) >= 30){
+                maxTempFlag = 0;
+                break;
+            }
+            else{
+                maxTempFlag = 1;
+            }
+        }
+        return maxTempFlag;
+    }
+
+    // 일교차 FLAG
+    public Integer setDailyTempGapFlag(){
+        Double dailyTempGap = 0.0;
+        Integer DailyTempGapFlag = 0;
+        dailyTempGap = (Double) maxTempList.get(0) - (Double) minTempList.get(0);
+
+        if (dailyTempGap >= 10){
+            DailyTempGapFlag = 1;
+        }
+        else if (dailyTempGap >= 15){
+            DailyTempGapFlag = 2;
+        }
+        else if (dailyTempGap >= 20){
+            DailyTempGapFlag = 2;
+        }
+        else{
+            DailyTempGapFlag = 0;
+        }
+
+        return DailyTempGapFlag;
+    }
+
+
+    // 적절 기온 FLAG
+    public  int setTempFlag(){
+
+        Integer tempFlag = 1;
+
+        //for-loop 통한 전체 조회
+        for(Object object : tempList) {
+            Double element = (Double) object;
+            if (element >= 5) {
+                tempFlag = 1;
+            }
+            else if (element < 5) {
+                tempFlag = 0;
+            }
+        }
+
+        return tempFlag;
+    }
+
+    //---------------------------------------------------BaseFlag를 합친 Flag -------------------------------------------------
+    // BaseFlag들을 합쳐서 최종 Flag를 만든다.
+    public Integer setBaseFlag() {
+        int i;
+        int baseFlag = 0;
+
+        if (setRainFlag() == 1 && setSnowFlag() == 1 && setMinTempFlag() == 1 && setMaxTempFlag() == 1) {
+            baseFlag = 1;
+        } else {
+            baseFlag = 0;
+        }
+
+        return baseFlag;
+    }
+
+
+
+    //---------------------------------------------------각각의 액티비티 FLAG 매서드------------------------------------------------------------------------------------------------------------
+    // 런닝 FLAG 값 정하기
+    public Integer setRunningFlag(){
+
+        int runningFlag = 0;
+
+        if (setBaseFlag() == 1){
+            runningFlag = 1;
+        }
+        else{
+            runningFlag = 0;
+        }
+
+        return runningFlag;
+    }
+
+    // 등산 FLAG 값 정하기
+    public Integer setHikingFlag(){
+
+        int hikingFlag = 0;
+
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
+            hikingFlag = 1;
+        }
+        else{
+            hikingFlag = 0;
+        }
+
+        return hikingFlag;
+    }
+
+
+    // 싸이클 FLAG 값 정하기
+    public Integer setCycleFlag() {
+        // 풍속이 4.0ms 이하일 때
+        if (doubleMaxWindSpeed <= 4.0 && setBaseFlag() == 1) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                            "최대 풍속이 4.0 이하 입니다.\n" +
+                            "자전거 타기 좋은 날 입니다."+
+                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
+                }
+            });
+            int Flag = 1;
+            return Flag;
+        }
+        //아니면.
+        else{
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
+                            "최대 풍속이 4.0 보다 높습니다.\n" +
+                            "자전거 타기 힘든 날 입니다."+
+                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed + " 입니다.");
+                }
+            });
+            int Flag = 0;
+            return Flag;
+        }
+    }
+
+
+
+    // 골프 FLAG 값 정하기
+    public Integer setGolfFlag(){
+
+        int golfFlag = 0;
+
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
+            golfFlag = 1;
+        }
+        else{
+            golfFlag = 0;
+        }
+
+        return golfFlag;
+    }
+
+    // 스키 FLAG 값 정하기
+    // 스키는 조건을 조금 더 추가해야함
+    public Integer setSkiFlag(){
+
+        int skiFlag = 0;
+
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1 && (Double)maxTempList.get(0) < 8.0) {
+            skiFlag = 1;
+        }
+        else{
+            skiFlag = 0;
+            if (setSnowFlag() == 0){
+                skiFlag = 1;
+            }
+        }
+
+        return skiFlag;
+    }
+
+    // 패러글라이딩 FLAG 값 정하기
+    public Integer setParaglidingFlag(){
+
+        int paraglidingFlag = 0;
+
+        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0){
+            paraglidingFlag = 1;
+        }
+        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0){
+            paraglidingFlag = 2;
+        }
+        else{
+            paraglidingFlag = 3;
+        }
+
+        return paraglidingFlag;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    // 카카오 로컬 API
     public static String gpsInfo(String x, String y) throws IOException {
         URL url = new URL("http://dapi.kakao.com/v2/local/geo/coord2address.json?x="+x+"&y="+y+"&input_coord=WGS84");
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
@@ -407,8 +954,10 @@ public class FlagMaker extends AppCompatActivity {
     }
 
 
-    // gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
 
+
+
+    // 기기 로컬에서 받아온 gps 좌표를 기상청에서 사용하는 좌표계로 변환합니다.
     public FlagMaker.LatXLngY convertGRID_GPS(int mode, double lat_X, double lng_Y )
     {
         double RE = 6371.00877; // 지구 반경(km)
@@ -440,7 +989,7 @@ public class FlagMaker extends AppCompatActivity {
         sf = Math.pow(sf, sn) * Math.cos(slat1) / sn;
         double ro = Math.tan(Math.PI * 0.25 + olat * 0.5);
         ro = re * sf / Math.pow(ro, sn);
-        FlagMaker.LatXLngY rs = new FlagMaker.LatXLngY();
+        FlagMaker.LatXLngY rs = new FlagMaker().new LatXLngY();
 
         if (mode == TO_GRID) {
             rs.lat = lat_X;
@@ -539,6 +1088,8 @@ public class FlagMaker extends AppCompatActivity {
 
     }
 
+
+    // gps 좌표를 받아서 위도 경도로 변환
     final LocationListener gpsLocationListener = new LocationListener() {
         public void onLocationChanged(Location location) {
             // 위치 리스너는 위치정보를 전달할 때 호출되므로 onLocationChanged()메소드 안에 위지청보를 처리를 작업을 구현 해야합니다.
@@ -555,4 +1106,6 @@ public class FlagMaker extends AppCompatActivity {
 
         }
     };
+
+
 }

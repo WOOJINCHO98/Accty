@@ -46,6 +46,8 @@ public class A_AlarmReceiver extends BroadcastReceiver {
     //TODO [클래스 전역 변수 선언 부분]
     Context mContext;
 
+
+
     //TODO [onReceive 메소드를 재정의 (채널 알림 메시지 확인 부분)]
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -57,9 +59,31 @@ public class A_AlarmReceiver extends BroadcastReceiver {
             Log.w("//===========//", "================================================");
             Log.d("---", "---");
 
+
+            String header =  "";
+            String body ="";
+
+            List a = ((SplashActivity)SplashActivity.mContext).makeFlag(); // 알림 발생 시 makeFlag() 메소드 호출
+            // 만약 데이터베이스의 선택된 운동의 값이, 라면 해당 운동에 대한 알림을 발생시킨다.
+
+            // 만약 러닝이 선택되어 있다면?
+
+
+            if (Integer.parseInt(a.get(1).toString())==1){
+                header = "러닝하기 좋은 날 입니다!";
+
+            }
+            else{
+                header = " 러닝하기 좋지 않은 날 입니다! ";
+            }
+            body += " 오늘의 평균 온도는 약 " + a.get(7).toString() + "도 입니다. \n";
+            body += " 오늘의 평균 강수량은 " + a.get(8).toString() + "mm 입니다. ";
+
+
             //TODO 노티피케이션 알림 호출 실시
             Toast.makeText(mContext, S_Preference.getString(mContext, "Alarm_Date") + " [알림]", Toast.LENGTH_SHORT).show();
-            serviceContent = S_Preference.getString(mContext, "Alarm_Date") + "Lorem Ipsum";
+            serviceTittle = header;
+            serviceContent = body;
             setNotificationShow();
 
 
@@ -74,7 +98,7 @@ public class A_AlarmReceiver extends BroadcastReceiver {
     NotificationManager notificationManager; //매니저
     NotificationChannel notificationChannel; //채널
     NotificationCompat.Builder builder; //빌더
-    String serviceTittle = "[알람 매니저 실행]";
+    String serviceTittle = "";
     String serviceContent = "";
 
     public void setNotificationShow() {
