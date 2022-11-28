@@ -101,7 +101,7 @@
                         android:layout_column="0"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="온도"
+                        android:text="평균 온도"
                         android:textStyle="bold"
                         android:textSize="20sp" />
 
@@ -120,7 +120,7 @@
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="강수량"
+                        android:text="평균 강수량"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
@@ -138,7 +138,7 @@
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="미세먼지등급"
+                        android:text="미세먼지 등급"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
@@ -156,7 +156,7 @@
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="오존등급"
+                        android:text="오존 등급"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 

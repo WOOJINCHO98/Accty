@@ -63,7 +63,10 @@ public class RunningActivity extends AppCompatActivity
 
         }
 
-        test.setText(flagMaker.hMap.get("TempAverage")); // 평균온도
+        Double temp = Double.parseDouble(flagMaker.hMap.get("TempAverage"));
+        Integer intTemp = temp.intValue();
+
+        test.setText(intTemp.toString()); // 평균온도
         test1.setText(flagMaker.hMap.get("Rain1hAverage")); // 평균강수량
         test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
         test3.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
