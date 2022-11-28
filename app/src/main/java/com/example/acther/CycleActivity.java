@@ -48,7 +48,7 @@ public class CycleActivity extends AppCompatActivity
 
 
 
-        CharSequence address = a.get(0).toString();
+        //CharSequence address = a.get(0).toString();
 
 
         System.out.println("#########################\n\n####################\n\n"+flagMaker.hMap.get("address"));
@@ -58,7 +58,7 @@ public class CycleActivity extends AppCompatActivity
         //test1.setText(flagMaker.address); // 주소정보
 
 
-        if (Integer.parseInt(a.get(3).toString())==1){
+        if (flagMaker.hMap.get("Cycle").equals("1")){
 
             test2.setText("자전거 타기 좋은 날 입니다!"); // 싸이클 플래그
         }
@@ -68,8 +68,14 @@ public class CycleActivity extends AppCompatActivity
 
         test3.setText(a.get(7).toString()); // 평균온도
         test4.setText(a.get(8).toString()); // 평균강수량
+        if(flagMaker.hMap.get("Rain1hAverage").equals("0.0")){
+            test4.setText("강수 없음"); // 1시간 평균 강수량
+        }
+        else{
+            test4.setText("비가 옵니다."); // 1시간 평균 강수량
+        }
         //test4.setText(a.get(10).toString()); // 평균 풍속
-        //test5.setText(a.get(11).toString()); // 최대 풍속
+        test5.setText(flagMaker.hMap.get("MaxWindSpeed")); // 최대 풍속
 
 
 

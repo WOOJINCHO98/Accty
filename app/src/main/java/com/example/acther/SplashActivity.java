@@ -133,7 +133,17 @@ public class SplashActivity extends AppCompatActivity {
 // 다른 액티비티에서 사용하기 위한 메서드
     public List makeFlag() {
 
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.INTERNET"},
+                0);
 
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.ACCESS_FINE_LOCATION"},
+                0);
+
+        ActivityCompat.requestPermissions(SplashActivity.this,
+                new String[]{"android.permission.ACCESS_COURCE_LOCATION"},
+                0);
 
 
         Log.d("----------", "onCreate: ################## IN FLAGMAKER ####### AT ON CREATE ###############" );
@@ -603,6 +613,10 @@ public class SplashActivity extends AppCompatActivity {
                         System.out.println("setBaseFlag : " + setBaseFlag());
 
 
+
+
+                        //hMap.put("JijumCode", getJijumCodeJson(temp_x, temp_y));
+                        //System.out.println("getJijumCodeJson : " + getJijumCodeJson(temp_x, temp_y));
                     }
                     catch (IOException | JSONException e) {
                         e.printStackTrace();
@@ -1135,5 +1149,103 @@ public class SplashActivity extends AppCompatActivity {
 
         }
     };
+
+
+    public String getJijumCodeJson(int x, int y){
+
+
+
+        String result = "";
+
+        int xCode = x; // 위도
+        int yCode = y; // 경도
+
+        int count = 0;
+
+        Log.e(">>", "x = " + xCode);
+
+        Log.e(">>", "y = " + yCode);
+
+
+
+        String JijumCode = "";
+
+        try{
+
+
+            InputStream inputStream = getAssets().open("JijumCode.json");
+
+            BufferedReader rd = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+
+            String str = "";
+            StringBuffer buffer2 = new StringBuffer();
+            while ((str = rd.readLine()) != null) {
+
+                buffer2.append(str + "\n");
+
+                //buffer.append(str);
+            }
+            String jsonData = buffer2.toString();
+            String receiveMsg = buffer2.toString();
+
+            //System.out.println("jsonData ::::: "+jsonData);
+
+
+
+            //Log.e(">>", "data = " + jsonData);
+
+            Log.e(">>", "포문 밖에는 나오나여?11 = " + xCode);
+
+            // jsonData를 먼저 JSONObject 형태로 바꾼다.
+            JSONObject obj = new JSONObject(jsonData);
+
+
+            Log.e(">>", "포문 밖에는 나오나여? 22= " + obj);
+
+
+
+            JSONArray ValueArray = new JSONArray(obj);
+            Log.e(">>", "포문 밖에는 나오나여?33 = " + xCode);
+
+
+            //valueObject 에 전부 추가한다.
+            //만약 카테고리가 TMP OR 바람세기 이면~ 나머지 값들 추가 ;; 이런 식으로 구현할듯
+            for(int i=0; i<ValueArray.length(); i++)
+            {
+                JSONObject valueObject = ValueArray.getJSONObject(i);
+
+                //SplashActivity.Value value = new SplashActivity.Value();
+
+                Log.e(">>", "도는중 = " + xCode);
+
+
+                if(valueObject.getString("X").equals(String.valueOf(xCode)) && valueObject.getString("Y").equals(String.valueOf(yCode))){
+                    JijumCode = valueObject.getString("JijumCode");
+                    Log.e(">>", "와 찾았다 ! = " + xCode);
+
+                    break;
+                }
+
+
+
+            }
+            Log.e(">>", "code = " +JijumCode);
+            //Log.e(">>", "x = " + obj.toString());
+
+            //Log.e(">>", "data = " + obj);
+
+
+
+        }
+        catch (Exception e){
+        }
+
+        Log.e(">>", "포문 밖에는 나오나여?123123 = " + JijumCode);
+
+        return JijumCode;
+
+    }
+
+
 
 }

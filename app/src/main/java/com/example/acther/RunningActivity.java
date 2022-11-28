@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class RunningActivity extends AppCompatActivity
 {
 
-    TextView test,test1,test2,test3,test4,test5;
+    TextView test,test1,test2,test3,test4,test5,running_good;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +26,7 @@ public class RunningActivity extends AppCompatActivity
         test3 = (TextView) findViewById(R.id.test3);
         test4 = (TextView) findViewById(R.id.test4);
         test5 = (TextView) findViewById(R.id.test5);
+        running_good = (TextView) findViewById(R.id.running_good);
 
 
         List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
@@ -55,13 +56,18 @@ public class RunningActivity extends AppCompatActivity
 
         //test.setText(address); // 주소정보
 
+        SplashActivity flagMaker = new SplashActivity();
+
+
+        test5.setText(flagMaker.hMap.get("address"));
+
 
         if (Integer.parseInt(a.get(1).toString())==1){
 
-            test1.setText("러닝하기 좋은 날 입니다!"); // 러닝 플래그
+            running_good.setText("러닝하기 좋은 날씨"); // 러닝 플래그
         }
         else{
-            test1.setText("러닝하기 좋지 않은 날 입니다!"); // 러닝 플래그
+            running_good.setText("러닝하기 좋지 않은 날씨"); // 러닝 플래그
         }
 
         test2.setText(a.get(7).toString()); // 평균온도
