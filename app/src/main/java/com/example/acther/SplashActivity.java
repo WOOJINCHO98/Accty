@@ -73,8 +73,14 @@ public class SplashActivity extends AppCompatActivity {
     public static int TO_GRID = 0;
     public static int TO_GPS = 1;
 
+    public static String tmX = "";
+    public static String tmY = "";
+
     String address = "";
 
+    String stationName = "";
+    String pm10Grade = "";
+    String O3Grade = "";
     //값 들을 리스트로 받기
     List<String> categoryList = new ArrayList<String>();
     List fcstDateList = new ArrayList();
@@ -173,6 +179,7 @@ public class SplashActivity extends AppCompatActivity {
                 double latitude = location.getLatitude();
                 double altitude = location.getAltitude();
 
+
                 System.out.println("위치정보 : " + provider + "\n" +
                         "위도 : " + longitude + "\n" +
                         "경도 : " + latitude + "\n" +
@@ -208,6 +215,89 @@ public class SplashActivity extends AppCompatActivity {
                 String kakaoX = Double.toString(longitude);
                 String kakaoY = Double.toString(latitude);
 
+
+                new Thread(()-> {
+
+                    try{
+
+                        String kakaoTm = getTm(kakaoX, kakaoY);
+                        String jsonData = kakaoTm;
+
+
+                        try{
+                            JSONObject jObject = new JSONObject(jsonData);
+                            JSONArray jArray = jObject.getJSONArray("documents");
+                            JSONObject obj = jArray.getJSONObject(0);
+                            //obj = obj.getJSONObject("road_address");
+                            tmX = obj.getString("x");
+                            tmY = obj.getString("y");
+                        }catch(JSONException e){
+
+                        }
+
+                        Log.e(">>", "tmX : " + tmX + "\n" + "tmY : " + tmY);
+                        Log.e(">>", "tmX : " + tmX + "\n" + "tmY : " + tmY);
+                        Log.e(">>", "tmX : " + tmX + "\n" + "tmY : " + tmY);
+                        Log.e(">>", "tmX : " + tmX + "\n" + "tmY : " + tmY);
+
+                        stationName = getSpectator(tmX,tmY);
+
+                        Log.e(">>", "stationName : " + stationName);
+                        Log.e(">>", "stationName : " + stationName);
+
+
+                        pm10Grade = getPolution(stationName);
+
+                        if (pm10Grade.equals("1")){
+                            pm10Grade = "좋음";
+                        }else if (pm10Grade.equals("2")){
+                            pm10Grade = "보통";
+                        }else if (pm10Grade.equals("3")){
+                            pm10Grade = "나쁨";
+                        }else if (pm10Grade.equals("4")){
+                            pm10Grade = "매우나쁨";
+                        }
+
+
+                        O3Grade = getO3(stationName);
+                        if (O3Grade.equals("1")){
+                            O3Grade = "좋음";
+                        }else if (O3Grade.equals("2")){
+                            O3Grade = "보통";
+                        }
+                        else if (O3Grade.equals("3")){
+                            O3Grade = "나쁨";
+                        }
+                        else if (O3Grade.equals("4")){
+                            O3Grade = "매우나쁨";
+                        }
+
+
+
+                        hMap.put("pm10Grade", pm10Grade);
+                        hMap.put("O3Grade", O3Grade);
+
+                        Log.e(">>", "pm10Grade : " + pm10Grade);
+                        Log.e(">>", "pm10Grade : " + pm10Grade);
+
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+
+                }).start();
+
+                new Thread(() ->{
+                    try{
+
+
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                }).start();
 
                 //kakao Test
                 new Thread(() -> {
@@ -866,7 +956,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int runningFlag = 0;
 
-        if (setBaseFlag() == 1){
+        if (setBaseFlag() == 1 && pm10Grade.equals("좋음")||pm10Grade.equals("보통")){
             runningFlag = 1;
         }
         else{
@@ -1149,6 +1239,164 @@ public class SplashActivity extends AppCompatActivity {
 
         }
     };
+
+    public String getTm(String lat, String lng) throws IOException{
+        String tm = "";
+
+
+
+        //kakao 로 TM 좌표계 반환
+
+        URL url = new URL("https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?input_coord=WGS84&output_coord=TM&x="+lat+"&y="+lng);
+        HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+        httpConn.setRequestMethod("GET");
+
+        httpConn.setRequestProperty("Authorization", "KakaoAK c1c0921d459951a565bc6c7669060e68");
+
+        InputStream responseStream = httpConn.getResponseCode() / 100 == 2
+                ? httpConn.getInputStream()
+                : httpConn.getErrorStream();
+        Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+        String response = s.hasNext() ? s.next() : "";
+        System.out.println("리스폰스 입니다. TM"+response);
+
+        return response;
+
+    }
+
+    public String getSpectator(String tmX,String tmY) throws IOException{
+
+        String spectator = "";
+
+
+        String url = "http://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX="+tmX+"&tmY="+tmY+"&returnType=json&serviceKey=oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
+
+
+        System.out.println(url);
+        InputStream is = null;
+        try {
+            is = new URL(url).openStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            String str;
+            StringBuffer buffer = new StringBuffer();
+            while ((str = rd.readLine()) != null) {
+                buffer.append(str + "\n");
+            }
+            String jsonData = buffer.toString();
+            String receiveMsg = buffer.toString();
+
+
+
+            // jsonData를 먼저 JSONObject 형태로 바꾼다.
+            JSONObject obj = new JSONObject(jsonData);
+            obj = obj.getJSONObject("response");
+            obj = obj.getJSONObject("body");
+            JSONArray ValueArray = obj.getJSONArray("items");
+            //JSONArray ValueArray = obj.getJSONArray("item");
+
+            spectator = ValueArray.getJSONObject(0).getString("stationName");
+
+            Log.e("spectator",spectator);
+            Log.e("spectator",spectator);
+
+        }
+        catch (IOException | JSONException e) {
+            e.printStackTrace();
+
+        }
+
+        return spectator;
+
+    }
+
+    public String getPolution(String stationName) throws IOException {
+
+        String polution = "";
+        Log.e("misae", "misae");
+        Log.e("misae", "misae");
+        Log.e("misae", "misae");
+        Log.e("misae", "misae");
+        Log.e("misae", "misae");
+
+
+
+
+        String url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName="+stationName+"&dataTerm=DAILY&pageNo=1&numOfRows=100&returnType=json&serviceKey="+"oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
+        System.out.println(url);
+        InputStream is = null;
+        try {
+            is = new URL(url).openStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            String str;
+            StringBuffer buffer = new StringBuffer();
+            while ((str = rd.readLine()) != null) {
+                buffer.append(str + "\n");
+            }
+            String jsonData = buffer.toString();
+            String receiveMsg = buffer.toString();
+
+            // jsonData를 먼저 JSONObject 형태로 바꾼다.
+            JSONObject obj = new JSONObject(jsonData);
+            obj = obj.getJSONObject("response");
+            obj = obj.getJSONObject("body");
+            JSONArray ValueArray = obj.getJSONArray("items");
+            //JSONArray ValueArray = obj.getJSONArray("item");
+
+            polution = ValueArray.getJSONObject(0).getString("pm10Grade");
+
+
+        }
+        catch (IOException | JSONException e) {
+            e.printStackTrace();
+
+        }
+
+
+
+        return polution;
+    }
+
+
+    public String getO3(String stationName) throws IOException {
+
+
+        String result = "";
+
+
+        String url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName="+stationName+"&dataTerm=DAILY&pageNo=1&numOfRows=100&returnType=json&serviceKey="+"oTsloDJ6xmHymJiItQxmn1GEp2HiiX%2B8fA%2BH6PRKbCUp3XWPNEAViCpeWOir0YPCRpFHH3XQ6i6PlYwNdEg4dQ%3D%3D";
+        System.out.println(url);
+        InputStream is = null;
+        try {
+            is = new URL(url).openStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            String str;
+            StringBuffer buffer = new StringBuffer();
+            while ((str = rd.readLine()) != null) {
+                buffer.append(str + "\n");
+            }
+            String jsonData = buffer.toString();
+            String receiveMsg = buffer.toString();
+
+            // jsonData를 먼저 JSONObject 형태로 바꾼다.
+            JSONObject obj = new JSONObject(jsonData);
+            obj = obj.getJSONObject("response");
+            obj = obj.getJSONObject("body");
+            JSONArray ValueArray = obj.getJSONArray("items");
+            //JSONArray ValueArray = obj.getJSONArray("item");
+
+            result = ValueArray.getJSONObject(0).getString("o3Grade");
+
+
+        }
+        catch (IOException | JSONException e) {
+            e.printStackTrace();
+
+        }
+
+
+
+        return result;
+    }
 
 
     public String getJijumCodeJson(int x, int y){
