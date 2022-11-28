@@ -29,27 +29,7 @@ public class RunningActivity extends AppCompatActivity
         running_good = (TextView) findViewById(R.id.running_good);
 
 
-        List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
 
-
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-        //System.out.println(a.get(0).toString());
-        System.out.println(a.get(1).toString());
-        System.out.println(a.get(2).toString());
-        System.out.println(a.get(3).toString());
-        System.out.println(a.get(4).toString());
-        System.out.println(a.get(5).toString());
-        System.out.println(a.get(6).toString());
-        System.out.println(a.get(7).toString());
-        System.out.println(a.get(8).toString());
-        System.out.println(a.get(9).toString());
-        System.out.println(a.get(10).toString());
 
 
         //CharSequence address = a.get(0).toString();
@@ -62,7 +42,7 @@ public class RunningActivity extends AppCompatActivity
         test5.setText(flagMaker.hMap.get("address"));
 
 
-        if (Integer.parseInt(a.get(1).toString())==1){
+        if (Integer.parseInt(flagMaker.hMap.get("Cycle"))==1){
 
             running_good.setText("러닝하기 좋은 날씨"); // 러닝 플래그
         }
@@ -70,8 +50,8 @@ public class RunningActivity extends AppCompatActivity
             running_good.setText("러닝하기 좋지 않은 날씨"); // 러닝 플래그
         }
 
-        test2.setText(a.get(7).toString()); // 평균온도
-        test3.setText(a.get(8).toString()); // 평균강수량
+        test2.setText(flagMaker.hMap.get("TempAverage")); // 평균온도
+        test3.setText(flagMaker.hMap.get("Rain1hAverage")); // 평균강수량
 
 
 
