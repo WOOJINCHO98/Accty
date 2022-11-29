@@ -32,7 +32,7 @@
 
             <FrameLayout
                 android:layout_width="350dp"
-                android:layout_height="640dp"
+                android:layout_height="700dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/your_rounded_shape"
@@ -70,7 +70,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginBottom="120dp"
-                    android:src="@drawable/running90"
+                    android:src="@drawable/run_b"
                     android:visibility="visible"/>
 
 
@@ -80,7 +80,7 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="140dp"
-                    android:src="@drawable/surf_3"
+                    android:src="@drawable/run_o"
                     android:visibility="invisible" />
 
                 <GridLayout
