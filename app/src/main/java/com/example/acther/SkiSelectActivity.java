@@ -22,7 +22,7 @@ public class SkiSelectActivity extends AppCompatActivity {
     SQLiteDatabase sqlDb;
     SkiDb skiDb;
     Cursor cursor;
-    TextView skiName1,skiName2,skiName3,skiName4,skiName5,skiName6;
+    TextView Name1,Name2,Name3,Name4,Name5,Name6;
     TextView phone1,phone2,phone3,phone4,phone5,phone6;
     TextView locationX1,locationX2,locationX3,locationX4,locationX5,locationX6;
     TextView locationY1,locationY2,locationY3,locationY4,locationY5,locationY6;
@@ -37,12 +37,12 @@ public class SkiSelectActivity extends AppCompatActivity {
 
 
         skiDb=new SkiDb(this);
-        skiName1=(TextView)findViewById(R.id.skiName1);
-        skiName2=(TextView)findViewById(R.id.skiName2);
-        skiName3=(TextView)findViewById(R.id.skiName3);
-        skiName4=(TextView)findViewById(R.id.skiName4);
-        skiName5=(TextView)findViewById(R.id.skiName5);
-        skiName6=(TextView)findViewById(R.id.skiName6);
+        Name1=(TextView)findViewById(R.id.Name1);
+        Name2=(TextView)findViewById(R.id.Name2);
+        Name3=(TextView)findViewById(R.id.Name3);
+        Name4=(TextView)findViewById(R.id.Name4);
+        Name5=(TextView)findViewById(R.id.Name5);
+        Name6=(TextView)findViewById(R.id.Name6);
 
         phone1=(TextView)findViewById(R.id.phone1);
         phone2=(TextView)findViewById(R.id.phone2);
@@ -110,12 +110,12 @@ public class SkiSelectActivity extends AppCompatActivity {
         cursor.close();                                 //커서닫기
         sqlDb.close();                         //db닫기
 
-        skiName1.setText(strName[0]);
-        skiName2.setText(strName[1]);
-        skiName3.setText(strName[2]);
-        skiName4.setText(strName[3]);
-        skiName5.setText(strName[4]);
-        skiName6.setText(strName[5]);
+        Name1.setText(strName[0]);
+        Name2.setText(strName[1]);
+        Name3.setText(strName[2]);
+        Name4.setText(strName[3]);
+        Name5.setText(strName[4]);
+        Name6.setText(strName[5]);
         phone1.setText(phone[0]);
         phone2.setText(phone[1]);
         phone3.setText(phone[2]);

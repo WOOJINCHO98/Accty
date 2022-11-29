@@ -39,7 +39,7 @@
 
 
                 <TextView
-                    android:id="@+id/skiName1"
+                    android:id="@+id/Name1"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -85,7 +85,7 @@
 
                 <TextView
 
-                    android:id="@+id/skiName2"
+                    android:id="@+id/Name2"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -132,7 +132,7 @@
 
                 <TextView
 
-                    android:id="@+id/skiName3"
+                    android:id="@+id/Name3"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -179,7 +179,7 @@
 
                 <TextView
 
-                    android:id="@+id/skiName4"
+                    android:id="@+id/Name4"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -226,7 +226,7 @@
 
                 <TextView
 
-                    android:id="@+id/skiName5"
+                    android:id="@+id/Name5"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -273,7 +273,7 @@
 
                 <TextView
 
-                    android:id="@+id/skiName6"
+                    android:id="@+id/Name6"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
