@@ -28,14 +28,7 @@ class SkiDb extends SQLiteOpenHelper{
         skiLocationY[4]="37.58132759335204";                    //휘닉스 평창 Y좌표
         skiLocationY[5]="37.33798433777639";                    //곤지암 리조트 Y좌표
 
-        String phone[] = new String [6];
-        phone[0]="강원평창군대관령면용산리425";
 
-        String placeUrl[]=new String[6];
-        placeUrl[0]="http://place.map.kakao.com/26977193";
-
-        String addressName[]=new String[6];
-        addressName[0]="-339-0000";
 
         sqLiteDatabase.execSQL("CREATE TABLE SkiTable(placeName CHAR(40) PRIMARY KEY," +
                 "locationX CHAR(100),"+"locationY CHAR(100),"+"addressName CHAR(100),"+"phone CHAR(100),"+"placeUrl CAHR(100))");
@@ -53,16 +46,7 @@ class SkiDb extends SQLiteOpenHelper{
                 "'"+"강원 평창군 봉평면 면온리 1095-1"+"','"+"1588-2828"+"','"+"http://place.map.kakao.com/27217918"+"')");
         sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "곤지암 리조트" + "',"+skiLocationX[5]+","+skiLocationY[5]+"," +
                 "'"+"경기 광주시 도척면 도웅리 533"+"','"+"1661-8787"+"','"+"http://place.map.kakao.com/8190409"+"')");
-/*
 
-
-
-
-        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "휘닉스 평창" + "',"+skiLocationX[4]+","+skiLocationY[4]+"," +
-                ""+"강원 평창군 봉평면 면온리 1095-1"+","+"1588-2828"+","+"http://place.map.kakao.com/27217918"+")");
-        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "곤지암리조트" + "',"+skiLocationX[5]+","+skiLocationY[5]+"," +
-                ""+"경기 광주시 도척면 도웅리 533"+","+"1661-8787"+","+"http://place.map.kakao.com/8190409"+")");
-                */
 
     }
 
