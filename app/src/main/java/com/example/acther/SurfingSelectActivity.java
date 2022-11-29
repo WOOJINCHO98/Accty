@@ -19,7 +19,7 @@ public class SurfingSelectActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_golf_select);
 
-        place =(EditText) findViewById(R.id.place);
+        //place =(EditText) findViewById(R.id.);
 
         String strName[]=new String[6];
         String strLocationX[]=new String[6];

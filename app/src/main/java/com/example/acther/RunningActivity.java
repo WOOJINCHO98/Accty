@@ -54,14 +54,14 @@ public class RunningActivity extends AppCompatActivity
             running_good.setText("러닝하기 좋은 날씨"); // 러닝 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));
             running_good.setTextColor(Color.parseColor("#00D1FF"));
-            running_image.setColorFilter(Color.parseColor("#00D1FF"));
+            running_image.setImageResource(R.drawable.run_b);
 
         }
         else{
             running_good.setText("러닝하기 좋지 않은 날씨"); // 러닝 플래그
             title.setTextColor(Color.parseColor("#FF3203"));
             running_good.setTextColor(Color.parseColor("#FF3203"));
-            running_image.setColorFilter(Color.parseColor("#FF3203"));
+            running_image.setImageResource(R.drawable.run_o);
 
 
             //running_image.setImageTintBlendMode(BlendMode.MULTIPLY);
