@@ -10,32 +10,34 @@ import androidx.appcompat.app.AppCompatActivity;
 public class GolfSelectActivity extends AppCompatActivity
 {
     SQLiteDatabase sqlDb;
-    SkiDb skiDb;
+    GolfDb golfDb;
     Cursor cursor;
-    EditText skiname;
+    EditText golfName;   //확인용도 삭제하면됨
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_golf_select);
 
-        skiname=(EditText) findViewById(R.id.skiname);
+        golfDb=new GolfDb(this);
+        //golfName=(EditText)findViewById(R.id.golfName);
 
-        String strName[]=new String[6];
-        String strLocationX[]=new String[6];
-        String strLocationY[]=new String[6];
-        skiname.setText("안녕");
 
-        skiDb=new SkiDb(this);
+        String strName[]=new String[6];                    //골프장 이름 넣을 변수
+        String strLocationX[]=new String[6];               //골프장 X좌표 넣을 변수
+        String strLocationY[]=new String[6];               //골프장 Y좌표 넣을 변수
 
-        sqlDb=skiDb.getReadableDatabase();
-        skiDb.onUpgrade(sqlDb,1,2);
+        //테이블조회
+        sqlDb=golfDb.getReadableDatabase();
+        golfDb.onUpgrade(sqlDb,1,2);
 
-        cursor = sqlDb.rawQuery("SELECT * FROM skiTable;",null);
+        cursor = sqlDb.rawQuery("SELECT * FROM GolfTable;",null);
+
 
 
         //아까선언한 변수에 스키장 이름,X좌표,y좌표값 넣기
-        for(int i=0; i<4;i++){
+        for(int i=0; i<6;i++){
             cursor.moveToNext();
 
             strName[i]=cursor.getString(0);
@@ -43,18 +45,9 @@ public class GolfSelectActivity extends AppCompatActivity
             strLocationY[i]=cursor.getString(2);
 
         }
-
-
-        skiname.setText(strName[3]);           //다른 변수에 넣을 수도 있다. 나중에 실제 활용
-
-
         cursor.close();                                 //커서닫기
-
-
         sqlDb.close();                         //db닫기
-
-
-
+        golfName.setText(strName[5]);           //저장 확인용도,
 
 
 

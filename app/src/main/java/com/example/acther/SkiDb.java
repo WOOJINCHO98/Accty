@@ -30,17 +30,17 @@ class SkiDb extends SQLiteOpenHelper{
 
         sqLiteDatabase.execSQL("CREATE TABLE SkiTable(placeName CHAR(40) PRIMARY KEY," +
                 "locationX CHAR(100),"+"locationY CHAR(100));");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "알펜시아" + "',"+skiLocationX[0]+","+skiLocationY[0]+")");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "소노벨비발디파크" + "',"+skiLocationX[1]+","+skiLocationY[1]+")");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "용평리조트" + "',"+skiLocationX[2]+","+skiLocationY[2]+")");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "하이원리조트" + "',"+skiLocationX[3]+","+skiLocationY[3]+")");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "휘닉스평창" + "',"+skiLocationX[4]+","+skiLocationY[4]+")");
-        sqLiteDatabase.execSQL("INSERT INTO skiTable VALUES('"+ "곤지암리조트" + "',"+skiLocationX[5]+","+skiLocationY[5]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "알펜시아" + "',"+skiLocationX[0]+","+skiLocationY[0]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "소노벨비발디파크" + "',"+skiLocationX[1]+","+skiLocationY[1]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "용평리조트" + "',"+skiLocationX[2]+","+skiLocationY[2]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "하이원리조트" + "',"+skiLocationX[3]+","+skiLocationY[3]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "휘닉스평창" + "',"+skiLocationX[4]+","+skiLocationY[4]+")");
+        sqLiteDatabase.execSQL("INSERT INTO SkiTable VALUES('"+ "곤지암리조트" + "',"+skiLocationX[5]+","+skiLocationY[5]+")");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS skiTable");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS SkiTable");
         onCreate(sqLiteDatabase);
 
     }
