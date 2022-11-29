@@ -53,18 +53,20 @@
 
 
             <TextView
+                android:id="@+id/msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="280dp"
+                android:layout_marginBottom="250dp"
                 android:layout_gravity="center"
-                android:text="서핑하기 힘든 날씨"
+
                 android:textColor="#ff7800"
                 android:visibility="invisible"
                 android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="17sp"/>
 
 
             <ImageView
+                android:id="@+id/img"
                 android:layout_gravity="center"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -74,7 +76,6 @@
 
 
             <ImageView
-                android:id="@+id/img"
                 android:layout_gravity="center"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -126,7 +127,7 @@
                     android:textSize="20sp"/>
 
                 <TextView
-                    android:id="@+id/rainfall"
+                    android:id="@+id/snowfall"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:textColor="@color/black"
@@ -181,7 +182,6 @@
 
                 <TextView
                     android:id="@+id/wave"
-
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:textColor="@color/black"
@@ -208,6 +208,7 @@
         </FrameLayout>
 
         <TextView
+            android:id="@id/ozone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
