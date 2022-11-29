@@ -62,7 +62,7 @@ public class FishingActivity extends AppCompatActivity
             img.setImageResource(R.drawable.fish_o);
 
 
-            String msgString = flagMaker.hMap.get("temp0Msg2");
+            String msgString = flagMaker.hMap.get("tempGapMsg");
             System.out.println("msgString : "+msgString);
 
             if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
