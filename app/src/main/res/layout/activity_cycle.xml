@@ -149,7 +149,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="240dp"
-                    android:text="서핑하기 힘든 날씨"
                     android:textColor="#ff7800"
                     android:textSize="17sp"
                     android:visibility="invisible" />

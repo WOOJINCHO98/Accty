@@ -59,7 +59,7 @@ public class A_AlarmReceiver extends BroadcastReceiver {
 
         SplashActivity flagMaker = new SplashActivity();
 
-        List a = ((SplashActivity)SplashActivity.mContext).makeFlag(); // 알림 발생 시 makeFlag() 메소드 호출
+        ((SplashActivity)SplashActivity.mContext).makeFlag(); // 알림 발생 시 makeFlag() 메소드 호출
 
 
         try {

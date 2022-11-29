@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -68,8 +70,28 @@ public class CycleActivity extends AppCompatActivity
             is_good.setTextColor(Color.parseColor("#FF3203"));
             img.setImageResource(R.drawable.cycle_o);
 
+            String msgString = flagMaker.hMap.get("tempGapMsg");
 
-            String msgString = flagMaker.hMap.get("temp0Msg");
+
+            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
+                msgString = flagMaker.hMap.get("rainMsg");
+                System.out.println("msgString : "+msgString);
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg"))==false){
+                msgString = flagMaker.hMap.get("snowMsg");
+                System.out.println("msgString : "+msgString);
+
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg"))==false){
+                msgString = flagMaker.hMap.get("temp0Msg");
+                System.out.println("msgString : "+msgString);
+
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp30Msg"))==false){
+                msgString = flagMaker.hMap.get("temp30Msg");
+                System.out.println("msgString : "+msgString);
+
+            }
             System.out.println(msgString);
             msg.setText(msgString);
             msg.setVisibility(View.VISIBLE);
@@ -88,11 +110,15 @@ public class CycleActivity extends AppCompatActivity
         Double temp = Double.parseDouble(flagMaker.hMap.get("TempAverage"));
         Integer intTemp = temp.intValue();
 
+
+        Double windAverage = Double.parseDouble(flagMaker.hMap.get("WindSpeedAverage"));
+        Integer intWindAverage = windAverage.intValue();
+
         temperature.setText(intTemp.toString()); // 평균온도
         rainfall.setText(flagMaker.hMap.get("Rain1hAverage")); // 평균강수량
-        //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
-        dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
-        wind.setText(flagMaker.hMap.get("WindSpeedAverage")); // 평균강수량
+        //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균
+        dust.setText(flagMaker.hMap.get("pm10Grade")); // 미세먼지
+        wind.setText(intWindAverage.toString()+"m/s"); // 평균풍속
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 

@@ -4,10 +4,13 @@ import android.graphics.BlendMode;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -15,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class RunningActivity extends AppCompatActivity
 {
 
-    TextView title,test,test1,test2,test3,test4,test5,running_good;
+    TextView title,test,test1,test2,test3,test4,test5,running_good,msg;
 
     ImageView running_image;
     @Override
@@ -35,6 +38,7 @@ public class RunningActivity extends AppCompatActivity
         test5 = (TextView) findViewById(R.id.test5);
         running_good = (TextView) findViewById(R.id.running_good);
         running_image = (ImageView) findViewById(R.id.running_image);
+        msg = (TextView) findViewById(R.id.msg);
 
 
 
@@ -62,6 +66,33 @@ public class RunningActivity extends AppCompatActivity
             title.setTextColor(Color.parseColor("#FF3203"));
             running_good.setTextColor(Color.parseColor("#FF3203"));
             running_image.setImageResource(R.drawable.run_o);
+
+
+            String msgString = "";
+
+
+            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
+                msgString = flagMaker.hMap.get("rainMsg");
+                System.out.println("msgString : "+msgString);
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg"))==false){
+                msgString = flagMaker.hMap.get("snowMsg");
+                System.out.println("msgString : "+msgString);
+
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg"))==false){
+                msgString = flagMaker.hMap.get("temp0Msg");
+                System.out.println("msgString : "+msgString);
+
+            }
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp30Msg"))==false){
+                msgString = flagMaker.hMap.get("temp30Msg");
+                System.out.println("msgString : "+msgString);
+
+            }
+            System.out.println(msgString);
+            msg.setText(msgString);
+            msg.setVisibility(View.VISIBLE);
 
 
             //running_image.setImageTintBlendMode(BlendMode.MULTIPLY);

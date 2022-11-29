@@ -51,15 +51,14 @@
                     android:textSize="20sp"/>
 
                 <TextView
+                    android:id="@+id/msg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="280dp"
                     android:layout_gravity="center"
-                    android:text="러닝하기 힘든 날씨"
+                    android:layout_marginBottom="240dp"
                     android:textColor="#ff7800"
-                    android:visibility="invisible"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
+                    android:textSize="17sp"
+                    android:visibility="invisible" />
 
                 <ImageView
                     android:id="@+id/running_image"

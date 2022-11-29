@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     FlagMaker flagMaker = new FlagMaker();
 
+    public static Activity activity;
+
+
     private static final String TAG = "MainActivity";
 
     SQLiteDatabase sqlDb;
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        activity = MainActivity.this;
 
         //flagMaker.makeFlag();
 
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         */
 
         // splash 액티비티의 make flag 실행하기
-        List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
+        Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag();
 
 
 

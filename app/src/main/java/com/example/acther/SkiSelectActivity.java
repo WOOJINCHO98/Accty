@@ -1,14 +1,20 @@
 package com.example.acther;
 
+import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.w3c.dom.Text;
+
+import java.util.List;
 
 public class SkiSelectActivity extends AppCompatActivity {
 
@@ -20,10 +26,15 @@ public class SkiSelectActivity extends AppCompatActivity {
     TextView phone1,phone2,phone3,phone4,phone5,phone6;
     TextView locationX1,locationX2,locationX3,locationX4,locationX5,locationX6;
     TextView locationY1,locationY2,locationY3,locationY4,locationY5,locationY6;
+
+    FrameLayout frameBtn1,frameBtn2,frameBtn3,frameBtn4,frameBtn5,frameBtn6;
+    MainActivity MA = (MainActivity) MainActivity.activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ski_select);
+
+
 
         skiDb=new SkiDb(this);
         skiName1=(TextView)findViewById(R.id.skiName1);
@@ -40,6 +51,16 @@ public class SkiSelectActivity extends AppCompatActivity {
         phone5=(TextView)findViewById(R.id.phone5);
         phone6=(TextView)findViewById(R.id.phone6);
 
+        frameBtn1= (FrameLayout) findViewById(R.id.frameBtn1);
+        frameBtn2= (FrameLayout) findViewById(R.id.frameBtn2);
+        frameBtn3= (FrameLayout) findViewById(R.id.frameBtn3);
+        frameBtn4= (FrameLayout) findViewById(R.id.frameBtn4);
+        frameBtn5= (FrameLayout) findViewById(R.id.frameBtn5);
+        frameBtn6= (FrameLayout) findViewById(R.id.frameBtn6);
+
+
+
+        /*
         locationX1=(TextView)findViewById(R.id.locationX1);
         locationX2=(TextView)findViewById(R.id.locationX2);
         locationX3=(TextView)findViewById(R.id.locationX3);
@@ -53,7 +74,7 @@ public class SkiSelectActivity extends AppCompatActivity {
         locationY4=(TextView)findViewById(R.id.locationY4);
         locationY5=(TextView)findViewById(R.id.locationY5);
         locationY6=(TextView)findViewById(R.id.locationY6);
-
+*/
 
 
 
@@ -101,6 +122,9 @@ public class SkiSelectActivity extends AppCompatActivity {
         phone4.setText(phone[3]);
         phone5.setText(phone[4]);
         phone6.setText(phone[5]);
+
+
+        /*
         locationX1.setText(strLocationX[0]);
         locationX2.setText(strLocationX[1]);
         locationX3.setText(strLocationX[2]);
@@ -115,6 +139,7 @@ public class SkiSelectActivity extends AppCompatActivity {
         locationY5.setText(strLocationX[4]);
         locationY6.setText(strLocationX[5]);
 
+         */
 
 
 
@@ -122,6 +147,209 @@ public class SkiSelectActivity extends AppCompatActivity {
 
 
 
+        frameBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[0]+ strLocationX[0]+ strLocationY[0]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[0], strLocationX[0], strLocationY[0]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
+
+        frameBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[1]+ strLocationX[1]+ strLocationY[1]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[1], strLocationX[1], strLocationY[1]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
+
+        frameBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[2]+ strLocationX[2]+ strLocationY[2]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[2], strLocationX[2], strLocationY[2]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
+
+        frameBtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[0]+ strLocationX[0]+ strLocationY[0]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[3], strLocationX[3], strLocationY[3]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
+
+        frameBtn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[0]+ strLocationX[0]+ strLocationY[0]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[4], strLocationX[4], strLocationY[4]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
+
+        frameBtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println("클릭");
+                System.out.println(strName[0]+ strLocationX[0]+ strLocationY[0]);
+
+
+                try {
+                    Integer a = ((SplashActivity)SplashActivity.mContext).makeFlag_DB(strName[5], strLocationX[5], strLocationY[5]);
+
+
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
+
+                try {
+
+                    Thread.sleep(1000); //1초 대기
+
+                } catch (InterruptedException e) {
+
+                    e.printStackTrace();
+
+                }
+                Intent intent = new Intent(SkiSelectActivity.this, SkiActivity.class);
+                startActivity(intent);
+            }
+
+
+
+        });
     }
 }
 

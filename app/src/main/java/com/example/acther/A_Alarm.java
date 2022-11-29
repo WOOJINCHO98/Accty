@@ -16,6 +16,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -187,6 +188,10 @@ public class A_Alarm extends AppCompatActivity {
 
         ok_button = (Button)findViewById(R.id.ok_button);
         no_button = (Button)findViewById(R.id.no_button);
+
+
+
+
 
         //TODO [버튼 클릭 이벤트 정의]
         ok_button.setOnClickListener(new View.OnClickListener() {
