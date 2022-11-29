@@ -26,7 +26,7 @@ public class SurfingActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_golf);
+        setContentView(R.layout.activity_surfing);
 
 
 
