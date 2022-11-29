@@ -1714,7 +1714,10 @@ public class SplashActivity extends AppCompatActivity {
             fishingFlag = 1;
         }
         else{
+
             fishingFlag = 0;
+
+
         }
 
         return fishingFlag;
