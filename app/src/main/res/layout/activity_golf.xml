@@ -27,7 +27,7 @@
 
             <FrameLayout
                 android:layout_width="350dp"
-                android:layout_height="700dp"
+                android:layout_height="800dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/your_rounded_shape"
@@ -76,12 +76,90 @@
                     android:src="@drawable/golf_o"
                     android:visibility="invisible"/>
 
+                <GridLayout
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/your_rounded_shape"
+                    android:elevation="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="풍향"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/arrow_s"/>
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="9시"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_ne"/>
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="15시"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_e"/>
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="19시"/>
+
+                    </LinearLayout>
+
+
+
+                </GridLayout>
+
 
                 <GridLayout
                     android:layout_width="300dp"
                     android:layout_height="230dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="195dp"
                     android:columnCount="2"
                     android:rowCount="4"
                     android:orientation="horizontal"
@@ -169,7 +247,7 @@
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="파고"
+                        android:text="풍향"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
@@ -190,7 +268,7 @@
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="300dp"
+                    android:layout_marginTop="350dp"
                     android:text="위치:경기도 남양주시"
                     android:textColor="@color/white"
                     android:textSize="17sp"

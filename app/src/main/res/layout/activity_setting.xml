@@ -25,7 +25,7 @@
         android:orientation="vertical"
         android:elevation="10dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="80dp">
 
     <TextView
         android:textStyle="bold"
@@ -156,7 +156,7 @@
 
     <Button
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="50dp"

@@ -50,8 +50,6 @@
                     android:textStyle="bold"
                     android:textSize="20sp"/>
 
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -63,7 +61,6 @@
                     android:textStyle="bold"
                     android:textSize="20sp"/>
 
-
                 <ImageView
                     android:id="@+id/running_image"
                     android:layout_gravity="center"
@@ -72,7 +69,6 @@
                     android:layout_marginBottom="120dp"
                     android:src="@drawable/run_b"
                     android:visibility="visible"/>
-
 
                 <ImageView
 

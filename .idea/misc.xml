@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/drawable/ic_surf.xml" value="0.276" />
         <entry key="app/src/main/res/drawable/mainbox.xml" value="0.131" />
         <entry key="app/src/main/res/drawable/mainbox_blue.xml" value="0.2145" />
+        <entry key="app/src/main/res/drawable/mainbox_grey.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/rounded_shape_purple.xml" value="0.254" />
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.1495" />
@@ -33,9 +34,9 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_running.xml" value="0.28838745117187503" />
         <entry key="app/src/main/res/layout/activity_set_alarm.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_ski.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_ski_select.xml" value="0.3029891304347826" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_ski.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_ski_select.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22962962962962963" />
         <entry key="app/src/main/res/layout/activity_surfing.xml" value="0.33" />
         <entry key="app/src/main/res/layout/notification_popup.xml" value="0.22962962962962963" />
