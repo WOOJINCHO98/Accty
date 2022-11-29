@@ -846,6 +846,7 @@ public class SplashActivity extends AppCompatActivity {
                 rainFlag = 1;
             }
             else{
+                hMap.put("rainMsg","오늘은 비가 내릴 수도 있어요");
                 rainFlag = 0;
                 break;
             }
@@ -862,6 +863,8 @@ public class SplashActivity extends AppCompatActivity {
                 snowFlag = 1;
             }
             else{
+                hMap.put("snowMsg","오늘은 눈이 내릴 수도 있어요");
+
                 snowFlag = 0;
                 break;
             }
@@ -876,6 +879,8 @@ public class SplashActivity extends AppCompatActivity {
         for (i=0; i<tempList.size(); i++){
             if ((Double)tempList.get(i) <= 0){
                 minTempFlag = 0;
+                hMap.put("temp0Msg","오늘은 영하권이에요.");
+
                 break;
             }
             else{
@@ -892,6 +897,8 @@ public class SplashActivity extends AppCompatActivity {
         for (i=0; i<tempList.size(); i++){
             if ((Double)tempList.get(i) >= 30){
                 maxTempFlag = 0;
+                hMap.put("temp30Msg","오늘은 한 낮에 30도가 넘어가요");
+
                 break;
             }
             else{
@@ -908,12 +915,15 @@ public class SplashActivity extends AppCompatActivity {
         dailyTempGap = (Double) maxTempList.get(0) - (Double) minTempList.get(0);
 
         if (dailyTempGap >= 10){
+            hMap.put("tmepGapMsg","오늘은 일교차가 10도 이상이에요.");
             DailyTempGapFlag = 1;
         }
         else if (dailyTempGap >= 15){
+            hMap.put("tmepGapMsg","오늘은 일교차가 15도 이상이에요.");
             DailyTempGapFlag = 2;
         }
         else if (dailyTempGap >= 20){
+            hMap.put("tmepGapMsg","오늘은 일교차가 20도 이상이에요.");
             DailyTempGapFlag = 2;
         }
         else{
@@ -995,30 +1005,13 @@ public class SplashActivity extends AppCompatActivity {
     // 싸이클 FLAG 값 정하기
     public Integer setCycleFlag() {
         // 풍속이 4.0ms 이하일 때
-        if (doubleMaxWindSpeed <= 4.0 && setBaseFlag() == 1) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                            "최대 풍속이 4.0 이하 입니다.\n" +
-                            "자전거 타기 좋은 날 입니다."+
-                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed+ " 입니다.");
-                }
-            });
+        if (setWindSpeedAverage() <= 4.0 && setBaseFlag() == 1) {
             int Flag = 1;
             return Flag;
         }
         //아니면.
         else{
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("설정 시간 오전 10:00 ~ 오후 5:00 사이 \n" +
-                            "최대 풍속이 4.0 보다 높습니다.\n" +
-                            "자전거 타기 힘든 날 입니다."+
-                            "오늘의 최대 풍속은  "+doubleMaxWindSpeed + " 입니다.");
-                }
-            });
+            hMap.put("cycleMsg","오늘은 풍속이 4m/s 이상이에요.");
             int Flag = 0;
             return Flag;
         }
@@ -1051,6 +1044,7 @@ public class SplashActivity extends AppCompatActivity {
             skiFlag = 1;
         }
         else{
+
             skiFlag = 0;
             if (setSnowFlag() == 0){
                 skiFlag = 1;
@@ -1069,9 +1063,13 @@ public class SplashActivity extends AppCompatActivity {
             paraglidingFlag = 1;
         }
         else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0){
+            hMap.put("glidingMsg","오늘은 풍속이 6m/s 가 넘어가요.");
+
             paraglidingFlag = 2;
         }
         else{
+            hMap.put("glidingMsg","오늘은 바람이 너무 안 부네요.");
+
             paraglidingFlag = 3;
         }
 
@@ -1079,7 +1077,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
 
-    // 패러글라이딩 FLAG 값 정하기
+    // 서핑 FLAG 값 정하기
     public Integer setSurfingFlag(){
 
         int surfingFlag = 0;
