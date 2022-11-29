@@ -3,121 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name1">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone1"
-            ></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationX1">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationY1">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name2">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone2"
-            ></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationX2">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationY2">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name3">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone3"
-            ></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationX3">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationY3">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name4">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone4"
-            ></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationX4">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/locationY4">
-
-        </TextView>
-
-
-    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -141,6 +26,7 @@
                 android:textSize="40sp"/>
 
             <FrameLayout
+                android:id="@+id/frameBtn1"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingRight="20dp"
@@ -153,6 +39,7 @@
 
 
                 <TextView
+                    android:id="@+id/Name1"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -162,6 +49,7 @@
                     android:text="고양 컨트리 클럽"
                     android:textColor="@color/black"/>
                 <TextView
+                    android:id="@+id/phone1"
                     android:textColor="@color/black"
                     android:layout_marginTop="55dp"
                     android:layout_marginLeft="20dp"
@@ -182,6 +70,8 @@
             </FrameLayout>
 
             <FrameLayout
+
+                android:id="@+id/frameBtn2"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingRight="20dp"
@@ -194,6 +84,8 @@
 
 
                 <TextView
+
+                    android:id="@+id/Name2"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -203,6 +95,8 @@
                     android:text="고양 컨트리 클럽"
                     android:textColor="@color/black"/>
                 <TextView
+
+                    android:id="@+id/phone2"
                     android:textColor="@color/black"
                     android:layout_marginTop="55dp"
                     android:layout_marginLeft="20dp"
@@ -223,6 +117,8 @@
             </FrameLayout>
 
             <FrameLayout
+
+                android:id="@+id/frameBtn3"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingRight="20dp"
@@ -235,6 +131,8 @@
 
 
                 <TextView
+
+                    android:id="@+id/Name3"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -244,6 +142,8 @@
                     android:text="고양 컨트리 클럽"
                     android:textColor="@color/black"/>
                 <TextView
+
+                    android:id="@+id/phone3"
                     android:textColor="@color/black"
                     android:layout_marginTop="55dp"
                     android:layout_marginLeft="20dp"
@@ -264,6 +164,8 @@
             </FrameLayout>
 
             <FrameLayout
+
+                android:id="@+id/frameBtn4"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingRight="20dp"
@@ -276,6 +178,8 @@
 
 
                 <TextView
+
+                    android:id="@+id/Name4"
                     android:textSize="20sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -285,6 +189,8 @@
                     android:text="고양 컨트리 클럽"
                     android:textColor="@color/black"/>
                 <TextView
+
+                    android:id="@+id/phone4"
                     android:textColor="@color/black"
                     android:layout_marginTop="55dp"
                     android:layout_marginLeft="20dp"
@@ -304,51 +210,10 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:paddingRight="20dp"
-                android:layout_width="350dp"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/mainbox"
-                android:elevation="5dp">
 
 
-                <TextView
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="고양 컨트리 클럽"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:textColor="@color/black"
-                    android:layout_marginTop="55dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="0dp"
-                    android:textSize="15sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="02-1234-1234"
-                    android:gravity="center_vertical" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_round_arrow"
-                    android:layout_marginLeft="280dp"
-                    android:layout_marginTop="20dp"/>
 
-            </FrameLayout>
-
-            <EditText
-                android:layout_width="350dp"
-                android:layout_height="10dp"
-                android:id="@+id/skiname"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -359,12 +224,5 @@
                 android:textSize="10sp"/>
         </LinearLayout>
     </ScrollView>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/paraName"
-        android:text="aaa"
-        ></EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
