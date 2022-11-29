@@ -26,6 +26,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 0);
 
         */
+
+        // splash 액티비티의 make flag 실행하기
+        List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
+
+
 
 
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);

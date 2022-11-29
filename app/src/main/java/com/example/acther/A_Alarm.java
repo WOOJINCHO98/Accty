@@ -72,7 +72,17 @@ public class A_Alarm extends AppCompatActivity {
     Button no_button;
 
 
+    String isRunningChecked;
+    String isCyclingChecked;
+    String isHikingChecked;
+    String isGlidingChecked;
+    String isSurfingChecked;
+    String isFishingChecked;
+    String isGolfChecked;
+    String isSkiChecked;
 
+
+    public static String whatIsChecked;
 
     //TODO [액티비티 시작 메소드]
     @Override
@@ -84,6 +94,50 @@ public class A_Alarm extends AppCompatActivity {
         Log.d("","\n"+"[A_Alarm > onCreate() 메소드 : 액티비티 시작 실시]");
         Log.d("//===========//","================================================");
         Log.d("---","---");
+
+        isRunningChecked = S_Preference.getString(getApplication(), "isRunningChecked");
+        isCyclingChecked = S_Preference.getString(getApplication(), "isCyclingChecked");
+        isHikingChecked = S_Preference.getString(getApplication(), "isHikingChecked");
+        isGlidingChecked = S_Preference.getString(getApplication(), "isGlidingChecked");
+        isSurfingChecked = S_Preference.getString(getApplication(), "isSurfingChecked");
+        isFishingChecked = S_Preference.getString(getApplication(), "isFishingChecked");
+        isGolfChecked = S_Preference.getString(getApplication(), "isGolfChecked");
+        isSkiChecked = S_Preference.getString(getApplication(), "isSkiChecked");
+
+
+        System.out.println("isRunningChecked : " + isRunningChecked);
+        System.out.println("isCyclingChecked : " + isCyclingChecked);
+        System.out.println("isHikingChecked : " + isHikingChecked);
+        System.out.println("isGlidingChecked : " + isGlidingChecked);
+        System.out.println("isSurfingChecked : " + isSurfingChecked);
+        System.out.println("isFishingChecked : " + isFishingChecked);
+        System.out.println("isGolfChecked : " + isGolfChecked);
+        System.out.println("isSkiChecked : " + isSkiChecked);
+
+
+
+
+        if(isRunningChecked.equals("true")){
+            whatIsChecked = "running";
+        }else if(isCyclingChecked.equals("true")){
+            whatIsChecked =  "cycling";
+        }else if(isHikingChecked.equals("true")){
+            whatIsChecked =  "hiking";
+        }else if(isGlidingChecked.equals("true")){
+            whatIsChecked = "gliding";
+        }else if(isSurfingChecked.equals("true")){
+            whatIsChecked =  "surfing";
+        }else if(isFishingChecked.equals("true")){
+            whatIsChecked =  "fishing";
+        }else if(isGolfChecked.equals("true")){
+            whatIsChecked =  "golf";
+        }else if(isSkiChecked.equals("true")){
+            whatIsChecked =  "ski";
+        }else{
+            whatIsChecked =  "none";
+        }
+
+
 
 
         //TODO [초기 프리퍼런스에 현재 날짜 저장 실시]
@@ -172,6 +226,8 @@ public class A_Alarm extends AppCompatActivity {
             String now = getNowTime2();
             int result = str_date.compareTo(now);
 
+
+
             //TODO [알림 매니저 객체 생성]
             AlarmManager alarmManager  = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             Calendar calendar = Calendar.getInstance();
@@ -197,6 +253,10 @@ public class A_Alarm extends AppCompatActivity {
             Log.d("","\n"+"[Calendar : "+calendar.toString()+"]");
             Log.w("//===========//","================================================");
             Log.d("---","---");
+
+
+
+
 
             //TODO [알림 등록 실시]
             if (Build.VERSION.SDK_INT >= 23) { //TODO 23보다 큰 경우
@@ -239,7 +299,7 @@ public class A_Alarm extends AppCompatActivity {
             S_Preference.setString(getApplication(), "Alarm_Date", str_date);
 
             getAlertDialog("알람 설정",
-                    "\n"+"[알림이 정상적으로 예약되었습니다]"+"\n"+"\n"+
+                    "\n"+"["+ whatIsChecked +"알림이 정상적으로 예약되었습니다]"+"\n"+"\n"+
                     "[현재 예약 날짜]"+"\n"+String.valueOf(now)+"\n"+"\n"+
                             "[변경할 날짜]"+"\n"+S_Preference.getString(getApplication(), "Alarm_Date"),
                     "확인",
@@ -363,7 +423,7 @@ public class A_Alarm extends AppCompatActivity {
             Log.d("---","---");
             //TODO [액티비티 종료 실시]
             finish();
-            overridePendingTransition(0,0);
+            overridePendingTransition(1,3);
         }
         return true;
     }

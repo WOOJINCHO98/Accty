@@ -11,11 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="IM SETTING"/>
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="알람 시간 설정 하기"/>
 
     <Button
         android:layout_gravity="center"
@@ -32,62 +27,77 @@
         android:text="알람 운동종목 설정하기"/>
 
 
-    <CheckBox
+    <ImageButton
         android:id="@+id/running"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="러닝"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
         />
 
-    <CheckBox
+    <ImageButton
         android:id="@+id/cycling"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="자전거"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/hiking"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="등산"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/gliding"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="패러글라이딩"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/surfing"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="서핑"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/fishing"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="낚시"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/golf"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="골프"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
-    <CheckBox
+    <ImageButton
         android:id="@+id/ski"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="스키"
         android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background"
+
         />
 
 

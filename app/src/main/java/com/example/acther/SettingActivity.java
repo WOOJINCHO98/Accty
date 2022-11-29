@@ -6,6 +6,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,6 +15,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -29,14 +32,26 @@ public class SettingActivity extends AppCompatActivity {
 
     Button setTime,notification_btn;
 
-    static CheckBox running;
-    static CheckBox cycling;
-    static CheckBox hiking;
-    static CheckBox gliding;
-    static CheckBox surfing;
-    static CheckBox fishing;
-    static CheckBox golf;
-    static CheckBox ski;
+    static ImageButton running;
+    static ImageButton cycling;
+    static ImageButton hiking;
+    static ImageButton gliding;
+    static ImageButton surfing;
+    static ImageButton fishing;
+    static ImageButton golf;
+    static ImageButton ski;
+
+    public String isRunningChecked;
+    public String isCyclingChecked;
+    public String isHikingChecked;
+    public String isGlidingChecked;
+    public String isSurfingChecked;
+    public String isFishingChecked;
+    public String isGolfChecked;
+    public String isSkiChecked;
+
+
+
 
     private final ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
@@ -55,18 +70,22 @@ public class SettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
 
 
+
+
+
+
         // -----------
         notification_btn = (Button) findViewById(R.id.notification_btn);
         setTime = (Button) findViewById(R.id.setTime);
         //-------------
-        running = (CheckBox) findViewById(R.id.running);
-        cycling = (CheckBox) findViewById(R.id.cycling);
-        hiking = (CheckBox) findViewById(R.id.hiking);
-        gliding = (CheckBox) findViewById(R.id.gliding);
-        surfing = (CheckBox) findViewById(R.id.surfing);
-        fishing = (CheckBox) findViewById(R.id.fishing);
-        golf = (CheckBox) findViewById(R.id.golf);
-        ski = (CheckBox) findViewById(R.id.ski);
+        running = (ImageButton) findViewById(R.id.running);
+        cycling = (ImageButton) findViewById(R.id.cycling);
+        hiking = (ImageButton) findViewById(R.id.hiking);
+        gliding = (ImageButton) findViewById(R.id.gliding);
+        surfing = (ImageButton) findViewById(R.id.surfing);
+        fishing = (ImageButton) findViewById(R.id.fishing);
+        golf = (ImageButton) findViewById(R.id.golf);
+        ski = (ImageButton) findViewById(R.id.ski);
         //--------------------------------
 /*
         //알림(Notification)을 관리하는 관리자 객체를 운영체제(Context)로부터 소환하기
@@ -121,7 +140,66 @@ public class SettingActivity extends AppCompatActivity {
         askNotificationPermission();
 
 
+
+
 */
+
+        //프리퍼런스 불러오기]
+        isRunningChecked = S_Preference.getString(getApplication(), "isRunningChecked");
+        isCyclingChecked = S_Preference.getString(getApplication(), "isCyclingChecked");
+        isHikingChecked = S_Preference.getString(getApplication(), "isHikingChecked");
+        isGlidingChecked = S_Preference.getString(getApplication(), "isGlidingChecked");
+        isSurfingChecked = S_Preference.getString(getApplication(), "isSurfingChecked");
+        isFishingChecked = S_Preference.getString(getApplication(), "isFishingChecked");
+        isGolfChecked = S_Preference.getString(getApplication(), "isGolfChecked");
+        isSkiChecked = S_Preference.getString(getApplication(), "isSkiChecked");
+
+
+
+        if (isRunningChecked.equals("false")) {
+            running.setImageResource(R.drawable.running90);
+        } else {
+            running.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isCyclingChecked.equals("false")) {
+            cycling.setImageResource(R.drawable.cycling_icon);
+        } else {
+            cycling.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isHikingChecked.equals("false")) {
+            hiking.setImageResource(R.drawable.trekking_icon);
+        } else {
+            hiking.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isGlidingChecked.equals("false")) {
+            gliding.setImageResource(R.drawable.paragliding_icon);
+        } else {
+            gliding.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isSurfingChecked.equals("false")) {
+            surfing.setImageResource(R.drawable.surf);
+        } else {
+            surfing.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isFishingChecked.equals("false")) {
+            fishing.setImageResource(R.drawable.fishing_icon);
+        } else {
+            fishing.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isGolfChecked.equals("false")) {
+            golf.setImageResource(R.drawable.golf_icon);
+        } else {
+            golf.setImageResource(R.drawable.ic_launcher_background);
+        }
+        if (isSkiChecked.equals("false")) {
+            ski.setImageResource(R.drawable.skking_icon);
+        } else {
+            ski.setImageResource(R.drawable.ic_launcher_background);
+        }
+
+
+
+
 
         setTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +217,203 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-        getIsChecked();
+
+
+        running.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isRunningChecked = S_Preference.getString(getApplication(), "isRunningChecked");
+
+                System.out.println("isRunningChecked : " + isRunningChecked);
+
+                if (isRunningChecked.equals("true")) {
+                    running.setImageResource(R.drawable.running90);
+                    S_Preference.setString(getApplication(), "isRunningChecked", "false");
+                    Toast.makeText(getApplicationContext(), "러닝 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    running.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isRunningChecked", "true");
+                    Toast.makeText(getApplicationContext(), "러닝 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //running.setSelected(!running.isSelected());
+
+            }
+        });
+
+
+        cycling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isCyclingChecked = S_Preference.getString(getApplication(), "isCyclingChecked");
+
+                System.out.println("isCyclingChecked : " + isCyclingChecked);
+
+                if (isCyclingChecked.equals("true")) {
+                    cycling.setImageResource(R.drawable.cycling_icon);
+                    S_Preference.setString(getApplication(), "isCyclingChecked", "false");
+                    Toast.makeText(getApplicationContext(), "싸이클 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    cycling.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isCyclingChecked", "true");
+                    Toast.makeText(getApplicationContext(), "싸이클 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+
+        hiking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isHikingChecked = S_Preference.getString(getApplication(), "isHikingChecked");
+
+                System.out.println("isHikingChecked : " + isHikingChecked);
+
+                if (isHikingChecked.equals("true")) {
+                    hiking.setImageResource(R.drawable.trekking_icon);
+                    S_Preference.setString(getApplication(), "isHikingChecked", "false");
+                    Toast.makeText(getApplicationContext(), "하이킹 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    hiking.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isHikingChecked", "true");
+                    Toast.makeText(getApplicationContext(), "하이킹 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+        gliding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isGlidingChecked = S_Preference.getString(getApplication(), "isGlidingChecked");
+
+                System.out.println("isGlidingChecked : " + isGlidingChecked);
+
+                if (isGlidingChecked.equals("true")) {
+                    gliding.setImageResource(R.drawable.paragliding_icon);
+                    S_Preference.setString(getApplication(), "isGlidingChecked", "false");
+                    Toast.makeText(getApplicationContext(), "글라이딩 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    gliding.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isGlidingChecked", "true");
+                    Toast.makeText(getApplicationContext(), "글라이딩 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+        surfing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isSurfingChecked = S_Preference.getString(getApplication(), "isSurfingChecked");
+
+                System.out.println("isSurfingChecked : " + isSurfingChecked);
+
+                if (isSurfingChecked.equals("true")) {
+                    surfing.setImageResource(R.drawable.surf);
+                    S_Preference.setString(getApplication(), "isSurfingChecked", "false");
+                    Toast.makeText(getApplicationContext(), "서핑 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    surfing.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isSurfingChecked", "true");
+                    Toast.makeText(getApplicationContext(), "서핑 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+        fishing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isFishingChecked = S_Preference.getString(getApplication(), "isFishingChecked");
+
+                System.out.println("isFishingChecked : " + isFishingChecked);
+
+                if (isFishingChecked.equals("true")) {
+                    fishing.setImageResource(R.drawable.fishing_icon);
+                    S_Preference.setString(getApplication(), "isFishingChecked", "false");
+                    Toast.makeText(getApplicationContext(), "낚시 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    fishing.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isFishingChecked", "true");
+                    Toast.makeText(getApplicationContext(), "낚시 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+        golf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isGolfChecked = S_Preference.getString(getApplication(), "isGolfChecked");
+
+                System.out.println("isGolfChecked : " + isGolfChecked);
+
+                if (isGolfChecked.equals("true")) {
+                    golf.setImageResource(R.drawable.golf_icon);
+                    S_Preference.setString(getApplication(), "isGolfChecked", "false");
+                    Toast.makeText(getApplicationContext(), "골프 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    golf.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isGolfChecked", "true");
+                    Toast.makeText(getApplicationContext(), "골프 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+        ski.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                isSkiChecked = S_Preference.getString(getApplication(), "isSkiChecked");
+
+                System.out.println("isSkiChecked : " + isSkiChecked);
+
+                if (isSkiChecked.equals("true")) {
+                    ski.setImageResource(R.drawable.skking_icon);
+                    S_Preference.setString(getApplication(), "isSkiChecked", "false");
+                    Toast.makeText(getApplicationContext(), "스키 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    ski.setImageResource(R.drawable.ic_launcher_background);
+                    S_Preference.setString(getApplication(), "isSkiChecked", "true");
+                    Toast.makeText(getApplicationContext(), "스키 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
+                }
+                //cycling.setSelected(!cycling.isSelected());
+
+            }
+        });
+
+
+        // activity finish if keycode back
+
+
+
+
+
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        finish();
+
     }
 
 
@@ -156,6 +430,14 @@ public class SettingActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
+
+
+
+    /*
     public static Integer getIsChecked() {
         Integer isCheckedRunning = 0;
         Integer isCheckedGolf = 0;
@@ -165,7 +447,9 @@ public class SettingActivity extends AppCompatActivity {
         Integer isCheckedSurf = 0;
         Integer isCheckedSki = 0;
         Integer isCheckedHiking = 0;
+*/
 
+        /*
         if (running.isChecked()) {
             isCheckedRunning = 1;
             System.out.println("runningFlag : " + isCheckedRunning);
@@ -234,7 +518,7 @@ public class SettingActivity extends AppCompatActivity {
         return isCheckedCycle;
     }
 
-
+*/
 
 
 }
