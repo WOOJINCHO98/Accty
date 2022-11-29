@@ -1,7 +1,15 @@
 package com.example.acther;
 
+import android.graphics.BlendMode;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,73 +19,85 @@ import java.util.concurrent.TimeUnit;
 public class CycleActivity extends AppCompatActivity
 {
 
-    FlagMaker flagMaker = new FlagMaker();
+    TextView title,is_good,temperature,rainfall,wind,dust,wave,address,ozone,msg;
 
-
-    TextView test,test1,test2,test3,test4,test5;
-
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cycle2);
+        setContentView(R.layout.activity_cycle);
 
 
 
-
-        //test = (TextView) findViewById(R.id.test);
-        test1 = (TextView) findViewById(R.id.test1);
-        test2 = (TextView) findViewById(R.id.test2);
-        test3 = (TextView) findViewById(R.id.test3);
-        test4 = (TextView) findViewById(R.id.test4);
-        test5 = (TextView) findViewById(R.id.test5);
-
-
-
-        List a = ((SplashActivity)SplashActivity.mContext).makeFlag();
-
-        SplashActivity flagMaker = new SplashActivity();
-
-        try {
-            TimeUnit.SECONDS.sleep(2);
-
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        title = findViewById(R.id.title);
+        is_good = (TextView) findViewById(R.id.is_good);
+        temperature = (TextView) findViewById(R.id.temperature);
+        rainfall = (TextView) findViewById(R.id.rainfall);
+        wind = (TextView) findViewById(R.id.wind);
+        dust = (TextView) findViewById(R.id.dust);
+        wave = (TextView) findViewById(R.id.wave);
+        address = (TextView) findViewById(R.id.address);
+        img = (ImageView) findViewById(R.id.img);
+        ozone = (TextView) findViewById(R.id.ozone);
+        msg = (TextView) findViewById(R.id.msg);
 
 
 
         //CharSequence address = a.get(0).toString();
 
+        //test.setText(address); // 주소정보
 
-        System.out.println("#########################\n\n####################\n\n"+flagMaker.hMap.get("address"));
-        test1.setText(flagMaker.hMap.get("address"));
-        //test1.setText(String.valueOf(address)); // 주소정보
-
-        //test1.setText(flagMaker.address); // 주소정보
+        SplashActivity flagMaker = new SplashActivity();
 
 
-        if (flagMaker.hMap.get("Cycle").equals("1")){
+        address.setText(flagMaker.hMap.get("address"));
 
-            test2.setText("자전거 타기 좋은 날 입니다!"); // 싸이클 플래그
+
+        if (Integer.parseInt(flagMaker.hMap.get("Cycle"))==1){
+
+            is_good.setText("라이딩하기 좋은 날씨"); // 서핑 플래그
+            title.setTextColor(Color.parseColor("#00D1FF"));
+            is_good.setTextColor(Color.parseColor("#00D1FF"));
+            img.setImageResource(R.drawable.cycle_b);
+            msg.setVisibility(View.INVISIBLE);
         }
         else{
-            test2.setText("자전거 타기 좋지 않은 날 입니다!"); // 싸이클 플래그
+            is_good.setText("라이딩하기 좋지 않은 날씨"); // 러닝 플래그
+            title.setTextColor(Color.parseColor("#FF3203"));
+            is_good.setTextColor(Color.parseColor("#FF3203"));
+            img.setImageResource(R.drawable.cycle_o);
+
+
+            String msgString = flagMaker.hMap.get("temp0Msg");
+            System.out.println(msgString);
+            msg.setText(msgString);
+            msg.setVisibility(View.VISIBLE);
+
+
+            //running_image.setImageTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setForegroundTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setBackgroundTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setForeground(getResources().getDrawable(R.drawable.good));
+
+
+
+
         }
 
-        test3.setText(a.get(7).toString()); // 평균온도
-        test4.setText(a.get(8).toString()); // 평균강수량
-        if(flagMaker.hMap.get("Rain1hAverage").equals("0.0")){
-            test4.setText("강수 없음"); // 1시간 평균 강수량
-        }
-        else{
-            test4.setText("비가 옵니다."); // 1시간 평균 강수량
-        }
-        //test4.setText(a.get(10).toString()); // 평균 풍속
-        test5.setText(flagMaker.hMap.get("MaxWindSpeed")); // 최대 풍속
+        Double temp = Double.parseDouble(flagMaker.hMap.get("TempAverage"));
+        Integer intTemp = temp.intValue();
 
+        temperature.setText(intTemp.toString()); // 평균온도
+        rainfall.setText(flagMaker.hMap.get("Rain1hAverage")); // 평균강수량
+        //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
+        dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
+        wind.setText(flagMaker.hMap.get("WindSpeedAverage")); // 평균강수량
+
+        ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 
 
     }
+
 }
+

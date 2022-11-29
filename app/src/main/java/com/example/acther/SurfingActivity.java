@@ -17,7 +17,7 @@ public class SurfingActivity extends AppCompatActivity
 
     TextView title,is_good,temperature,rainfall,wind,dust,wave,address;
 
-    ImageView surfimg;
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -34,7 +34,7 @@ public class SurfingActivity extends AppCompatActivity
         dust = (TextView) findViewById(R.id.dust);
         wave = (TextView) findViewById(R.id.wave);
         address = (TextView) findViewById(R.id.address);
-        surfimg = (ImageView) findViewById(R.id.surfimg);
+        img = (ImageView) findViewById(R.id.img);
 
 
 
@@ -54,14 +54,14 @@ public class SurfingActivity extends AppCompatActivity
             is_good.setText("서핑하기 좋은 날씨"); // 서핑 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));
             is_good.setTextColor(Color.parseColor("#00D1FF"));
-            surfimg.setColorFilter(Color.parseColor("#00D1FF"));
+            img.setColorFilter(Color.parseColor("#00D1FF"));
 
         }
         else{
             is_good.setText("서핑하기 좋지 않은 날씨"); // 러닝 플래그
             title.setTextColor(Color.parseColor("#FF3203"));
             is_good.setTextColor(Color.parseColor("#FF3203"));
-            surfimg.setColorFilter(Color.parseColor("#FF3203"));
+            img.setColorFilter(Color.parseColor("#FF3203"));
 
 
             //running_image.setImageTintBlendMode(BlendMode.MULTIPLY);

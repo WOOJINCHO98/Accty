@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HikingActivity"
-    android:orientation="vertical"
-    android:background="@color/white">
-
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,13 +19,14 @@
             android:background="@color/white">
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
                 android:color="@color/black"
                 android:fontFamily="@font/roboto_black"
-                android:text="Hiking"
+                android:text="Cycling"
                 android:textColor="#00D1FF"
                 android:textSize="40sp"/>
 
@@ -41,12 +39,12 @@
                 android:elevation="10dp">
 
                 <TextView
-                    android:id="@+id/running_good"
+                    android:id="@+id/is_good"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="280dp"
                     android:layout_gravity="center"
-                    android:text="등산하기 좋은 날씨"
+                    android:text="라이딩하기 좋은 날씨"
                     android:textColor="#0085ff"
                     android:visibility="visible"
                     android:textStyle="bold"
@@ -59,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="280dp"
                     android:layout_gravity="center"
-                    android:text="등산하기 힘든 날씨"
+                    android:text="서핑하기 힘든 날씨"
                     android:textColor="#ff7800"
                     android:visibility="invisible"
                     android:textStyle="bold"
@@ -67,11 +65,12 @@
 
 
                 <ImageView
+                    android:id="@+id/img"
                     android:layout_gravity="center"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginBottom="120dp"
-                    android:src="@drawable/hiking_b"
+                    android:src="@drawable/cycle_b"
                     android:visibility="visible"/>
 
 
@@ -80,7 +79,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginBottom="120dp"
-                    android:src="@drawable/hiking_o"
+                    android:src="@drawable/cycle_o"
                     android:visibility="invisible"/>
 
 
@@ -108,7 +107,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/test"
+                        android:id="@+id/temperature"
                         android:layout_marginTop="10dp"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
@@ -127,7 +126,7 @@
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/test1"
+                        android:id="@+id/rainfall"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:textColor="@color/black"
@@ -145,7 +144,7 @@
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/test2"
+                        android:id="@+id/wind"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:textColor="@color/black"
@@ -158,12 +157,12 @@
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="미세먼지"
+                        android:text="미세먼지등급"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
                     <TextView
-                        android:id="@+id/test3"
+                        android:id="@+id/dust"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:textColor="@color/black"
@@ -171,17 +170,20 @@
                         android:text="심각"
                         android:textSize="20sp"/>
 
+
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:textColor="@color/black"
                         android:gravity="center"
-                        android:text="파고"
+                        android:text="오존등급"
                         android:textStyle="bold"
                         android:textSize="20sp"/>
 
+
+
                     <TextView
-                        android:id="@+id/test4"
+                        android:id="@+id/ozone"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:textColor="@color/black"
@@ -192,7 +194,7 @@
                 </GridLayout>
 
                 <Button
-                    android:id="@+id/test5"
+                    android:id="@+id/address"
                     android:background="@drawable/rounded_shape_purple"
                     android:layout_width="300dp"
                     android:layout_height="50dp"
@@ -216,4 +218,5 @@
                 />
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
