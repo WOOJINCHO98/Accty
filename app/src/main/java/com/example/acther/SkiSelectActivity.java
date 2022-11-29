@@ -41,16 +41,19 @@ public class SkiSelectActivity extends AppCompatActivity {
 
             strName[i]=cursor.getString(0);
             strLocationX[i]=cursor.getString(1);
-            strLocationY[i]=cursor.getString(1);
-            addressName[i]=cursor.getString(1);
-            phone[i]=cursor.getString(1);
-            placeUrl[i]=cursor.getString(1);
+            strLocationY[i]=cursor.getString(2);
+            addressName[i]=cursor.getString(3);
+            phone[i]=cursor.getString(4);
+            placeUrl[i]=cursor.getString(5);
+
+
+
 
 
         }
         cursor.close();                                 //커서닫기
         sqlDb.close();                         //db닫기
-        skiName.setText(strName[3]);           //저장 확인용도,
+        skiName.setText(placeUrl[4]);           //저장 확인용도,
 
 
 
