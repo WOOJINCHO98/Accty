@@ -20,7 +20,7 @@ class GolfDb extends SQLiteOpenHelper{
         golfLocationX[4]="127.5717471367287";           //자유cc x좌표
         golfLocationX[5]="129.0401779338762";           //양산cc x좌표
 
-
+//
 
         String golfLocationY[] = new String[6];
         golfLocationY[0]="35.27397158170206";           //가야CC y좌표

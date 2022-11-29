@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,9 @@ public class GlidingSelectActivity extends AppCompatActivity
     SQLiteDatabase sqlDb;
     ParaDb paraDb;
     Cursor cursor;
-    EditText paraName;   //확인용도 삭제하면됨
+    TextView name1,name2,name3,name4,phone1,phone2,phone3,phone4,locationX1,locationX2,locationX3,
+            locationX4,locationY1,locationY2,locationY3,locationY4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,11 +24,34 @@ public class GlidingSelectActivity extends AppCompatActivity
         setContentView(R.layout.activity_gliding_select);
 
         paraDb=new ParaDb(this);
-        paraName=(EditText) findViewById(R.id.paraName);
+
+        name1=(TextView) findViewById(R.id.name1);
+        name2=(TextView) findViewById(R.id.name2);
+        name3=(TextView) findViewById(R.id.name3);
+        name4=(TextView) findViewById(R.id.name4);
+
+        phone1=(TextView)findViewById(R.id.phone1);
+        phone2=(TextView)findViewById(R.id.phone2);
+        phone3=(TextView)findViewById(R.id.phone3);
+        phone4=(TextView)findViewById(R.id.phone4);
+
+        locationX1=(TextView)findViewById(R.id.locationX1);
+        locationX2=(TextView)findViewById(R.id.locationX2);
+        locationX3=(TextView)findViewById(R.id.locationX3);
+        locationX4=(TextView)findViewById(R.id.locationX4);
+
+        locationY1=(TextView)findViewById(R.id.locationY1);
+        locationY2=(TextView)findViewById(R.id.locationY2);
+        locationY3=(TextView)findViewById(R.id.locationY3);
+        locationY4=(TextView)findViewById(R.id.locationY4);
+
 
         String strName[]=new String[4];                    //낚시터 이름 넣을 변수
         String strLocationX[]=new String[4];               //낚시터 X좌표 넣을 변수
         String strLocationY[]=new String[4];               //낚시터 Y좌표 넣을 변수
+        String phone[] = new String[4];
+        String addressName[] = new String[4];
+        String placeUrl[]=new String[4];
 
         sqlDb=paraDb.getReadableDatabase();
         paraDb.onUpgrade(sqlDb,1,2);
@@ -40,11 +66,38 @@ public class GlidingSelectActivity extends AppCompatActivity
             strName[i]=cursor.getString(0);
             strLocationX[i]=cursor.getString(1);
             strLocationY[i]=cursor.getString(2);
+            addressName[i]=cursor.getString(3);
+            phone[i]=cursor.getString(4);
+            placeUrl[i]=cursor.getString(5);
 
         }
         cursor.close();                                 //커서닫기
         sqlDb.close();                         //db닫기
-        paraName.setText(strName[3]);           //저장 확인용도,
+
+        name1.setText(strName[0]);
+        name2.setText(strName[1]);
+        name3.setText(strName[2]);
+        name4.setText(strName[3]);
+
+
+        phone1.setText(phone[0]);
+        phone2.setText(phone[1]);
+        phone3.setText(phone[2]);
+        phone4.setText(phone[3]);
+
+
+        locationX1.setText(strLocationX[0]);
+        locationX2.setText(strLocationX[1]);
+        locationX3.setText(strLocationX[2]);
+        locationX4.setText(strLocationX[3]);
+
+
+        locationY1.setText(strLocationY[0]);
+        locationY2.setText(strLocationY[1]);
+        locationY3.setText(strLocationY[2]);
+        locationY4.setText(strLocationY[3]);
+
+
     }
 
 }
