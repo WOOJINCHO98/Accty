@@ -49,7 +49,7 @@ public class SkiActivity extends AppCompatActivity
 
 
 
-        if (Integer.parseInt(flagMaker.hMap.get("Hiking"))==1){
+        if (Integer.parseInt(flagMaker.hMap.get("Ski2"))==1){
 
             is_good.setText("스키타기 좋은 날씨"); // 서핑 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));

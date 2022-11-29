@@ -20,7 +20,7 @@ public class GolfActivity extends AppCompatActivity
 
     TextView title,is_good,temperature,snowfall,wind,dust,address,ozone,msg;
 
-    ImageView img;
+    ImageView img,wind_direction1,wind_direction2,wind_direction3,wind_direction4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,12 +42,134 @@ public class GolfActivity extends AppCompatActivity
         msg = (TextView) findViewById(R.id.msg);
 
 
+        wind_direction1 = (ImageView) findViewById(R.id.wind_direction1);
+        wind_direction2 = (ImageView) findViewById(R.id.wind_direction2);
+        wind_direction3 = (ImageView) findViewById(R.id.wind_direction3);
+        wind_direction4 = (ImageView) findViewById(R.id.wind_direction4);
+
         SplashActivity flagMaker = new SplashActivity();
 
 
         address.setText(flagMaker.hMap.get("address2"));
 
 
+        if (flagMaker.hMap.get("windDirection10").equals("NW-N")){
+            wind_direction1.setImageResource(R.drawable.arrow_n);
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("W-NW")){
+            wind_direction1.setImageResource(R.drawable.arrow_nw);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("SW-W")){
+            wind_direction1.setImageResource(R.drawable.arrow_w);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("S-SW")){
+            wind_direction1.setImageResource(R.drawable.arrow_sw);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("SE-S")){
+            wind_direction1.setImageResource(R.drawable.arrow_s);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("E-SE")){
+            wind_direction1.setImageResource(R.drawable.arrow_se);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("NE-E")){
+            wind_direction1.setImageResource(R.drawable.arrow_e);
+
+
+        }
+        else if(flagMaker.hMap.get("windDirection10").equals("N-NE")){
+            wind_direction1.setImageResource(R.drawable.arrow_ne);
+
+
+        }
+
+        if (flagMaker.hMap.get("windDirection12").equals("NW-N")){
+            wind_direction2.setImageResource(R.drawable.arrow_n);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("W-NW")) {
+            wind_direction2.setImageResource(R.drawable.arrow_nw);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("SW-W")) {
+            wind_direction2.setImageResource(R.drawable.arrow_w);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("S-SW")) {
+            wind_direction2.setImageResource(R.drawable.arrow_sw);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("SE-S")) {
+            wind_direction2.setImageResource(R.drawable.arrow_s);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("E-SE")) {
+            wind_direction2.setImageResource(R.drawable.arrow_se);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("NE-E")) {
+            wind_direction2.setImageResource(R.drawable.arrow_e);
+        }
+        else if(flagMaker.hMap.get("windDirection12").equals("N-NE")) {
+            wind_direction2.setImageResource(R.drawable.arrow_ne);
+        }
+
+
+
+
+        if (flagMaker.hMap.get("windDirection14").equals("NW-N")){
+            wind_direction3.setImageResource(R.drawable.arrow_n);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("W-NW")) {
+            wind_direction3.setImageResource(R.drawable.arrow_nw);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("SW-W")) {
+            wind_direction3.setImageResource(R.drawable.arrow_w);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("S-SW")) {
+            wind_direction3.setImageResource(R.drawable.arrow_sw);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("SE-S")) {
+            wind_direction3.setImageResource(R.drawable.arrow_s);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("E-SE")) {
+            wind_direction3.setImageResource(R.drawable.arrow_se);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("NE-E")) {
+            wind_direction3.setImageResource(R.drawable.arrow_e);
+        }
+        else if (flagMaker.hMap.get("windDirection14").equals("N-NE")) {
+            wind_direction3.setImageResource(R.drawable.arrow_ne);
+        }
+
+
+        if (flagMaker.hMap.get("windDirection16").equals("NW-N")){
+            wind_direction4.setImageResource(R.drawable.arrow_n);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("W-NW")) {
+            wind_direction4.setImageResource(R.drawable.arrow_nw);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("SW-W")) {
+            wind_direction4.setImageResource(R.drawable.arrow_w);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("S-SW")) {
+            wind_direction4.setImageResource(R.drawable.arrow_sw);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("SE-S")) {
+            wind_direction4.setImageResource(R.drawable.arrow_s);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("E-SE")) {
+            wind_direction4.setImageResource(R.drawable.arrow_se);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("NE-E")) {
+            wind_direction4.setImageResource(R.drawable.arrow_e);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("N-NE")) {
+            wind_direction4.setImageResource(R.drawable.arrow_ne);
+        }
         if (Integer.parseInt(flagMaker.hMap.get("Golf"))==1){
 
             is_good.setText("골프하기 좋은 날씨"); // 서핑 플래그
@@ -62,7 +184,7 @@ public class GolfActivity extends AppCompatActivity
             img.setImageResource(R.drawable.golf_o);
 
 
-            String msgString = flagMaker.hMap.get("temp0Msg2");
+            String msgString = flagMaker.hMap.get("tempGapMsg");
             System.out.println("msgString : "+msgString);
 
             if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){

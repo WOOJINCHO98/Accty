@@ -19,7 +19,7 @@ public class GlidingActivity extends AppCompatActivity
 {
 
     TextView title,is_good,temperature,snowfall,wind,dust,wave,address,ozone,msg;
-    ImageView img,wind_direction1,wind_direction2,wind_direction3;
+    ImageView img,wind_direction1,wind_direction2,wind_direction3,wind_direction4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,6 +44,7 @@ public class GlidingActivity extends AppCompatActivity
         wind_direction1 = (ImageView) findViewById(R.id.wind_direction1);
         wind_direction2 = (ImageView) findViewById(R.id.wind_direction2);
         wind_direction3 = (ImageView) findViewById(R.id.wind_direction3);
+        wind_direction4 = (ImageView) findViewById(R.id.wind_direction4);
 
 
 
@@ -145,9 +146,34 @@ public class GlidingActivity extends AppCompatActivity
         }
 
 
+        if (flagMaker.hMap.get("windDirection16").equals("NW-N")){
+            wind_direction4.setImageResource(R.drawable.arrow_n);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("W-NW")) {
+            wind_direction4.setImageResource(R.drawable.arrow_nw);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("SW-W")) {
+            wind_direction4.setImageResource(R.drawable.arrow_w);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("S-SW")) {
+            wind_direction4.setImageResource(R.drawable.arrow_sw);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("SE-S")) {
+            wind_direction4.setImageResource(R.drawable.arrow_s);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("E-SE")) {
+            wind_direction4.setImageResource(R.drawable.arrow_se);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("NE-E")) {
+            wind_direction4.setImageResource(R.drawable.arrow_e);
+        }
+        else if (flagMaker.hMap.get("windDirection16").equals("N-NE")) {
+            wind_direction4.setImageResource(R.drawable.arrow_ne);
+        }
 
 
-        if (Integer.parseInt(flagMaker.hMap.get("Hiking"))==1){
+
+        if (Integer.parseInt(flagMaker.hMap.get("Paragliding2"))==1){
 
             is_good.setText("글라이딩하기 좋은 날씨"); // 서핑 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));
@@ -164,7 +190,7 @@ public class GlidingActivity extends AppCompatActivity
 
 
 
-            String msgString = flagMaker.hMap.get("temp0Msg2");
+            String msgString = flagMaker.hMap.get("glidingMsg2");
             System.out.println("msgString : "+msgString);
 
             if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){

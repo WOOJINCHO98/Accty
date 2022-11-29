@@ -51,11 +51,7 @@ public class CycleActivity_backup extends AppCompatActivity {
         setContentView(R.layout.activity_cycle);
 
 
-        test = (TextView) findViewById(R.id.test) ;
-        test1 = (TextView) findViewById(R.id.test1);
-        test2 = (TextView) findViewById(R.id.test2);
-        test3 = (TextView) findViewById(R.id.test3);
-        test4 = (TextView) findViewById(R.id.test4);
+
 
         // 위치 관리자 객체 참조하기
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

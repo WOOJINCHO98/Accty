@@ -1668,16 +1668,16 @@ public class SplashActivity extends AppCompatActivity {
 
         int paraglidingFlag = 0;
 
-        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0){
+        if (setBaseFlag() == 1 && setWindSpeedAverage() >= 1.0 && setWindSpeedAverage() <= 6.0){
             paraglidingFlag = 1;
         }
-        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0){
-            hMap.put("glidingMsg","오늘은 풍속이 6m/s 가 넘어가요.");
+        else if (setBaseFlag() == 1 && setWindSpeedAverage() >= 6.0){
+            hMap.put("glidingMsg2","오늘은 풍속이 6m/s 가 넘어가요.");
 
             paraglidingFlag = 2;
         }
         else{
-            hMap.put("glidingMsg","오늘은 바람이 너무 안 부네요.");
+            hMap.put("glidingMsg2","오늘은 바람이 너무 안 부네요.");
 
             paraglidingFlag = 3;
         }

@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class SurfingActivity extends AppCompatActivity
 {
 
-    TextView title,is_good,temperature,snowfall,wind,dust,address,ozone,msg;
+    TextView title,is_good,temperature,snowfall,wind,dust,address,ozone,msg,wave;
 
     ImageView img;
 
@@ -41,6 +41,7 @@ public class SurfingActivity extends AppCompatActivity
         ozone = (TextView) findViewById(R.id.ozone);
         msg = (TextView) findViewById(R.id.msg);
 
+        wave = (TextView) findViewById(R.id.wave);
 
         SplashActivity flagMaker = new SplashActivity();
 
@@ -109,6 +110,7 @@ public class SurfingActivity extends AppCompatActivity
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 
+        wave.setText(flagMaker.hMap.get("waveAverage2")); // 파도
 
     }
 
