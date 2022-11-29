@@ -2,13 +2,212 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/skiname"
-        android:text="aaa">
+        android:background="#F2F2F2">
 
-    </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:color="@color/black"
+                android:fontFamily="@font/roboto_black"
+                android:text="Golf"
+                android:textColor="#00D1FF"
+                android:textSize="40sp"/>
+
+            <FrameLayout
+                android:layout_width="350dp"
+                android:layout_height="700dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/your_rounded_shape"
+                android:elevation="10dp">
+
+                <TextView
+                    android:id="@+id/running_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="280dp"
+                    android:layout_gravity="center"
+                    android:text="라운딩하기 좋은 날씨"
+                    android:textColor="#0085ff"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="280dp"
+                    android:layout_gravity="center"
+                    android:text="라운딩하기 힘든 날씨"
+                    android:textColor="#ff7800"
+                    android:visibility="invisible"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="120dp"
+                    android:src="@drawable/golf_b"
+                    android:visibility="visible"/>
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="120dp"
+                    android:src="@drawable/golf_o"
+                    android:visibility="invisible"/>
+
+
+                <GridLayout
+                    android:layout_width="300dp"
+                    android:layout_height="230dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="150dp"
+                    android:columnCount="2"
+                    android:rowCount="4"
+                    android:orientation="horizontal"
+                    android:elevation="10dp"
+                    android:background="@drawable/your_rounded_shape">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="온도"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/test"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="20"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="강수량"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/test1"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="10mm"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="풍속"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/test2"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="dd"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="미세먼지"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/test3"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="심각"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="파고"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/test4"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="심각"
+                        android:textSize="20sp"/>
+
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/test5"
+                    android:background="@drawable/rounded_shape_purple"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="300dp"
+                    android:text="위치:경기도 남양주시"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:elevation="10dp"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:textColor="#00D1FF"
+                />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

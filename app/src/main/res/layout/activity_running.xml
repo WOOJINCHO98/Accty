@@ -68,7 +68,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginBottom="120dp"
-                    android:src="@drawable/surf_2"
+                    android:src="@drawable/run_b"
                     android:visibility="visible"/>
 
 
@@ -77,7 +77,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginBottom="120dp"
-                    android:src="@drawable/surf_3"
+                    android:src="@drawable/run_o"
                     android:visibility="invisible"/>
 
 
@@ -195,7 +195,6 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="300dp"
-                    android:text="위치:경기도 남양주시"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="bold"

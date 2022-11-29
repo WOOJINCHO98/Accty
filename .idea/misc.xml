@@ -16,21 +16,22 @@
         <entry key="app/src/main/res/drawable/your_rounded_shape.xml" value="0.283" />
         <entry key="app/src/main/res/layout/activity_a_alarm.xml" value="0.2599075317382813" />
         <entry key="app/src/main/res/layout/activity_cycle.xml" value="0.28058803965623724" />
+        <entry key="app/src/main/res/layout/activity_cycle2.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/activity_fishing.xml" value="0.3171616730866609" />
         <entry key="app/src/main/res/layout/activity_fishing_select.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_gliding.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_gliding.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_gliding_select.xml" value="0.3029891304347826" />
         <entry key="app/src/main/res/layout/activity_golf.xml" value="0.3029891304347826" />
         <entry key="app/src/main/res/layout/activity_golf_select.xml" value="0.3029891304347826" />
         <entry key="app/src/main/res/layout/activity_hiking.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2720596313476563" />
-        <entry key="app/src/main/res/layout/activity_running.xml" value="0.11" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4586834733893557" />
+        <entry key="app/src/main/res/layout/activity_running.xml" value="0.28838745117187503" />
         <entry key="app/src/main/res/layout/activity_set_alarm.xml" value="0.28009918212890617" />
-        <entry key="app/src/main/res/layout/activity_setting.xml" value="1.4275329589843753" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_ski.xml" value="0.3029891304347826" />
         <entry key="app/src/main/res/layout/activity_ski_select.xml" value="0.3029891304347826" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22962962962962963" />
-        <entry key="app/src/main/res/layout/activity_surfing.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_surfing.xml" value="0.33" />
         <entry key="app/src/main/res/layout/notification_popup.xml" value="0.22962962962962963" />
       </map>
     </option>
