@@ -8,10 +8,6 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:id="@+id/parent">
-    <!--    [editText 사용시 자동으로 포커스활성 방지]-->
-    <!--    android:focusable="true"-->
-    <!--    android:focusableInTouchMode="true"-->
-    <!--    android:id="@+id/parent"-->
 
     <LinearLayout
         android:background="@color/white"
@@ -31,27 +27,29 @@
             android:textSize="40sp"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="340dp"
+            android:layout_height="500dp"
             android:orientation="vertical"
-            android:background="@color/white"
-            android:layout_margin="10dp">
+            android:layout_gravity="center"
+            android:background="@drawable/mainbox_grey"
+            android:elevation="10dp"
+            android:layout_marginTop="40dp">
 
             <TextView
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
                 android:layout_gravity="center"
                 android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="알람 시간 설정"/>
 
             <TimePicker
                 android:id="@+id/timePicker"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_conten"
+                android:layout_height="wrap_content"
                 android:timePickerMode="spinner"
                 android:elevation="10dp"
                 android:gravity="center"
@@ -61,12 +59,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:layout_weight="0.1"
                 android:orientation="vertical"
-                android:layout_gravity="center"
-
-
-            >
+                android:layout_gravity="center">
 
                 <Button
                     android:id="@+id/ok_button"
@@ -88,7 +83,6 @@
                     android:id="@+id/no_button"
                     android:layout_width="300dp"
                     android:layout_height="50dp"
-
                     android:text="등록 취소"
                     android:textStyle="bold"
                     android:textSize="15dp"
@@ -98,7 +92,7 @@
                     android:layout_marginTop="20dp"
                     android:elevation="5dp"
                     android:layout_marginRight="0dp"
-                    android:layout_marginBottom="0dp"/>
+                    android:layout_marginBottom="20dp"/>
 
             </LinearLayout>
 
