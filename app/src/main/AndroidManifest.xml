@@ -107,6 +107,11 @@
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
 
+        <activity
+            android:name=".SurfingSelectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
 
 
 

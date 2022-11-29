@@ -668,6 +668,7 @@ public class SplashActivity extends AppCompatActivity {
                         hMap.put("Running", setRunningFlag().toString());
                         hMap.put("Golf", setGolfFlag().toString());
                         hMap.put("Cycle", setCycleFlag().toString());
+                        hMap.put("Surfing", setSurfingFlag().toString());
                         hMap.put("Paragliding", setParaglidingFlag().toString());
                         hMap.put("Ski", setSkiFlag().toString());
                         hMap.put("Hiking", setHikingFlag().toString());
@@ -680,6 +681,7 @@ public class SplashActivity extends AppCompatActivity {
                         result.add(setWindSpeedAverage().toString());
                         result.add(maxWindSpeed.toString());
 
+                        hMap.put("waveAverage", setWaveAverage().toString());
                         hMap.put("TempAverage", setTempAverage().toString());
                         hMap.put("Rain1hAverage", setRain1hAverage().toString());
                         hMap.put("Snow1hAverage", setSnow1hAverage().toString());
@@ -741,6 +743,14 @@ public class SplashActivity extends AppCompatActivity {
         return result;
     }
 
+
+    public Double setWaveAverage(){
+        Double sum = 0.0;
+        for(int i=0; i<waveList.size(); i++){
+            sum += (Double) waveList.get(i);
+        }
+        return sum/waveList.size();
+    }
 
     public Double setWindSpeedAverage() {
         Double windSpeedAverage = 0.0;
@@ -1066,6 +1076,25 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         return paraglidingFlag;
+    }
+
+
+    // 패러글라이딩 FLAG 값 정하기
+    public Integer setSurfingFlag(){
+
+        int surfingFlag = 0;
+
+        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0){
+            surfingFlag = 1;
+        }
+        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0){
+            surfingFlag = 2;
+        }
+        else{
+            surfingFlag = 3;
+        }
+
+        return surfingFlag;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 

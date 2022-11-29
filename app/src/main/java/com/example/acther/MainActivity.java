@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SurfingActivity.class);
+                Intent intent = new Intent(MainActivity.this, SurfingSelectActivity.class);
                 startActivity(intent);
 
             }

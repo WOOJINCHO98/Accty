@@ -1,6 +1,8 @@
 package com.example.acther;
 
+import android.graphics.BlendMode;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -60,6 +62,15 @@ public class RunningActivity extends AppCompatActivity
             title.setTextColor(Color.parseColor("#FF3203"));
             running_good.setTextColor(Color.parseColor("#FF3203"));
             running_image.setColorFilter(Color.parseColor("#FF3203"));
+
+
+            //running_image.setImageTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setForegroundTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setBackgroundTintBlendMode(BlendMode.MULTIPLY);
+            //running_image.setForeground(getResources().getDrawable(R.drawable.good));
+
+
+
 
         }
 
