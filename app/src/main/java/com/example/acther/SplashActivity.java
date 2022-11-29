@@ -286,7 +286,6 @@ public class SplashActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-
                 }).start();
 
                 new Thread(() ->{
@@ -387,7 +386,7 @@ public class SplashActivity extends AppCompatActivity {
                     String url = ("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey="
                             + key + "&dataType=json&numOfRows=400&pageNo=1&base_date="+ finalStrNowDate +"&base_time=0500&"+
                             "nx="+strX+ "&ny=" + strY);
-                    System.out.println(url);
+                    System.out.println("단기예보 : " + url);
                     InputStream is = null;
                     try {
                         is = new URL(url).openStream();
@@ -555,34 +554,34 @@ public class SplashActivity extends AppCompatActivity {
                         List windDirectionCntList = new ArrayList();
                         String windDirection = "";
                         for (Object direction : windDirectionList) {
-                            System.out.println(direction);
+                            System.out.println("object direction : " + direction);
                             int intDirection = (int)(direction);
 
                             if (intDirection>0 && intDirection<45){
                                 windDirectionCntList.add("N-NE");
 
                             }
-                            else if (intDirection>45 && intDirection<90){
+                            else if (intDirection>45 && intDirection<=90){
                                 windDirectionCntList.add("NE-E");
 
                             }
-                            else if (intDirection>90 && intDirection<135){
+                            else if (intDirection>90 && intDirection<=135){
                                 windDirectionCntList.add("E-SE");
 
                             }
-                            else if (intDirection>135 && intDirection<180){
+                            else if (intDirection>135 && intDirection<=180){
                                 windDirectionCntList.add("SE-S");
 
                             }
-                            else if (intDirection>180 && intDirection<225){
+                            else if (intDirection>180 && intDirection<=225){
                                 windDirectionCntList.add("S-SW");
 
                             }
-                            else if (intDirection>225 && intDirection<270){
+                            else if (intDirection>225 && intDirection<=270){
                                 windDirectionCntList.add("SW-W");
 
                             }
-                            else if (intDirection>225 && intDirection<315){
+                            else if (intDirection>225 && intDirection<=315){
                                 windDirectionCntList.add("W-NW");
 
                             }
@@ -682,6 +681,10 @@ public class SplashActivity extends AppCompatActivity {
                         result.add(setWindSpeedAverage().toString());
                         result.add(maxWindSpeed.toString());
 
+                        hMap.put("windDirection10", windDirectionCntList.get(0).toString());
+                        hMap.put("windDirection12", windDirectionCntList.get(2).toString());
+                        hMap.put("windDirection14", windDirectionCntList.get(4).toString());
+                        hMap.put("windDirection16", windDirectionCntList.get(6).toString());
                         hMap.put("waveAverage", setWaveAverage().toString());
                         hMap.put("TempAverage", setTempAverage().toString());
                         hMap.put("Rain1hAverage", setRain1hAverage().toString());
@@ -756,6 +759,27 @@ public class SplashActivity extends AppCompatActivity {
 
         double longitude = Double.parseDouble(l);
         double latitude = Double.parseDouble(x);
+
+
+        categoryList.clear();
+
+        fcstDateList.clear();
+        fcstTimeList.clear();
+        fcstValueList.clear();
+        maxTempList.clear();
+        minTempList.clear();
+        inTimeList.clear();
+        windSpeedList.clear();
+        windDirectionList.clear();
+        rainList.clear();
+        rainTypeList.clear();
+        rain1hList.clear();
+        snow1hList.clear();
+        humidityList.clear();
+        waveList.clear();
+        tempList.clear();
+        skyList.clear();
+
 
 
 
@@ -1611,7 +1635,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int golfFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0 && setWindSpeedAverage() <= 4.0 ){
             golfFlag = 1;
         }
         else{
@@ -1627,15 +1651,13 @@ public class SplashActivity extends AppCompatActivity {
 
         int skiFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 1 && (Double)maxTempList.get(0) < 8.0) {
+        if ((Double)maxTempList.get(0) < 8.0) {
             skiFlag = 1;
         }
         else{
 
+            hMap.put("skiMsg","기온이 높아, 눈이 녹을 우려가 있어요");
             skiFlag = 0;
-            if (setSnowFlag() == 0){
-                skiFlag = 1;
-            }
         }
 
         return skiFlag;

@@ -75,7 +75,6 @@
                     android:layout_marginBottom="120dp"
                     android:src="@drawable/golf_o"
                     android:visibility="invisible"/>
-
                 <GridLayout
                     android:layout_width="300dp"
                     android:layout_height="70dp"
@@ -85,7 +84,7 @@
                     android:layout_gravity="center">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="70dp"
                         android:text="풍향"
                         android:textStyle="bold"
@@ -94,65 +93,95 @@
                         android:gravity="center"/>
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="54dp"
                         android:layout_height="70dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
-                    <ImageView
-                        android:layout_marginTop="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/arrow_s"/>
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        android:text="9시"/>
+                        <ImageView
+                            android:id="@+id/wind_direction1"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="45dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_s"/>
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="10시"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="54dp"
                         android:layout_height="70dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <ImageView
+                            android:id="@+id/wind_direction2"
                             android:layout_marginTop="5dp"
-                            android:layout_width="70dp"
+                            android:layout_width="45dp"
                             android:layout_height="40dp"
                             android:src="@drawable/arrow_ne"/>
                         <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="45dp"
                             android:layout_height="20dp"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:text="15시"/>
+                            android:text="12시"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="54dp"
                         android:layout_height="70dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <ImageView
+                            android:id="@+id/wind_direction3"
                             android:layout_marginTop="5dp"
-                            android:layout_width="70dp"
+                            android:layout_width="45dp"
                             android:layout_height="40dp"
                             android:src="@drawable/arrow_e"/>
                         <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="45dp"
                             android:layout_height="20dp"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:text="19시"/>
+                            android:text="14시"/>
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="54dp"
+                        android:layout_height="70dp"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:id="@+id/wind_direction4"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="45dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/arrow_e"/>
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="16시"/>
+
+                    </LinearLayout>
+
+
 
 
 
                 </GridLayout>
+
 
 
                 <GridLayout

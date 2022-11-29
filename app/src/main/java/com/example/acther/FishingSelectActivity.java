@@ -27,7 +27,7 @@ public class FishingSelectActivity extends AppCompatActivity
 
         fishingDb=new FishingDb(this);
 
-       name1=(TextView)findViewById(R.id.name1);
+        name1=(TextView)findViewById(R.id.name1);
         name2=(TextView)findViewById(R.id.name2);
         name3=(TextView)findViewById(R.id.name3);
         name4=(TextView)findViewById(R.id.name4);

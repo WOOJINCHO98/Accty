@@ -48,6 +48,7 @@ public class SkiActivity extends AppCompatActivity
         address.setText(flagMaker.hMap.get("address2"));
 
 
+
         if (Integer.parseInt(flagMaker.hMap.get("Hiking"))==1){
 
             is_good.setText("스키타기 좋은 날씨"); // 서핑 플래그
@@ -65,28 +66,14 @@ public class SkiActivity extends AppCompatActivity
 
 
 
-            String msgString = flagMaker.hMap.get("temp0Msg2");
+            String msgString = flagMaker.hMap.get("skiMsg");
             System.out.println("msgString : "+msgString);
 
             if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
                 msgString = flagMaker.hMap.get("rainMsg");
                 System.out.println("msgString : "+msgString);
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg"))==false){
-                msgString = flagMaker.hMap.get("snowMsg");
-                System.out.println("msgString : "+msgString);
 
-            }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg"))==false){
-                msgString = flagMaker.hMap.get("temp0Msg");
-                System.out.println("msgString : "+msgString);
-
-            }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("temp30Msg"))==false){
-                msgString = flagMaker.hMap.get("temp30Msg");
-                System.out.println("msgString : "+msgString);
-
-            }
 
             System.out.println(msgString);
             msg.setText(msgString);
@@ -94,6 +81,8 @@ public class SkiActivity extends AppCompatActivity
 
 
         }
+
+
 
         Double temp = Double.parseDouble(flagMaker.hMap.get("TempAverage2"));
         Integer intTemp = temp.intValue();

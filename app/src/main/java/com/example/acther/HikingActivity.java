@@ -108,7 +108,7 @@ public class HikingActivity extends AppCompatActivity
         rainfall.setText(flagMaker.hMap.get("Rain1hAverage")); // 평균강수량
         //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
         dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
-        wind.setText(flagMaker.hMap.get("WindSpeedAverage")); // 평균강수량
+
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 
