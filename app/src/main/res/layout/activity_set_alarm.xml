@@ -14,98 +14,89 @@
     <!--    android:id="@+id/parent"-->
 
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- ====== [타이틀 레이아웃] ====== -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:background="#343d46"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="[ 알람 매니저 ]"
-                android:textColor="#ffffff"
-                android:textSize="23dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:color="@color/black"
+            android:fontFamily="@font/roboto_black"
+            android:text="Set Time"
+            android:textColor="#00D1FF"
+            android:textSize="40sp"/>
 
-        <!-- ====== [카드 레이아웃] ====== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#343d46"
+            android:background="@color/white"
             android:layout_margin="10dp">
 
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:gravity="center"
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp">
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_launcher_background"/>
-            </LinearLayout>
-
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="알람 시간 설정"/>
 
             <TimePicker
                 android:id="@+id/timePicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_conten"
                 android:timePickerMode="spinner"
+                android:elevation="10dp"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 />
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.6"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="15dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+
+
+            >
 
                 <Button
                     android:id="@+id/ok_button"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+
                     android:text="알림 등록"
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:gravity="center"
-                    android:textColor="#000000"
-                    android:background="@drawable/ic_launcher_background"
-                    android:layout_marginTop="0dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/mainbox_blue"
+                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="0dp"/>
 
                 <Button
                     android:id="@+id/no_button"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+
                     android:text="등록 취소"
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:gravity="center"
-                    android:textColor="#000000"
-                    android:background="@drawable/ic_launcher_background"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/mainbox_blue"
+                    android:layout_marginTop="20dp"
+                    android:elevation="5dp"
                     android:layout_marginRight="0dp"
                     android:layout_marginBottom="0dp"/>
 

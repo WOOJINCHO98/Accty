@@ -11,4 +11,246 @@
 
     </EditText>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F2F2">
+
+        <LinearLayout
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:color="@color/black"
+                android:fontFamily="@font/roboto_black"
+                android:text="Fishing"
+                android:textColor="#00D1FF"
+                android:textSize="40sp"/>
+
+            <FrameLayout
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingRight="20dp"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/mainbox"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양 컨트리 클럽"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-1234-1234"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_arrow"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingRight="20dp"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mainbox"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양 컨트리 클럽"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-1234-1234"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_arrow"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingRight="20dp"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mainbox"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양 컨트리 클럽"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-1234-1234"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_arrow"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingRight="20dp"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mainbox"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양 컨트리 클럽"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-1234-1234"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_arrow"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingRight="20dp"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mainbox"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양 컨트리 클럽"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-1234-1234"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_arrow"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+
+            <EditText
+                android:layout_width="350dp"
+                android:layout_height="10dp"
+                android:id="@+id/skiname"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:textColor="#00D1FF"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

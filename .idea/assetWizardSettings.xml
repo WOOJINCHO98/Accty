@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/settings/baseline_settings_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialiconsround/arrow_forward_ios/round_arrow_forward_ios_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,9 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="color" value="6d6d6d" />
-                            <entry key="outputName" value="ic__105bfdf_4ce8_47bb_9b60_635c936d2cbb" />
+                            <entry key="color" value="00d1ff" />
+                            <entry key="outputName" value="ic_round_arrow" />
                             <entry key="sourceFile" value="$USER_HOME$/Downloads/5105bfdf-4ce8-47bb-9b60-635c936d2cbb.svg" />
                           </map>
                         </option>

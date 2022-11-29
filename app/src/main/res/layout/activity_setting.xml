@@ -1,125 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:color="@color/black"
+        android:fontFamily="@font/roboto_black"
+        android:text="Setting"
+        android:textColor="#00D1FF"
+        android:textSize="40sp"/>
 
+    <LinearLayout
+
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:background="@drawable/mainbox"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
 
     <TextView
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="center"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IM SETTING"/>
+        android:textColor="@color/black"
+        android:text="알람 운동종목 설정"/>
 
-    <Button
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="알람 시간 설정 하기"
-        android:id="@+id/setTime"
-        />
+    <GridLayout
 
-    <TextView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="알람 운동종목 설정하기"/>
+        android:layout_marginTop="10dp"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+     >
 
 
     <ImageButton
         android:id="@+id/running"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="러닝"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:background="@color/white"
         />
 
     <ImageButton
         android:id="@+id/cycling"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="자전거"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
 
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="@color/white"
         />
     <ImageButton
         android:id="@+id/hiking"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="등산"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:background="@color/white"
 
         />
     <ImageButton
         android:id="@+id/gliding"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="패러글라이딩"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
 
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="@color/white"
         />
     <ImageButton
         android:id="@+id/surfing"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="서핑"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
-
+        android:background="@color/white"
         />
     <ImageButton
+
         android:id="@+id/fishing"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="낚시"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:background="@color/white"
 
         />
     <ImageButton
+        android:paddingBottom="5dp"
         android:id="@+id/golf"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="골프"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
 
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:background="@color/white"
         />
     <ImageButton
         android:id="@+id/ski"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="스키"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+
+        android:paddingBottom="5dp"
+        android:src="@drawable/cycle_b"
+        android:text="자전거"
+        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/ic_launcher_background"
+        android:background="@color/white"
 
         />
 
-
-
-
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:entries="@array/activity_array"
-        android:gravity="center"
-
-        />
+    </GridLayout>
+</LinearLayout>
 
     <Button
-        android:id="@+id/notification_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="알람 보내기"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="알람 시간 설정"
+        android:textSize="15sp"
+        android:color="@color/white"
+        android:background="@drawable/mainbox_blue"
+        android:id="@+id/setTime"
         />
 
 

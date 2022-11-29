@@ -30,7 +30,7 @@ import java.util.Date;
 
 public class SettingActivity extends AppCompatActivity {
 
-    Button setTime,notification_btn;
+    Button setTime;
 
     static ImageButton running;
     static ImageButton cycling;
@@ -71,11 +71,7 @@ public class SettingActivity extends AppCompatActivity {
 
 
 
-
-
-
         // -----------
-        notification_btn = (Button) findViewById(R.id.notification_btn);
         setTime = (Button) findViewById(R.id.setTime);
         //-------------
         running = (ImageButton) findViewById(R.id.running);
@@ -159,42 +155,42 @@ public class SettingActivity extends AppCompatActivity {
         if (isRunningChecked.equals("false")) {
             running.setImageResource(R.drawable.running90);
         } else {
-            running.setImageResource(R.drawable.ic_launcher_background);
+            running.setImageResource(R.drawable.run_b);
         }
         if (isCyclingChecked.equals("false")) {
             cycling.setImageResource(R.drawable.cycling_icon);
         } else {
-            cycling.setImageResource(R.drawable.ic_launcher_background);
+            cycling.setImageResource(R.drawable.cycle_b);
         }
         if (isHikingChecked.equals("false")) {
             hiking.setImageResource(R.drawable.trekking_icon);
         } else {
-            hiking.setImageResource(R.drawable.ic_launcher_background);
+            hiking.setImageResource(R.drawable.hiking_b);
         }
         if (isGlidingChecked.equals("false")) {
             gliding.setImageResource(R.drawable.paragliding_icon);
         } else {
-            gliding.setImageResource(R.drawable.ic_launcher_background);
+            gliding.setImageResource(R.drawable.glide_b);
         }
         if (isSurfingChecked.equals("false")) {
-            surfing.setImageResource(R.drawable.surf);
+            surfing.setImageResource(R.drawable.surf90);
         } else {
-            surfing.setImageResource(R.drawable.ic_launcher_background);
+            surfing.setImageResource(R.drawable.surf_b);
         }
         if (isFishingChecked.equals("false")) {
             fishing.setImageResource(R.drawable.fishing_icon);
         } else {
-            fishing.setImageResource(R.drawable.ic_launcher_background);
+            fishing.setImageResource(R.drawable.fish_b);
         }
         if (isGolfChecked.equals("false")) {
             golf.setImageResource(R.drawable.golf_icon);
         } else {
-            golf.setImageResource(R.drawable.ic_launcher_background);
+            golf.setImageResource(R.drawable.golf_b);
         }
         if (isSkiChecked.equals("false")) {
             ski.setImageResource(R.drawable.skking_icon);
         } else {
-            ski.setImageResource(R.drawable.ic_launcher_background);
+            ski.setImageResource(R.drawable.ski_b);
         }
 
 
@@ -208,14 +204,7 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        notification_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-
-            }
-        });
 
 
 
@@ -232,7 +221,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isRunningChecked", "false");
                     Toast.makeText(getApplicationContext(), "러닝 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    running.setImageResource(R.drawable.ic_launcher_background);
+                    running.setImageResource(R.drawable.run_b);
                     S_Preference.setString(getApplication(), "isRunningChecked", "true");
                     Toast.makeText(getApplicationContext(), "러닝 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -251,11 +240,13 @@ public class SettingActivity extends AppCompatActivity {
                 System.out.println("isCyclingChecked : " + isCyclingChecked);
 
                 if (isCyclingChecked.equals("true")) {
+                    //cycling.setImageResource(R.drawable.cycling_icon);
                     cycling.setImageResource(R.drawable.cycling_icon);
                     S_Preference.setString(getApplication(), "isCyclingChecked", "false");
                     Toast.makeText(getApplicationContext(), "싸이클 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    cycling.setImageResource(R.drawable.ic_launcher_background);
+                    //cycling.setImageResource(R.drawable.ic_launcher_background);
+                    cycling.setImageResource(R.drawable.cycle_b);
                     S_Preference.setString(getApplication(), "isCyclingChecked", "true");
                     Toast.makeText(getApplicationContext(), "싸이클 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -278,7 +269,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isHikingChecked", "false");
                     Toast.makeText(getApplicationContext(), "하이킹 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    hiking.setImageResource(R.drawable.ic_launcher_background);
+                    hiking.setImageResource(R.drawable.hiking_b);
                     S_Preference.setString(getApplication(), "isHikingChecked", "true");
                     Toast.makeText(getApplicationContext(), "하이킹 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -300,7 +291,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isGlidingChecked", "false");
                     Toast.makeText(getApplicationContext(), "글라이딩 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    gliding.setImageResource(R.drawable.ic_launcher_background);
+                    gliding.setImageResource(R.drawable.glide_b);
                     S_Preference.setString(getApplication(), "isGlidingChecked", "true");
                     Toast.makeText(getApplicationContext(), "글라이딩 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -318,11 +309,11 @@ public class SettingActivity extends AppCompatActivity {
                 System.out.println("isSurfingChecked : " + isSurfingChecked);
 
                 if (isSurfingChecked.equals("true")) {
-                    surfing.setImageResource(R.drawable.surf);
+                    surfing.setImageResource(R.drawable.surf90);
                     S_Preference.setString(getApplication(), "isSurfingChecked", "false");
                     Toast.makeText(getApplicationContext(), "서핑 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    surfing.setImageResource(R.drawable.ic_launcher_background);
+                    surfing.setImageResource(R.drawable.surf_b);
                     S_Preference.setString(getApplication(), "isSurfingChecked", "true");
                     Toast.makeText(getApplicationContext(), "서핑 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -344,7 +335,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isFishingChecked", "false");
                     Toast.makeText(getApplicationContext(), "낚시 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    fishing.setImageResource(R.drawable.ic_launcher_background);
+                    fishing.setImageResource(R.drawable.fish_b);
                     S_Preference.setString(getApplication(), "isFishingChecked", "true");
                     Toast.makeText(getApplicationContext(), "낚시 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -366,7 +357,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isGolfChecked", "false");
                     Toast.makeText(getApplicationContext(), "골프 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    golf.setImageResource(R.drawable.ic_launcher_background);
+                    golf.setImageResource(R.drawable.golf_b);
                     S_Preference.setString(getApplication(), "isGolfChecked", "true");
                     Toast.makeText(getApplicationContext(), "골프 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }
@@ -388,7 +379,7 @@ public class SettingActivity extends AppCompatActivity {
                     S_Preference.setString(getApplication(), "isSkiChecked", "false");
                     Toast.makeText(getApplicationContext(), "스키 알람이 해제되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    ski.setImageResource(R.drawable.ic_launcher_background);
+                    ski.setImageResource(R.drawable.ski_b);
                     S_Preference.setString(getApplication(), "isSkiChecked", "true");
                     Toast.makeText(getApplicationContext(), "스키 알람이 설정되었습니다", Toast.LENGTH_SHORT).show();
                 }

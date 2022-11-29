@@ -13,14 +13,13 @@ public class SkiSelectActivity extends AppCompatActivity {
     SQLiteDatabase sqlDb;
     SkiDb skiDb;
     Cursor cursor;
-    EditText skiName;   //확인용도 삭제하면됨
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ski_select);
 
         skiDb=new SkiDb(this);
-        skiName=(EditText) findViewById(R.id.skiName);
+
 
         String strName[]=new String[6];                    //낚시터 이름 넣을 변수
         String strLocationX[]=new String[6];               //낚시터 X좌표 넣을 변수
@@ -43,7 +42,7 @@ public class SkiSelectActivity extends AppCompatActivity {
         }
         cursor.close();                                 //커서닫기
         sqlDb.close();                         //db닫기
-        skiName.setText(strName[3]);           //저장 확인용도,
+
 
 
 

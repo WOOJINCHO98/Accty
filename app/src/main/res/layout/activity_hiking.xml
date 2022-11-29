@@ -26,7 +26,7 @@
                 android:layout_marginTop="50dp"
                 android:color="@color/black"
                 android:fontFamily="@font/roboto_black"
-                android:text="Cycling"
+                android:text="Hiking"
                 android:textColor="#00D1FF"
                 android:textSize="40sp"/>
 
