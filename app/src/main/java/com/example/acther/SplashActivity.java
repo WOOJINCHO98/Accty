@@ -1239,6 +1239,7 @@ public class SplashActivity extends AppCompatActivity {
                 hMap.put("Paragliding2", setParaglidingFlag().toString());
                 hMap.put("Ski2", setSkiFlag().toString());
                 hMap.put("Hiking2", setHikingFlag().toString());
+                hMap.put("Fishing2", setFishingFlag().toString());
 
 
 
@@ -1398,6 +1399,24 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
+    // 파고 1.5m 이상이면, waveFlag == 0
+    public Integer setWaveFlag(){
+        int i;
+        int waveFlag = 0;
+        for (i=0; i<waveList.size(); i++){
+            if ((Double)waveList.get(i) >= 1.5){
+                waveFlag = 0;
+                hMap.put("waveMsg","파고가 1.5m 이상이에요 주의하세요");
+
+                break;
+            }
+            else{
+                waveFlag = 1;
+            }
+        }
+        return waveFlag;
+    }
+
     //----------------------------------------------- 기초가 되는 BaseFlag들 -------------------------------------------------
     // 예측 강수 있다면, rainFlag == 0
     public Integer setRainFlag(){
@@ -1433,6 +1452,8 @@ public class SplashActivity extends AppCompatActivity {
         }
         return snowFlag;
     }
+
+
 
     // 활동 시간 내에 최저 기온이 0도 이하라면 0 반환
     public Integer setMinTempFlag(){
@@ -1648,10 +1669,11 @@ public class SplashActivity extends AppCompatActivity {
 
         int surfingFlag = 0;
 
-        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0){
+        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0 && setWaveFlag() == 1){
             surfingFlag = 1;
         }
-        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0){
+        // 풍속 6 이상이라 힘든 날
+        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0 && setWaveFlag() == 1){
             surfingFlag = 2;
         }
         else{
@@ -1659,6 +1681,21 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         return surfingFlag;
+    }
+
+    // 낚시 FLAG 값 정하기
+    public Integer setFishingFlag(){
+
+        int fishingFlag = 0;
+
+        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
+            fishingFlag = 1;
+        }
+        else{
+            fishingFlag = 0;
+        }
+
+        return fishingFlag;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
