@@ -8,9 +8,9 @@
         android:usesCleartextTraffic="true"
 
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/icon"
         android:label="Accty"
-        android:roundIcon="@drawable/ic_launcher_background"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Acther">
 

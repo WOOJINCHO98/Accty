@@ -222,8 +222,8 @@ public class A_AlarmReceiver extends BroadcastReceiver {
                 }
                 notificationManager.createNotificationChannel(notificationChannel);
                 builder = new NotificationCompat.Builder(mContext, Noti_Channel_ID)
-                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher_background))
-                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.icon))
+                        .setSmallIcon(R.drawable.icon)
                         .setColor(ContextCompat.getColor(mContext, R.color.colorAccent))
                         .setWhen(System.currentTimeMillis())
                         .setShowWhen(true)
@@ -243,8 +243,8 @@ public class A_AlarmReceiver extends BroadcastReceiver {
                 getDisplayWakeUp(); //TODO 화면 강제 기상
             } else {
                 builder = new NotificationCompat.Builder(mContext)
-                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher_background))
-                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.icon))
+                        .setSmallIcon(R.drawable.icon)
                         .setColor(ContextCompat.getColor(mContext, R.color.colorAccent))
                         .setWhen(System.currentTimeMillis())
                         .setShowWhen(true)
