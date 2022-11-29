@@ -168,7 +168,7 @@
                     android:layout_height="40dp"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="심각"
+                    android:text="테스트"
                     android:textSize="20sp"/>
 
                 <TextView
@@ -186,7 +186,7 @@
                     android:layout_height="40dp"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="심각"
+                    android:text="테스트"
                     android:textSize="20sp"/>
 
             </GridLayout>
@@ -213,7 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="50dp"
-            android:textColor="#00D1FF"
+            android:textColor="@color/white"
            />
       </LinearLayout>
     </ScrollView>

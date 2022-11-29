@@ -32,7 +32,7 @@
 
             <FrameLayout
                 android:layout_width="350dp"
-                android:layout_height="700dp"
+                android:layout_height="800dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/your_rounded_shape"
@@ -42,7 +42,7 @@
                     android:id="@+id/is_good"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="280dp"
+                    android:layout_marginBottom="320dp"
                     android:layout_gravity="center"
                     android:text="라이딩하기 좋은 날씨"
                     android:textColor="#0085ff"
@@ -55,7 +55,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="280dp"
+                    android:layout_marginBottom="320dp"
                     android:layout_gravity="center"
                     android:text="서핑하기 힘든 날씨"
                     android:textColor="#ff7800"
@@ -69,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="240dp"
+                    android:layout_marginBottom="280dp"
                     android:textColor="#ff7800"
                     android:textSize="17sp"
                     android:visibility="invisible" />
@@ -79,7 +79,7 @@
                     android:layout_gravity="center"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="120dp"
+                    android:layout_marginBottom="150dp"
                     android:src="@drawable/ski_b"
                     android:visibility="visible"/>
 
@@ -88,7 +88,7 @@
                     android:layout_gravity="center"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="120dp"
+                    android:layout_marginBottom="150dp"
                     android:src="@drawable/ski_o"
                     android:visibility="invisible"/>
                 <GridLayout
@@ -203,7 +203,7 @@
                     android:layout_width="300dp"
                     android:layout_height="230dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="195dp"
                     android:columnCount="2"
                     android:rowCount="4"
                     android:orientation="horizontal"
@@ -314,7 +314,7 @@
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="300dp"
+                    android:layout_marginTop="350dp"
                     android:text="위치:경기도 남양주시"
                     android:textColor="@color/white"
                     android:textSize="17sp"
