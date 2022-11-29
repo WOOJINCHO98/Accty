@@ -25,6 +25,9 @@ public class SkiSelectActivity extends AppCompatActivity {
         String strName[]=new String[6];                    //낚시터 이름 넣을 변수
         String strLocationX[]=new String[6];               //낚시터 X좌표 넣을 변수
         String strLocationY[]=new String[6];               //낚시터 Y좌표 넣을 변수
+        String addressName[]=new String[6];
+        String phone[]=new String[6];
+        String placeUrl[]=new String[6];
 
         sqlDb=skiDb.getReadableDatabase();
         skiDb.onUpgrade(sqlDb,1,2);
@@ -38,7 +41,11 @@ public class SkiSelectActivity extends AppCompatActivity {
 
             strName[i]=cursor.getString(0);
             strLocationX[i]=cursor.getString(1);
-            strLocationY[i]=cursor.getString(2);
+            strLocationY[i]=cursor.getString(1);
+            addressName[i]=cursor.getString(1);
+            phone[i]=cursor.getString(1);
+            placeUrl[i]=cursor.getString(1);
+
 
         }
         cursor.close();                                 //커서닫기
