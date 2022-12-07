@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class GlidingActivity extends AppCompatActivity
 {
 
-    TextView title,is_good,temperature,snowfall,wind,dust,wave,address,ozone,msg;
+    TextView title,is_good,temperature,rainfall,wind,dust,wave,address,ozone,msg;
     ImageView img,wind_direction1,wind_direction2,wind_direction3,wind_direction4;
 
     @Override
@@ -32,7 +32,7 @@ public class GlidingActivity extends AppCompatActivity
         title = findViewById(R.id.title);
         is_good = (TextView) findViewById(R.id.is_good);
         temperature = (TextView) findViewById(R.id.temperature);
-        snowfall = (TextView) findViewById(R.id.snowfall);
+        rainfall = (TextView) findViewById(R.id.rainfall);
         wind = (TextView) findViewById(R.id.wind);
         dust = (TextView) findViewById(R.id.dust);
         //wave = (TextView) findViewById(R.id.wave);
@@ -193,21 +193,21 @@ public class GlidingActivity extends AppCompatActivity
             String msgString = flagMaker.hMap.get("glidingMsg2");
             System.out.println("msgString : "+msgString);
 
-            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg2"))==false){
                 msgString = flagMaker.hMap.get("rainMsg");
                 System.out.println("msgString : "+msgString);
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg2"))==false){
                 msgString = flagMaker.hMap.get("snowMsg");
                 System.out.println("msgString : "+msgString);
 
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg2"))==false){
                 msgString = flagMaker.hMap.get("temp0Msg");
                 System.out.println("msgString : "+msgString);
 
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("temp30Msg"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp30Msg2"))==false){
                 msgString = flagMaker.hMap.get("temp30Msg");
                 System.out.println("msgString : "+msgString);
 
@@ -230,10 +230,10 @@ public class GlidingActivity extends AppCompatActivity
         //System.out.println(intWindAverage);
 
         temperature.setText(intTemp.toString()); // 평균온도
-        snowfall.setText(flagMaker.hMap.get("Snow1hAverage2")); // 평균강수량
+        rainfall.setText(flagMaker.hMap.get("Rain1hAverage2") + "ml"); // 평균강수량
         //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
         dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
-        wind.setText(intWindAverage.toString()); // 평균강수량
+        wind.setText(intWindAverage.toString()+"m/s"); // 평균강수량
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 

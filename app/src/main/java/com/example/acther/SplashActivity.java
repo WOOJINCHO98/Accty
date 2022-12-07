@@ -32,6 +32,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -129,7 +130,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
 
             }
-        }, 4000);
+        }, 1000);
     }
 
 
@@ -272,6 +273,9 @@ public class SplashActivity extends AppCompatActivity {
                         else if (O3Grade.equals("4")){
                             O3Grade = "매우나쁨";
                         }
+                        else{
+                            O3Grade = "보통";
+                        }
 
 
 
@@ -279,7 +283,7 @@ public class SplashActivity extends AppCompatActivity {
                         hMap.put("O3Grade", O3Grade);
 
                         Log.e(">>", "pm10Grade : " + pm10Grade);
-                        Log.e(">>", "pm10Grade : " + pm10Grade);
+                        Log.e(">>", "O3Grade : " + O3Grade);
 
                     }
                     catch (Exception e){
@@ -738,6 +742,14 @@ public class SplashActivity extends AppCompatActivity {
 
          */
 
+
+        try{
+            TimeUnit.SECONDS.sleep(2);
+
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
         return 0;
     }
 
@@ -870,6 +882,10 @@ public class SplashActivity extends AppCompatActivity {
                 else if (O3Grade.equals("4")){
                     O3Grade = "매우나쁨";
                 }
+                else{
+                    O3Grade = "보통";
+                }
+
 
 
 
@@ -877,7 +893,7 @@ public class SplashActivity extends AppCompatActivity {
                 hMap.put("O3Grade", O3Grade);
 
                 Log.e(">>", "pm10Grade : " + pm10Grade);
-                Log.e(">>", "pm10Grade : " + pm10Grade);
+                Log.e(">>", "O3Grade : " + O3Grade);
 
             }
             catch (Exception e){
@@ -1233,13 +1249,6 @@ public class SplashActivity extends AppCompatActivity {
 
                 System.out.println("주소 : " + address);
 
-                System.out.println("Running : " + setRunningFlag());
-                System.out.println("Hiking : " + setHikingFlag());
-                System.out.println("Cycle : " + setCycleFlag());
-                System.out.println("Gofl : " + setGolfFlag());
-                System.out.println("Ski : " + setSkiFlag());
-                System.out.println("Paragliding : " + setParaglidingFlag());
-
 
                 System.out.println("--------------------------------------");
 
@@ -1256,14 +1265,12 @@ public class SplashActivity extends AppCompatActivity {
 
 
 
-                hMap.put("Running2", setRunningFlag().toString());
                 hMap.put("Golf2", setGolfFlag().toString());
-                hMap.put("Cycle2", setCycleFlag().toString());
                 hMap.put("Surfing2", setSurfingFlag().toString());
                 hMap.put("Paragliding2", setParaglidingFlag().toString());
                 hMap.put("Ski2", setSkiFlag().toString());
-                hMap.put("Hiking2", setHikingFlag().toString());
                 hMap.put("Fishing2", setFishingFlag().toString());
+
 
 
 
@@ -1283,15 +1290,6 @@ public class SplashActivity extends AppCompatActivity {
 
 
 
-                System.out.println("setDailyTempGap : " + setDailyTempGapFlag());
-                System.out.println("setRainFlag : " + setRainFlag());
-                System.out.println("setSkyFlag : " + setSkyFlag());
-                System.out.println("setSnowFlag : " + setSnowFlag());
-                System.out.println("setMinTempFlag() : " + setMinTempFlag());
-                System.out.println("setMaxTempFlag() : " + setMaxTempFlag());
-                System.out.println("setBaseFlag : " + setBaseFlag());
-
-
 
 
                 //hMap.put("JijumCode", getJijumCodeJson(temp_x, temp_y));
@@ -1305,7 +1303,12 @@ public class SplashActivity extends AppCompatActivity {
         }).start();
 
 
+        try{
+            TimeUnit.SECONDS.sleep(1);
 
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
 
 
 
@@ -1519,6 +1522,56 @@ public class SplashActivity extends AppCompatActivity {
         return maxTempFlag;
     }
 
+
+  //  ------------
+
+    // 활동 시간 내에 최저 기온이 0도 이하라면 0 반환
+    public Integer setMinTempFlag2(){
+        int i;
+        int minTempFlag = 0;
+        for (i=0; i<tempList.size(); i++){
+            if ((Double)tempList.get(i) <= 0){
+                minTempFlag = 0;
+                hMap.put("temp0Msg3","오늘은 영하권이에요.");
+
+                break;
+            }
+            else{
+
+                minTempFlag = 1;
+                hMap.put("temp0Msg4","오늘은 영상권이에요.");
+
+            }
+
+        }
+        return minTempFlag;
+    }
+
+    // 활동 시간 내에 최대 기온이 30도 이상이라면 0 반환
+    public Integer setMaxTempFlag2(){
+        int i;
+        int maxTempFlag = 0;
+        for (i=0; i<tempList.size(); i++){
+            if ((Double)tempList.get(i) >= 30){
+                maxTempFlag = 0;
+                hMap.put("temp30Msg2","오늘은 한 낮에 30도가 넘어가요");
+
+                break;
+            }
+            else{
+                maxTempFlag = 1;
+            }
+        }
+        return maxTempFlag;
+    }
+
+
+
+//    -----------
+
+
+
+
     // 일교차 FLAG
     public Integer setDailyTempGapFlag(){
         Double dailyTempGap = 0.0;
@@ -1580,6 +1633,20 @@ public class SplashActivity extends AppCompatActivity {
     }
 
 
+    public Integer setBaseFlag2() {
+        int i;
+        int baseFlag = 0;
+
+        if (setRainFlag() == 1 && setSnowFlag() == 1 && setMinTempFlag2() == 1 && setMaxTempFlag2() == 1) {
+            baseFlag = 1;
+        } else {
+            baseFlag = 0;
+        }
+
+        return baseFlag;
+    }
+
+
 
     //---------------------------------------------------각각의 액티비티 FLAG 매서드------------------------------------------------------------------------------------------------------------
     // 런닝 FLAG 값 정하기
@@ -1587,7 +1654,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int runningFlag = 0;
 
-        if (setBaseFlag() == 1 && pm10Grade.equals("좋음")||pm10Grade.equals("보통")){
+        if (setBaseFlag() == 1){
             runningFlag = 1;
         }
         else{
@@ -1635,7 +1702,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int golfFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0 && setWindSpeedAverage() <= 4.0 ){
+        if (setBaseFlag2() == 1 && setDailyTempGapFlag() == 0 && setWindSpeedAverage() <= 4.0 ){
             golfFlag = 1;
         }
         else{
@@ -1668,10 +1735,10 @@ public class SplashActivity extends AppCompatActivity {
 
         int paraglidingFlag = 0;
 
-        if (setBaseFlag() == 1 && setWindSpeedAverage() >= 1.0 && setWindSpeedAverage() <= 6.0){
+        if (setBaseFlag2() == 1 && setWindSpeedAverage() >= 1.0 && setWindSpeedAverage() <= 6.0){
             paraglidingFlag = 1;
         }
-        else if (setBaseFlag() == 1 && setWindSpeedAverage() >= 6.0){
+        else if (setBaseFlag2() == 1 && setWindSpeedAverage() >= 6.0){
             hMap.put("glidingMsg2","오늘은 풍속이 6m/s 가 넘어가요.");
 
             paraglidingFlag = 2;
@@ -1691,11 +1758,11 @@ public class SplashActivity extends AppCompatActivity {
 
         int surfingFlag = 0;
 
-        if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0 && setWaveFlag() == 1){
+        if (setBaseFlag2() == 1 && doubleMaxWindSpeed >= 1.0 && doubleMaxWindSpeed <= 6.0 && setWaveFlag() == 1){
             surfingFlag = 1;
         }
         // 풍속 6 이상이라 힘든 날
-        else if (setBaseFlag() == 1 && doubleMaxWindSpeed >= 6.0 && setWaveFlag() == 1){
+        else if (setBaseFlag2() == 1 && doubleMaxWindSpeed >= 6.0 && setWaveFlag() == 1){
             surfingFlag = 2;
         }
         else{
@@ -1710,7 +1777,7 @@ public class SplashActivity extends AppCompatActivity {
 
         int fishingFlag = 0;
 
-        if (setBaseFlag() == 1 && setDailyTempGapFlag() == 0){
+        if (setBaseFlag2() == 1 && setDailyTempGapFlag() == 0){
             fishingFlag = 1;
         }
         else{

@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class GolfActivity extends AppCompatActivity
 {
 
-    TextView title,is_good,temperature,snowfall,wind,dust,address,ozone,msg;
+    TextView title,is_good,temperature,rainfall,wind,dust,address,ozone,msg;
 
     ImageView img,wind_direction1,wind_direction2,wind_direction3,wind_direction4;
 
@@ -33,7 +33,7 @@ public class GolfActivity extends AppCompatActivity
         title = findViewById(R.id.title);
         is_good = (TextView) findViewById(R.id.is_good);
         temperature = (TextView) findViewById(R.id.temperature);
-        snowfall = (TextView) findViewById(R.id.snowfall);
+        rainfall = (TextView) findViewById(R.id.rainfall);
         wind = (TextView) findViewById(R.id.wind);
         dust = (TextView) findViewById(R.id.dust);
         address = (TextView) findViewById(R.id.address);
@@ -170,7 +170,7 @@ public class GolfActivity extends AppCompatActivity
         else if (flagMaker.hMap.get("windDirection16").equals("N-NE")) {
             wind_direction4.setImageResource(R.drawable.arrow_ne);
         }
-        if (Integer.parseInt(flagMaker.hMap.get("Golf"))==1){
+        if (Integer.parseInt(flagMaker.hMap.get("Golf2"))==1){
 
             is_good.setText("골프하기 좋은 날씨"); // 서핑 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));
@@ -182,7 +182,6 @@ public class GolfActivity extends AppCompatActivity
             title.setTextColor(Color.parseColor("#FF3203"));
             is_good.setTextColor(Color.parseColor("#FF3203"));
             img.setImageResource(R.drawable.golf_o);
-
 
             String msgString = flagMaker.hMap.get("tempGapMsg");
             System.out.println("msgString : "+msgString);
@@ -224,10 +223,10 @@ public class GolfActivity extends AppCompatActivity
         //System.out.println(intWindAverage);
 
         temperature.setText(intTemp.toString()); // 평균온도
-        snowfall.setText(flagMaker.hMap.get("Snow1hAverage2")); // 평균강수량
+        rainfall.setText(flagMaker.hMap.get("Rain1hAverage2")); // 평균강수량
         //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
         dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
-        wind.setText(intWindAverage.toString()); // 평균강수량
+        wind.setText(intWindAverage.toString()+ "m/s"); // 평균강수량
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 

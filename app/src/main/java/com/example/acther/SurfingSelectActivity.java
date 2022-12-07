@@ -154,15 +154,6 @@ public class SurfingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(SurfingSelectActivity.this, SurfingActivity.class);
                 startActivity(intent);
             }
@@ -187,16 +178,6 @@ public class SurfingSelectActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(SurfingSelectActivity.this, SurfingActivity.class);
                 startActivity(intent);
             }
@@ -222,15 +203,6 @@ public class SurfingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(SurfingSelectActivity.this, SurfingActivity.class);
                 startActivity(intent);
             }
@@ -256,15 +228,6 @@ public class SurfingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(SurfingSelectActivity.this, SurfingActivity.class);
                 startActivity(intent);
             }

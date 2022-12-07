@@ -159,15 +159,6 @@ public class GlidingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GlidingSelectActivity.this, GlidingActivity.class);
                 startActivity(intent);
             }
@@ -193,15 +184,6 @@ public class GlidingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GlidingSelectActivity.this, GlidingActivity.class);
                 startActivity(intent);
             }
@@ -227,15 +209,6 @@ public class GlidingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GlidingSelectActivity.this, GlidingActivity.class);
                 startActivity(intent);
             }
@@ -261,15 +234,6 @@ public class GlidingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GlidingSelectActivity.this, GlidingActivity.class);
                 startActivity(intent);
             }

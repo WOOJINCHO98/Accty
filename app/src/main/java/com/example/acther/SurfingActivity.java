@@ -49,12 +49,24 @@ public class SurfingActivity extends AppCompatActivity
         address.setText(flagMaker.hMap.get("address2"));
 
 
-        if (Integer.parseInt(flagMaker.hMap.get("Surfing"))==1){
+        if (Integer.parseInt(flagMaker.hMap.get("Surfing2"))==1){
 
             is_good.setText("서핑하기 좋은 날씨"); // 서핑 플래그
             title.setTextColor(Color.parseColor("#00D1FF"));
             is_good.setTextColor(Color.parseColor("#00D1FF"));
             img.setImageResource(R.drawable.surf_b);
+        }
+        else if (Integer.parseInt(flagMaker.hMap.get("Surfing2")) == 2){
+            is_good.setText("서핑하기 좋지 않은 날씨"); // 러닝 플래그
+            title.setTextColor(Color.parseColor("#FF3203"));
+            is_good.setTextColor(Color.parseColor("#FF3203"));
+            img.setImageResource(R.drawable.surf_o);
+
+            String msgString = "오늘은 풍속이 6m/s 이상이에요.";
+
+            msg.setText(msgString);
+            msg.setVisibility(View.VISIBLE);
+
         }
         else{
             is_good.setText("서핑하기 좋지 않은 날씨"); // 러닝 플래그

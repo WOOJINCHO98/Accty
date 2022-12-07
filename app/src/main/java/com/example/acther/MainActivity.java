@@ -227,7 +227,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
@@ -243,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                         // Log and toast
                         String msg = getString(R.string.msg_token_fmt, token);
                         Log.d(TAG, msg);
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                         System.out.println(msg);
                     }
                 });
@@ -252,8 +251,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
 }

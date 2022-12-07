@@ -199,15 +199,6 @@ public class GolfSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GolfSelectActivity.this, GolfActivity.class);
                 startActivity(intent);
             }
@@ -233,15 +224,6 @@ public class GolfSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GolfSelectActivity.this, GolfActivity.class);
                 startActivity(intent);
             }
@@ -266,16 +248,6 @@ public class GolfSelectActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GolfSelectActivity.this, GolfActivity.class);
                 startActivity(intent);
             }
@@ -301,15 +273,6 @@ public class GolfSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GolfSelectActivity.this, GolfActivity.class);
                 startActivity(intent);
             }
@@ -334,16 +297,6 @@ public class GolfSelectActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(GolfSelectActivity.this, GolfActivity.class);
                 startActivity(intent);
             }

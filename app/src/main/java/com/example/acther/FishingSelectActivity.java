@@ -165,15 +165,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }
@@ -198,16 +189,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }
@@ -233,15 +214,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }
@@ -267,15 +239,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }
@@ -301,15 +264,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }
@@ -335,15 +289,6 @@ public class FishingSelectActivity extends AppCompatActivity {
                 }
 
 
-                try {
-
-                    Thread.sleep(1000); //1초 대기
-
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
-
-                }
                 Intent intent = new Intent(FishingSelectActivity.this, FishingActivity.class);
                 startActivity(intent);
             }

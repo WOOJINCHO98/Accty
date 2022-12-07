@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class FishingActivity extends AppCompatActivity
 {
 
-    TextView title,is_good,temperature,snowfall,wind,dust,wave,address,ozone,msg;
+    TextView title,is_good,temperature,snowfall,dust,wave,address,ozone,msg;
 
     ImageView img;
     @Override
@@ -33,7 +33,6 @@ public class FishingActivity extends AppCompatActivity
         is_good = (TextView) findViewById(R.id.is_good);
         temperature = (TextView) findViewById(R.id.temperature);
         snowfall = (TextView) findViewById(R.id.snowfall);
-        wind = (TextView) findViewById(R.id.wind);
         dust = (TextView) findViewById(R.id.dust);
         wave = (TextView) findViewById(R.id.wave);
         address = (TextView) findViewById(R.id.address);
@@ -105,7 +104,6 @@ public class FishingActivity extends AppCompatActivity
         snowfall.setText(flagMaker.hMap.get("Snow1hAverage2")); // 평균강수량
         //test4.setText(flagMaker.hMap.get("O3Grade")); // 평균풍속
         dust.setText(flagMaker.hMap.get("pm10Grade")); // 평균강수량
-        wind.setText(intWindAverage.toString()); // 평균강수량
 
         ozone.setText(flagMaker.hMap.get("O3Grade")); // 오존등급
 
