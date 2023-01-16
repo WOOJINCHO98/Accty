@@ -3,7 +3,10 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-32</target>
+        <device id="_device_class_phone" />
+        <device id="_device_class_foldable" />
+        <device id="_device_class_tablet" />
+        <option name="nonWearDeviceLastStateName" value="portrait" />
       </config>
     </shared>
   </component>
@@ -15,31 +18,31 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5c01d1f-247a-4cbf-a6fd-4b7f58527ba9" name="Default Changelist" comment="Add Android AlarmManager Function">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_ne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_nw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_se.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_sw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mainbox_grey.xml" afterDir="false" />
+    <list default="true" id="a5c01d1f-247a-4cbf-a6fd-4b7f58527ba9" name="Default Changelist" comment="Last Commit">
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/JijumCode.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/good.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Acther.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Acther.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cycle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cycle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_gliding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_gliding.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_golf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_golf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_running.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_running.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_set_alarm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_set_alarm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ski.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ski.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/acther/GlidingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/acther/GlidingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/acther/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/acther/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/acther/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/acther/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/acther/SurfDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <list id="770b700f-5a36-451a-b8ec-cdc5352b8c1e" name="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" comment="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,54 +50,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/dongjoonseo/.android/avd/Pixel_2_API_31.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/woojin/.android/avd/Pixel_2_API_32.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Acther" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Acther" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Acther" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="woojin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,26 +88,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$USER_HOME$/Desktop" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android-custom-view/Users/dongjoonseo/Library/Android/sdk/sources/android-33/android/widget/FrameLayout.java_SELECTED" value="FrameLayout" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="android-custom-view/Users/woojin/Library/Android/sdk/sources/android-33/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-view/Users/woojin/Library/Android/sdk/sources/android-33/android/widget/ImageView.java_SELECTED" value="ImageView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.acther" />
@@ -222,56 +195,182 @@
       <option name="project" value="LOCAL" />
       <updated>1667999668583</updated>
     </task>
-    <task id="LOCAL-00003" summary="Add Android AlarmManager Function">
-      <created>1668835351312</created>
+    <task id="LOCAL-00003" summary="For Window Project">
+      <created>1668233856717</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1668835351312</updated>
+      <updated>1668233856717</updated>
     </task>
-    <task id="LOCAL-00004" summary="Add Android AlarmManager Function">
-      <created>1668844339240</created>
+    <task id="LOCAL-00004" summary="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding">
+      <created>1668608093046</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1668844339240</updated>
+      <updated>1668608093046</updated>
     </task>
-    <task id="LOCAL-00005" summary="Add Android AlarmManager Function">
-      <created>1669561214963</created>
+    <task id="LOCAL-00005" summary="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding">
+      <created>1668608237922</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1669561214963</updated>
+      <updated>1668608237922</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add Android AlarmManager Function">
-      <created>1669607479504</created>
+    <task id="LOCAL-00006" summary="README UPDATE">
+      <created>1668608461568</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1669607479504</updated>
+      <updated>1668608461568</updated>
     </task>
-    <task id="LOCAL-00007" summary="Add Android AlarmManager Function">
-      <created>1669612374583</created>
+    <task id="LOCAL-00007" summary="README UPDATE">
+      <created>1668608576909</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1669612374583</updated>
+      <updated>1668608576909</updated>
     </task>
-    <task id="LOCAL-00008" summary="Add Android AlarmManager Function">
-      <created>1669714106610</created>
+    <task id="LOCAL-00008" summary="README UPDATE">
+      <created>1668608671682</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1669714106610</updated>
+      <updated>1668608671682</updated>
     </task>
-    <task id="LOCAL-00009" summary="Add Android AlarmManager Function">
-      <created>1669724432988</created>
+    <task id="LOCAL-00009" summary="2022-11-19">
+      <created>1668847487960</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1669724432988</updated>
+      <updated>1668847487961</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Request Location Permission">
+      <created>1668851352596</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668851352596</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Address BugFix // List Change to HashMap // Alarm Bug Fix">
+      <created>1669196298923</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669196298923</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Mapping Component in RunningActivity">
+      <created>1669612846884</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669612846884</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Setting Alarm by Preference">
+      <created>1669648261356</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669648261356</updated>
+    </task>
+    <task id="LOCAL-00014" summary="RunningActivity Complete // Add 1.0PM and O3 Grade">
+      <created>1669658813315</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669658813316</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Just Update">
+      <created>1669659801285</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669659801285</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Just Update">
+      <created>1669714375550</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669714375550</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Just Update">
+      <created>1669714679452</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669714679452</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Just Update">
+      <created>1669718282856</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669718282857</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Just Update">
+      <created>1669739297492</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669739297492</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Just Update">
+      <created>1669740194195</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669740194195</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add Fishing Flag">
+      <created>1669743047168</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669743047168</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add Fishing Flag">
+      <created>1669748527017</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669748527017</updated>
+    </task>
+    <task id="LOCAL-00023" summary="just commit">
+      <created>1669749914384</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669749914384</updated>
+    </task>
+    <task id="LOCAL-00024" summary="just commit">
+      <created>1669749967450</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669749967450</updated>
+    </task>
+    <task id="LOCAL-00025" summary="just commit">
+      <created>1669752305264</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669752305264</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Last Commit">
+      <created>1669753005586</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669753005587</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Last Commit">
+      <created>1670386894598</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670386894598</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,8 +398,48 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" />
     <MESSAGE value="Add Android AlarmManager Function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Android AlarmManager Function" />
+    <MESSAGE value="Uncommitted changes before Checkout at 2022/11/09 2:08 오후 [Default Changelist]" />
+    <MESSAGE value="For Window Project" />
+    <MESSAGE value="Method In SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding" />
+    <MESSAGE value="Move Method At SplashActivity Running / Hiking / Cycle / Golf / Ski / Paragliding" />
+    <MESSAGE value="README UPDATE" />
+    <MESSAGE value="2022-11-19" />
+    <MESSAGE value="Request Location Permission" />
+    <MESSAGE value="Address BugFix // List Change to HashMap // Alarm Bug Fix" />
+    <MESSAGE value="Mapping Component in RunningActivity" />
+    <MESSAGE value="Setting Alarm by Preference" />
+    <MESSAGE value="RunningActivity Complete // Add 1.0PM and O3 Grade" />
+    <MESSAGE value="Just Update" />
+    <MESSAGE value="Add Fishing Flag" />
+    <MESSAGE value="just commit" />
+    <MESSAGE value="Last Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/acther/CycleActivity.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/acther/SplashActivity.java</url>
+          <line>141</line>
+          <properties class="com.example.acther.SplashActivity" method="makeFlag" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="((SplashActivity)SplashActivity.mContext).stationName" custom="com.example.acther.SplashActivity" />
+        <watch expression="((SplashActivity)SplashActivity.mContext).categoryList" custom="com.example.acther.SplashActivity" />
+        <watch expression="((SplashActivity)SplashActivity.mContext).doubleMaxWindSpeed" custom="com.example.acther.SplashActivity" />
+        <watch expression="((SplashActivity)SplashActivity.mContext).stationName" language="JAVA" custom="com.example.acther.SplashActivity" />
+        <watch expression="((SplashActivity)SplashActivity.mContext).categoryList" language="JAVA" custom="com.example.acther.SplashActivity" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

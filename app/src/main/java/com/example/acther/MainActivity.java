@@ -243,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
                         String msg = getString(R.string.msg_token_fmt, token);
                         Log.d(TAG, msg);
                         //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        System.out.println(msg);
+                        System.out.println("firebasetoken"+msg);
                     }
                 });
 

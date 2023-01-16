@@ -193,16 +193,16 @@ public class GlidingActivity extends AppCompatActivity
             String msgString = flagMaker.hMap.get("glidingMsg2");
             System.out.println("msgString : "+msgString);
 
-            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg2"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("rainMsg"))==false){
                 msgString = flagMaker.hMap.get("rainMsg");
                 System.out.println("msgString : "+msgString);
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg2"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("snowMsg"))==false){
                 msgString = flagMaker.hMap.get("snowMsg");
                 System.out.println("msgString : "+msgString);
 
             }
-            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg2"))==false){
+            if (StringUtils.isEmpty(flagMaker.hMap.get("temp0Msg"))==false){
                 msgString = flagMaker.hMap.get("temp0Msg");
                 System.out.println("msgString : "+msgString);
 

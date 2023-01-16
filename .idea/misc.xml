@@ -4,17 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.117" />
+        <entry key="app/src/main/res/drawable/android_lar.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/good.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/ic__105bfdf_4ce8_47bb_9b60_635c936d2cbb.xml" value="0.276" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow.xml" value="0.2145" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.2145" />
+        <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.117" />
-        <entry key="app/src/main/res/drawable/ic_play_arrow.xml" value="0.2145" />
-        <entry key="app/src/main/res/drawable/ic_round_arrow.xml" value="0.2145" />
-        <entry key="app/src/main/res/drawable/ic_round_arrow_forward_ios_24.xml" value="0.218" />
         <entry key="app/src/main/res/drawable/ic_surf.xml" value="0.276" />
         <entry key="app/src/main/res/drawable/mainbox.xml" value="0.131" />
-        <entry key="app/src/main/res/drawable/mainbox_blue.xml" value="0.2145" />
-        <entry key="app/src/main/res/drawable/mainbox_grey.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/rounded_shape_purple.xml" value="0.254" />
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.1495" />
@@ -22,24 +18,25 @@
         <entry key="app/src/main/res/drawable/top_shape.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/your_rounded_shape.xml" value="0.283" />
         <entry key="app/src/main/res/layout/activity_a_alarm.xml" value="0.2599075317382813" />
-        <entry key="app/src/main/res/layout/activity_cycle.xml" value="0.28058803965623724" />
-        <entry key="app/src/main/res/layout/activity_cycle2.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_cycle.xml" value="0.29334916864608074" />
+        <entry key="app/src/main/res/layout/activity_cycle2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fishing.xml" value="0.3171616730866609" />
         <entry key="app/src/main/res/layout/activity_fishing_select.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_gliding.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_gliding.xml" value="0.2714285714285714" />
         <entry key="app/src/main/res/layout/activity_gliding_select.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_golf.xml" value="0.3029891304347826" />
+        <entry key="app/src/main/res/layout/activity_golf.xml" value="0.2794486215538847" />
         <entry key="app/src/main/res/layout/activity_golf_select.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_hiking.xml" value="0.3029891304347826" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_running.xml" value="0.28838745117187503" />
-        <entry key="app/src/main/res/layout/activity_set_alarm.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_ski.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_ski_select.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_hiking.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2720596313476563" />
+        <entry key="app/src/main/res/layout/activity_running.xml" value="0.11" />
+        <entry key="app/src/main/res/layout/activity_set_alarm.xml" value="0.28009918212890617" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.485" />
+        <entry key="app/src/main/res/layout/activity_ski.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_ski_select.xml" value="0.22629969418960244" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22962962962962963" />
-        <entry key="app/src/main/res/layout/activity_surfing.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_surfing.xml" value="0.1" />
         <entry key="app/src/main/res/layout/notification_popup.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/layout/toast_layout.xml" value="0.15946985891406584" />
       </map>
     </option>
   </component>

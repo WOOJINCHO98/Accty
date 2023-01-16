@@ -1736,6 +1736,8 @@ public class SplashActivity extends AppCompatActivity {
         int paraglidingFlag = 0;
 
         if (setBaseFlag2() == 1 && setWindSpeedAverage() >= 1.0 && setWindSpeedAverage() <= 6.0){
+            hMap.put("glidingMsg2","dsf.");
+
             paraglidingFlag = 1;
         }
         else if (setBaseFlag2() == 1 && setWindSpeedAverage() >= 6.0){
